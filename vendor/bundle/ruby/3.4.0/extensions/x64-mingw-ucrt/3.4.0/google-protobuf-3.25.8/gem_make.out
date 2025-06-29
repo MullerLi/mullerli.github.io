@@ -1,0 +1,9 @@
+current directory: C:/Users/Administrator/mullerli.github.io/vendor/bundle/ruby/3.4.0/gems/google-protobuf-3.25.8/ext/google/protobuf_c
+C:/Ruby34-x64/bin/ruby.exe extconf.rb
+creating Makefile
+
+current directory: C:/Users/Administrator/mullerli.github.io/vendor/bundle/ruby/3.4.0/gems/google-protobuf-3.25.8/ext/google/protobuf_c
+make DESTDIR\= sitearchdir\=./.gem.20250629-3324-b8lw3w sitelibdir\=./.gem.20250629-3324-b8lw3w clean
+current directory: C:/Users/Administrator/mullerli.github.io/vendor/bundle/ruby/3.4.0/gems/google-protobuf-3.25.8/ext/google/protobuf_c
+make DESTDIR\= sitearchdir\=./.gem.20250629-3324-b8lw3w sitelibdir\=./.gem.20250629-3324-b8lw3w
+make failedNo such file or directory - make

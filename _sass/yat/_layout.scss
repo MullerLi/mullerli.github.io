@@ -17,7 +17,7 @@ html {
 
       &.site-header {
         .site-brand-inner, .page-link {
-          color: #fff;
+          color: #4E3F40;
           transition: 0.1s color;
         }
 
@@ -295,7 +295,7 @@ html {
   }
 
   .post-meta {
-    color: $grey-color;
+    color: #3E3F40;
     font-size: $base-font-size;
     margin-bottom: $spacing-unit * 0.5;
   }
@@ -350,7 +350,7 @@ html {
   }
 
   .post-text {
-    color: $grey-color;
+    color: #3E3F40;
     word-break: break-word;
     overflow-wrap: break-word;
     flex: 1;
@@ -430,7 +430,7 @@ html {
     }
 
     .post-meta {
-      color: $grey-color;
+      color: #3E3F40;
       padding-bottom: 15px;
     }
   }
@@ -494,7 +494,7 @@ html {
   .post-related {
     &>*:first-child {
       @include relative-font-size(1.425);
-      color: #333;
+      color: #3E3F40;
       margin-bottom: 14px;
     }
 
@@ -504,10 +504,10 @@ html {
 
     .post-link {
       @include relative-font-size(1.075);
-      color: $grey-color;
+      color: #3E3F40;
 
       &:hover {
-        color: darken($grey-color, 50%);
+        color: darken(#3E3F40, 50%);
       }
     }
   }
@@ -529,7 +529,7 @@ html {
 
   a {
     @include relative-font-size(1.125);
-    color: $grey-color;
+    color: #3E3F40;
     max-width: 45%;
     display: flex;
     align-items: center;

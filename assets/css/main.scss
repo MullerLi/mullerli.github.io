@@ -53,3 +53,23 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 }
 
 @import "yat";
+
+/* Hide any potential hr within the banner */
+.page-banner hr {
+  display: none !important;
+}
+
+/* Hide pseudo-elements on banner headings/subheadings */
+.page-banner-heading::before,
+.page-banner-heading::after,
+.page-banner-subheading::before,
+.page-banner-subheading::after {
+  content: none !important;
+  border: none !important;
+}
+
+/* Ensure no borders on the headings/subheadings themselves */
+.page-banner-heading,
+.page-banner-subheading {
+  border: none !important;
+}

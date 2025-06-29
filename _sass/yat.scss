@@ -9,7 +9,7 @@
 
 // Define defaults for each variable.
 
-$base-font-family: Helvetica Neue, Helvetica, Arial, sans-serif, !default;
+$base-font-family: "GenSekiGothic2-R", sans-serif !default;
 $base-font-size: 14px !default;
 $base-font-weight: 400 !default;
 $small-font-size:  $base-font-size * 0.875 !default;
@@ -18,7 +18,7 @@ $base-transition-duration: 0.3s !default;
 
 $spacing-unit:     30px !default;
 
-$text-color:       #1d1d1f !default;
+$text-color:       #3E3F40 !default;
 $background-color: #fff !default;
 
 $grey-color:       #777 !default;
@@ -81,7 +81,7 @@ $on-laptop:        800px !default;
   "yat/base",
   "yat/layout",
   "yat/dark",
-  "misc/theme-toggle",
+  
   "misc/article-menu",
   "misc/common-list",
   "misc/google-translate",

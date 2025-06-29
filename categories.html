@@ -2,3 +2,18 @@
 layout: categories
 title: Categories
 ---
+
+<!-- 你可以加入以下內容來豐富這個頁面： -->
+<!-- 1. 顯示所有分類列表 -->
+<ul>
+    {% for category in site.categories %}
+        <li>
+            <a href="{{ site.baseurl }}/categories/{{ category[0] | slugify }}/">
+                {{ category[0] }} ({{ category[1].size }})
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<!-- 2. 加入簡單的說明文字 -->
+<p>這裡列出了本站所有的文章分類，點擊分類名稱可查看相關文章。</p>
