@@ -3,31 +3,76 @@ layout: about
 title: About Me
 ---
 
-<h2>李誠紘 ｜ Levi</h2>
+<style>
+  .about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  .about-photo {
+    flex: 1;
+    min-width: 220px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+  .about-photo img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  .about-content {
+    flex: 2;
+    min-width: 300px;
+  }
+  .about-content h2 {
+    margin-top: 0;
+    font-size: 2.2em;
+  }
+  .about-content h3 {
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.4em;
+  }
+  .about-content ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .about-content ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+  }
+</style>
 
-<h3>學術與專業背景</h3>
-<p>國立中興大學農藝系碩士</p>
-我目前任職於 <strong>農業部農業試驗所臺中區農業改良場--稻米與稻米品質研究室</strong>，專注於
-<ul>
-  <li>稻米品質研究</li>
-  <li>氣候變遷調適</li>
-  <li>水稻品種育成</li>
-</ul>
-在此，我將分享研究、技術與興趣。
-歡迎稻米品質諮詢與稻米品質食農教育講習邀約。
+<div class="about-container">
+  <div class="about-photo">
+    <img src="{{ site.baseurl }}/assets/images/profile.jpg" alt="李誠紘 (Levi) 的個人照片">
+  </div>
+  <div class="about-content">
+    <h2>李誠紘 ｜ Levi</h2>
+    
+    <h3>學經歷</h3>
+    <ul>
+      <li>中興大學農藝學系 遺傳育種組 (玉米分子細胞遺傳學)</li>
+      <li>農業試驗所 作物組助理、職務代理人 (稻作、玉米)</li>
+      <li>臺東區農業改良場 稻作研究室助理研究員</li>
+      <li>臺中區農業改良場 稻作與米質研究室助理研究員</li>
+    </ul>
 
-<h3>跨域興趣</h3>
-<ul>
-  <li>正向心理學</li>
-  <li>電腦程式語言</li>
-  <li>字體排版美學</li>
-</ul>
+    <h3>業務/專長</h3>
+    <ul>
+      <li>遺傳及稻米品質</li>
+      <li>稻米達人競賽評審</li>
+      <li>米食味鑑定士會員</li>
+    </ul>
 
-<h3>聯繫</h3>
-<ul>
-  <li>GitHub：<a href="https://github.com/MullerLi" target="_blank" rel="noopener">MullerLi</a></li>
-  <li>ORCID：<a href="https://orcid.org/0009-0007-8733-1767" target="_blank" rel="noopener">0009-0007-8733-1767</a></li>
-  <li>Email：<a href="mailto:lemax112@gmail.com">lemax112@gmail.com</a></li>
-</ul>
-
-<p>感謝造訪，如對合作、米質及研究有興趣，歡迎聯繫。</p>
+    <h3>聯繫方式</h3>
+    <ul>
+      <li><strong>Email：</strong><a href="mailto:lemax112@gmail.com">lemax112@gmail.com</a></li>
+      <li><strong>GitHub：</strong><a href="https://github.com/MullerLi" target="_blank" rel="noopener">MullerLi</a></li>
+      <li><strong>ORCID：</strong><a href="https://orcid.org/0009-0007-8733-1767" target="_blank" rel="noopener">0009-0007-8733-1767</a></li>
+    </ul>
+  </div>
+</div>
