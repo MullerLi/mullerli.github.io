@@ -145,7 +145,7 @@
     font-family: "Source Serif 4 18pt", "TRW UDMincho", "芫荽", serif;
     font-size: 1rem;
     line-height: 1.7;
-    font-weight: 300;
+    font-weight: normal;
     color: #bababa;
     letter-spacing: 0.015em;
   }
@@ -155,7 +155,7 @@
   blockquote:lang(zh),
   #write blockquote *:lang(zh),
   blockquote *:lang(zh) {
-    font-family: "TRW UDMincho", "芫荽", "Source Serif 4 18pt", serif;
+    font-family: "TRW UDMincho", "芫荽", serif;
   }
 
   /* 英文區塊（lang=en）優先使用 Source Serif 4 18pt */
@@ -163,13 +163,13 @@
   blockquote:lang(en),
   #write blockquote *:lang(en),
   blockquote *:lang(en) {
-    font-family: "Source Serif 4 18pt", "TRW UDMincho", "芫荽", serif;
+    font-family: "Source Serif 4 18pt", serif;
   }
 
   /* 所有 blockquote 內元素的通用樣式 */
   #write blockquote *,
-  blockquote * {
-    font-weight: 300;
+    blockquote * {
+    font-weight: normal;
     letter-spacing: 0.015em;
     color: #bababa;
   }
@@ -226,7 +226,7 @@
 
     /* —— Fonts —— */
     --font-latin: "Inter", "Helvetica", "Arial", "Aptos", sans-serif;     
-    --font-cjk-primary: "源石黑體月 R"; /* 主要 CJK 字體，源石黑體月 R */
+    --font-cjk-primary: "源流明體月 M"; /* 主要 CJK 字體，源流明體月 M */
     --font-cjk-secondary: "Taipei Sans TC Beta"; /* 若想完全統一，可一併改 */
     --font-sans: var(--font-latin), 
                 var(--font-cjk-primary), 
