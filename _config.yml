@@ -48,7 +48,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mullerli.github.io" # the base hostname & protocol for your site
-favicon: "" # the favicon for your site
+favicon: "/assets/images/favicon.ico" # the favicon for your site
 image: /assets/images/preview.jpg
 google_site_verification:
   - google6ce1164db9d39f2a
@@ -224,13 +224,12 @@ defaults:
 # Utterances comments
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
-
-# utterances:
-#   repo: "owner/repo"
-#   issue_term: "title"
-#   label: "utterances comment"
-#   theme: "github-light"
-#   follow_site_theme: true
+utterances:
+  repo: "MullerLi/my-blog-comments"
+  issue_term: "title"
+  label: "utterances comment"
+  theme: "github-light"
+  follow_site_theme: true
 
 # Build settings
 # highlighter: none
@@ -244,3 +243,8 @@ plugins:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-spaceship
+
+# SEO Tag settings
+# Disable robots.txt generation by jekyll-seo-tag
+seotag:
+  robots_txt: false
