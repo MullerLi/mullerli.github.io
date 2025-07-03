@@ -26,7 +26,7 @@
 
 title: Levi 食米研究
 email: lemax112@gmail.com
-author: Levi
+author: 李誠紘 | Levi
 
 
 # Copyright setting
@@ -48,7 +48,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mullerli.github.io" # the base hostname & protocol for your site
-favicon: "/assets/images/favicon.ico" # the favicon for your site
+favicon: "/assets/images/favicon.png" # the favicon for your site
 image: /assets/images/preview.jpg
 google_site_verification:
   - google6ce1164db9d39f2a

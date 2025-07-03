@@ -134,6 +134,7 @@ html {
     color: $header-text-color;
     transition: 0.1s ease-in-out;
     font-family: "jf open 粉圓 2.1", sans-serif;
+    font-weight: 500;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -421,7 +422,6 @@ html {
   .post-header {
     margin: 50px auto 60px;
     padding: 0 0 20px;
-    border-bottom: 1px solid #ebebeb;
 
     .post-title {
       margin-bottom: 6px;
