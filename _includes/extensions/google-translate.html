@@ -70,8 +70,33 @@ function googleTranslateElementInit() {
     }
   }
 
-  var googleCombo = document.querySelector("select.goog-te-combo");
+  var googleCombo;
   var langSelect = document.querySelector('.ct-language');
+
+  function setCombo(lang) {
+    if (googleCombo) {
+      googleCombo.value = lang;
+      triggerHtmlEvent(googleCombo, 'change');
+    }
+  }
+
+  function initCombo() {
+    googleCombo = document.querySelector('select.goog-te-combo');
+    if (!googleCombo) {
+      setTimeout(initCombo, 100);
+      return;
+    }
+
+    var savedLang = localStorage.getItem('google_lang');
+    if (savedLang && savedLang !== googleCombo.value) {
+      setCombo(savedLang);
+      var mark = document.querySelector('.lang-select[data-lang="' + savedLang + '"]');
+      if (mark) mark.parentElement.classList.add('ct-language-selected');
+    }
+  }
+
+  initCombo();
+
   langSelect.addEventListener('click', function(event) {
     if (!event.target) {
       return;
@@ -96,8 +121,8 @@ function googleTranslateElementInit() {
         restoreLang();
       } else {
         target.parentElement.classList.add('ct-language-selected');
-        googleCombo.value = lang;
-        triggerHtmlEvent(googleCombo, 'change');
+        setCombo(lang);
+        localStorage.setItem('google_lang', lang);
       }
     }
 

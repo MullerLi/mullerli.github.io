@@ -18,7 +18,7 @@
     {%- when 3 -%}
       {%- assign return = site.data[name] -%}
     {%- when 4 -%}
-      {%- assign return = site.defaults[page.layout][name] -%}
+      {%- assign return = site.layout_defaults[page.layout][name] -%}
     {%- when 5 -%}
       {%- assign return = site.data.defaults[page.layout][name] -%}
     {%- when 6 -%}

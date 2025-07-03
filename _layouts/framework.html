@@ -12,8 +12,8 @@ layout: default
     <!-- Get sidebar items -->
     {%- if page.sidebar -%}
       {%- assign sidebar = page.sidebar -%}
-    {%- elsif site.defaults[page.layout].sidebar -%}
-      {%- assign sidebar = site.defaults[page.layout].sidebar -%}
+    {%- elsif site.layout_defaults[page.layout].sidebar -%}
+      {%- assign sidebar = site.layout_defaults[page.layout].sidebar -%}
     {%- elsif layout.sidebar -%}
       {%- assign sidebar = layout.sidebar -%}
     {%- endif -%}
