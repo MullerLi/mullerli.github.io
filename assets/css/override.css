@@ -1,0 +1,29 @@
+/* assets/css/override.css */
+
+/* 拿掉標題底線 */
+h1, h2,
+.post-header { border-bottom: none !important; }
+
+/* 隱藏 pseudo 分隔線（若有）*/
+.left-vsplit:before,
+.post-header:after { display: none !important; }
+
+/* 副標題改灰色 */
+.post-subtitle,
+.page-banner .post-subtitle { color: #666 !important; }
+
+/* 拿掉文章標題和副標題的底線 */
+.post-title a,
+.post-subtitle a {
+  text-decoration: none !important;
+}
+
+/* 強化：徹底移除標題和副標題的底線與陰影 */
+.post-title,
+.post-subtitle,
+.post-title a,
+.post-subtitle a {
+  border-bottom: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}

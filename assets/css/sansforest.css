@@ -155,7 +155,7 @@
   blockquote:lang(zh),
   #write blockquote *:lang(zh),
   blockquote *:lang(zh) {
-    font-family: "TRW UDMincho", "芫荽", serif;
+    font-family:  "芫荽","TRW UDMincho", serif;
   }
 
   /* 英文區塊（lang=en）優先使用 Source Serif 4 18pt */
@@ -228,7 +228,7 @@
     --font-latin: "Inter", "Helvetica", "Arial", "Aptos", sans-serif;     
     --font-cjk-primary: "源流明體月 M"; /* 主要 CJK 字體，源流明體月 M */
     --font-cjk-secondary: "Taipei Sans TC Beta"; /* 若想完全統一，可一併改 */
-    --font-sans: var(--font-latin), 
+    --font-sans: var(--font-latin), "源石黑體月 R"
                 var(--font-cjk-primary), 
                 var(--font-cjk-secondary), 
                 -apple-system, BlinkMacSystemFont, 

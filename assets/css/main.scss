@@ -52,7 +52,8 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
   $selection-background-color: rgba(invert($brand-color), 0.3);
 }
 
-@import "yat";
+@import "yat";      // ← 主題原本的樣式
+@import "custom";   // ← 你的客製樣式（_sass/_custom.scss）
 
 /* Hide any potential hr within the banner */
 .page-banner hr {

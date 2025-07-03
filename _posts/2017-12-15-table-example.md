@@ -6,8 +6,13 @@ categories: example
 tags: [table]
 ---
 
-## Table example as below
+# Table example as below
 
+## h2
+
+### h3
+
+#### h4
 **For now, these extended features are provided:**
 
 * Cells spanning multiple columns
