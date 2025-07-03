@@ -50,7 +50,9 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mullerli.github.io" # the base hostname & protocol for your site
 favicon: "" # the favicon for your site
 image: /assets/images/preview.jpg
-google_site_verification: google6ce1164db9d39f2a
+google_site_verification:
+  - google6ce1164db9d39f2a
+  - F0KMuhz-7OPEUb4hgl0ay2SxCfrKMfA801rgeXby8N8
 
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
