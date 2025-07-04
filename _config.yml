@@ -225,7 +225,7 @@ defaults:
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
 utterances:
-  repo: "MullerLi/my-blog-comments"
+  repo: "MullerLi/mullerli.github.io"
   issue_term: "title"
   label: "utterances comment"
   theme: "github-light"
