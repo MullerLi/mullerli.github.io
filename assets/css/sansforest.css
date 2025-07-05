@@ -15,7 +15,7 @@
    ============================================================================ */
 
 @font-face {
-  font-family: "源流明體月 M";
+  font-family: "GenRyuMin2 TW M";
   src: url("./sansforest/GenRyuMin2TW-M.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "源石黑體月 R";
+  font-family: "GenSekiGothic2 TW R";
   src: url("./sansforest/GenSekiGothic2-R.ttc") format("truetype");
   font-style: normal;
   font-weight: normal;
@@ -206,7 +206,7 @@
   --mermaid-line-color:#7ee787;--mermaid-line-stroke-width:2px;
   --mermaid-edge-label-bg:#1e2e28;
   --mermaid-font-size:16px;
-  --mermaid-font-family:"Inter","源石黑體月 R",
+  --mermaid-font-family:"Inter","GenSekiGothic2 TW R",
                         "PingFang TC","Microsoft JhengHei",sans-serif;
   --mermaid-theme:dark;--mermaid-contrast-color:#58a6ff;
 
@@ -226,9 +226,9 @@
 
     /* —— Fonts —— */
     --font-latin: "Inter", "Helvetica", "Arial", "Aptos", sans-serif;     
-    --font-cjk-primary: "源流明體月 M"; /* 主要 CJK 字體，源流明體月 M */
+    --font-cjk-primary: "GenRyuMin2 TW M"; /* 主要 CJK 字體，源流明體月 M */
     --font-cjk-secondary: "Taipei Sans TC Beta"; /* 若想完全統一，可一併改 */
-    --font-sans: var(--font-latin), "源石黑體月 R"
+    --font-sans: var(--font-latin), "GenSekiGothic2 TW R"
                 var(--font-cjk-primary), 
                 var(--font-cjk-secondary), 
                 -apple-system, BlinkMacSystemFont, 
