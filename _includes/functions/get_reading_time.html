@@ -24,26 +24,13 @@
 {% assign hours = total_mins | divided_by: 60 %}
 {% assign mins = total_mins | modulo: 60 %}
 
-{% assign return = "About" %}
-
-{% if hours > 0 %}
-  {% assign unit = "hour" %}
-  {% if hours > 1 %}
-    {% assign unit = unit | append: "s" %}
+{%- if lang == "zh-TW" or lang == "zh" -%}
+  {% assign return = "約 " | append: total_mins | append: " 分鐘" %}
+{%- elsif lang == "ja" -%}
+  {% assign return = "約 " | append: total_mins | append: " 分" %}
+{%- else -%}
+  {% assign return = "About " | append: total_mins | append: " min" %}
+  {% if total_mins > 1 %}
+    {% assign return = return | append: "s" %}
   {% endif %}
-  {% assign return = return
-    | append: " "
-    | append: hours
-    | append: " "
-    | append: unit %}
-{% endif %}
-
-{% assign unit = "min" %}
-{% if mins > 1 %}
-  {% assign unit = unit | append: "s" %}
-{% endif %}
-{% assign return = return
-  | append: " "
-  | append: mins
-  | append: " "
-  | append: unit %}
+{%- endif -%}

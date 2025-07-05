@@ -57,7 +57,7 @@ google_site_verification:
 # Yat date format
 # refer to https://shopify.github.io/liquid/filters/date/ if you want to customize this
 yat:
-  date_format: "%b %d, %Y"
+  date_format: "%Y/%m/%d"
 
 # If you want more debug log, you can set true
 # debug: false
@@ -232,8 +232,6 @@ utterances:
   label: comment                    # 自訂 GitHub 標籤
   theme: github-light               # ← 固定一種佈景
 
-
-
 # Build settings
 # highlighter: none
 markdown: kramdown
@@ -245,7 +243,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
-  - jekyll-spaceship
+
+jekyll-spaceship:
+  reading_time_processor:
+    enabled: true
 
 # SEO Tag settings
 # Disable robots.txt generation by jekyll-seo-tag
