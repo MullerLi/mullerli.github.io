@@ -185,7 +185,7 @@
   --bg-color:#090d10;
   --side-bar-bg-color:#14191f; /* 更深的暗色，與主背景有區別 */
   --item-hover-bg-color:#0d1117;--item-hover-text-color:#55c95f;    
-  --text-color:#3E3F40;--text-dimmed:#6e7681;
+  --text-color:#c9d1d9;--text-dimmed:#6e7681;
   --primary-color:#55c95f;
   --active-file-border-color:#55c95f;
   --active-file-bg-color:#0d1117;--active-item-bg-color:#0d1117;
@@ -228,7 +228,7 @@
     --font-latin: "Inter", "Helvetica", "Arial", "Aptos", sans-serif;     
     --font-cjk-primary: "GenRyuMin2 TW M"; /* 主要 CJK 字體，源流明體月 M */
     --font-cjk-secondary: "Taipei Sans TC Beta"; /* 若想完全統一，可一併改 */
-    --font-sans: var(--font-latin), "GenSekiGothic2 TW R"
+    --font-sans: var(--font-latin), "GenSekiGothic2 TW R",
                 var(--font-cjk-primary), 
                 var(--font-cjk-secondary), 
                 -apple-system, BlinkMacSystemFont, 
@@ -242,7 +242,7 @@
        中文 → GenRyuMin2
        其餘 fallback 皆襯線體，確保跨平台顯示 */
   --font-heading-latin: "Mulish", "Cambria", serif; /* 英文 Heading 字體，Mulish */
-  --font-heading-cjk: "TRW UDMincho", "Noto Serif TC", "PMingLiU", serif; /* 中文 Heading 字體，GenRyuMin2 */
+  --font-heading-cjk: "GenRyuMin2 TW M", "TRW UDMincho", "Noto Serif TC", "PMingLiU", serif; /* 中文 Heading 字體，GenRyuMin2 */
 
   /* 表格左右、上下內距 & 列與列之間的縫隙 */
   --tbl-pad-x: 14px;   /* ←→ 左右 padding */
@@ -276,7 +276,7 @@
   html, body { 
     font-family:var(--font-sans);
     font-size:13px;
-    font-weight:500;
+    font-weight:400;
     line-height:1.5;
     color:var(--text-color);
     background:var(--bg-color);
@@ -303,7 +303,6 @@
   }
 }
 #typora-sidebar,.pane-group{background:var(--side-bar-bg-color)}
-.file-node-title{color:var(--text-color)}
 }
 
 
@@ -331,7 +330,7 @@
 @layer theme {
   h1, h2, h3, h4, h5, h6 {
     margin: 1rem 0;
-    font-family:  var(--font-heading-latin), var(--font-heading-cjk);
+    font-family: var(--font-heading-latin), var(--font-heading-cjk), serif;
     font-weight: 400;
     color: var(--text-color);
   }
@@ -609,8 +608,11 @@ body ::selection,#write ::selection{
     background-color: var(--active-file-bg-color);
     border-left-color: var(--primary-color);
   }
+  /* Hide sub-levels of the Table of Contents by default; 
+     this allows for collapsible TOC sections and prevents clutter when the TOC is long.
+     Remove or override this rule to show all TOC levels expanded. */
   .md-toc-item .md-toc-inner {
-    display: none; /* Hide sub-levels by default if needed */
+    display: none;
   }
 }
 
