@@ -1,29 +1,90 @@
-/* assets/css/override.css */
+/*
+============================================================================
+  override.css - Minimal Font Overrides
+----------------------------------------------------------------------------
+  This file is used to forcefully apply custom font settings using !important
+  to ensure they override any theme defaults. It only contains font-related
+  declarations to minimize conflicts.
+============================================================================
+*/
 
-/* 拿掉標題底線 */
-h1, h2,
-.post-header { border-bottom: none !important; }
-
-/* 隱藏 pseudo 分隔線（若有）*/
-.left-vsplit:before,
-.post-header:after { display: none !important; }
-
-/* 副標題改灰色 */
-.post-subtitle,
-.page-banner .post-subtitle { color: #666 !important; }
-
-/* 拿掉文章標題和副標題的底線 */
-.post-title a,
-.post-subtitle a {
-  text-decoration: none !important;
+/* --- Font Definitions --- */
+@font-face {
+  font-family: "GenRyuMin2";
+  src: url("./sansforest/GenRyuMin2TW-M.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
 }
 
-/* 強化：徹底移除標題和副標題的底線與陰影 */
-.post-title,
-.post-subtitle,
-.post-title a,
-.post-subtitle a {
-  border-bottom: none !important;
-  box-shadow: none !important;
-  text-decoration: none !important;
+@font-face {
+  font-family: "GenSekiGothic2";
+  src: url("./sansforest/GenSekiGothic2TW-R.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TRWUDMincho";
+  src: url("./sansforest/TRWUDMincho-R.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Iansui";
+  src: url("./sansforest/Iansui-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("./sansforest/Mulish-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./sansforest/Inter-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./sansforest/JetBrainsMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SourceSerif";
+  src: url("./sansforest/SourceSerif4_18pt-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DIN1451";
+  src: url("./sansforest/din1451alt.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --- Apply Fonts with High Specificity --- */
+body {
+  font-family: "Inter", "Helvetica", "Arial","GenSekiGothic2 TW R", "Aptos", sans-serif, "GenSekiGothic2", "Noto Sans TC", "Microsoft JhengHei" !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Muli", "Cambria", serif, "GenRyuMin2", "Noto Serif TC" !important;
+}
+
+blockquote {
+  font-family: "SourceSerif", "Iansui" !important;
+}
+
+code, pre {
+  font-family: "JetBrains Mono", monospace !important;
 }

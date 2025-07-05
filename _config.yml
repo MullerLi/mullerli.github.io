@@ -41,7 +41,7 @@ author: 李誠紘 | Levi
 #   "Copyright (c) 2017-{currentYear} <a href="https://example.com">{author}</a>"
 #   "Copyright © 2017-2021 Foobar"
 #
-copyright: "Unpublished Work (cleft) 2017-{currentYear} {author}"
+copyright: "© 2024-{currentYear} {author} All rights reserved."
 
 description: >- # this means to ignore newlines until "baseurl:"
   Rice & Quality 分享稻米品質研究的平台，涵蓋育種、栽培管理、碾米技術到食味分析的關鍵文獻。無論您是追求卓越的碾米廠業者、致力於食農教育的推廣者，或是學術領域的研究人員，都能在此獲得具深度與實用性的洞察。

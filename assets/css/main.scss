@@ -53,7 +53,6 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 }
 
 @import "yat";      // ← 主題原本的樣式
-@import "custom";   // ← 你的客製樣式（_sass/_custom.scss）
 
 /* Hide any potential hr within the banner */
 .page-banner hr {
@@ -73,4 +72,11 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 .page-banner-heading,
 .page-banner-subheading {
   border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  font-weight: normal !important;
+  font-size: inherit !important;
+  color: inherit !important;
 }

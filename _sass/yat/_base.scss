@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 @font-face {
-  font-family: 'jf open 粉圓 2.1';
+  font-family: 'jfhuninn';
   src: url('/assets/css/sansforest/jfopenhuninn2.1.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -119,9 +119,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight * 1.5;
+  font-weight: $base-font-weight;
 }
-
 /**
  * Links
  */
