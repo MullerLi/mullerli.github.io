@@ -1,6 +1,86 @@
 /**
  * Animation for transparent header
  */
+ @font-face {
+  font-family: "GenRyuMin2";
+  src: url("./sansforest/GenRyuMin2TW-M.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GenSekiGothic2";
+  src: url("./sansforest/GenSekiGothic2TW-R.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TRWUDMincho";
+  src: url("./sansforest/TRWUDMincho-R.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Iansui";
+  src: url("./sansforest/Iansui-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("./sansforest/Mulish-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./sansforest/Inter-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("./sansforest/JetBrainsMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SourceSerif";
+  src: url("./sansforest/SourceSerif4_18pt-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DIN1451";
+  src: url("./sansforest/din1451alt.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --- Apply Fonts with High Specificity --- */
+body {
+  font-family: "Inter", "Helvetica", "Arial","GenSekiGothic2 TW R", "Aptos", sans-serif, "GenSekiGothic2", "Noto Sans TC", "Microsoft JhengHei" !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Muli", "Cambria", "GenRyuMin2", "Noto Serif TC", serif, !important;
+}
+
+blockquote {
+  font-family: "SourceSerif", "Iansui" !important;
+}
+
+code, pre {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
 html {
   &[data-header-transparent] {
     header.site-header {
