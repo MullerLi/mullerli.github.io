@@ -78,7 +78,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Muli", "Cambria", serif, "GenRyuMin2", "Noto Serif TC" !important;
+  font-family: "Muli", "Cambria", "GenRyuMin2", "Noto Serif TC", serif, !important;
 }
 
 blockquote {
