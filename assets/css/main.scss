@@ -52,7 +52,9 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
   $selection-background-color: rgba(invert($brand-color), 0.3);
 }
 
-@import "yat";      // ← 主題原本的樣式
+@import "variables";  // 1. 先載你自己的變數
+@import "yat";        // 2. 載整包 Yat（它會用到剛剛那組新變數）
+@import "custom";     // 3. 最後再用 custom 蓋細節
 
 /* Hide any potential hr within the banner */
 .page-banner hr {

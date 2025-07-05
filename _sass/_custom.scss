@@ -1,0 +1,48 @@
+/* 補沒有變數可改、但你又想換色的小區塊 */
+.card {                /* 文章卡片維持白底舉例 */
+  background-color: #ffffff;
+}
+/* 專改分頁連結顏色 → 全黑 */
+.pagination .post-list > li {
+  background: $card-background-color;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-bottom: none !important; /* 覆寫主題預設的底線 */
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .pagination .post-list > li {
+    padding: 25px;
+  }
+}
+
+
+.pagination .post-link {
+  color: #1f1f1f !important;   /* 加 !important 保證蓋掉主題預設 #333 */
+}
+
+.pagination .post-link:hover {
+  text-decoration: underline;
+}
+
+.pagination .post-text {
+    color: #1f1f1f;
+}
+
+.site-footer {
+    color: #1f1f1f;
+    background-color: #f2f2f2;
+    text-align: left;
+    transition: background-color 0.2s;
+}
+a:hover {
+  text-decoration: underline;
+}
+

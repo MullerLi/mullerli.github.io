@@ -77,10 +77,12 @@
 /* --- Apply Fonts with High Specificity --- */
 body {
   font-family: "Inter", "Helvetica", "Arial","GenSekiGothic2 TW R", "Aptos", sans-serif, "GenSekiGothic2", "Noto Sans TC", "Microsoft JhengHei" !important;
+  color: #1f1f1f;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Muli", "Cambria", "GenRyuMin2", "Noto Serif TC", serif !important;
+  color: #1f1f1f;
 }
 
 blockquote {
@@ -89,4 +91,8 @@ blockquote {
 
 code, pre {
   font-family: "JetBrains Mono", monospace !important;
+}
+
+table {
+  color: #1f1f1f;
 }
