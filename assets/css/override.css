@@ -11,63 +11,63 @@
 /* --- Font Definitions --- */
 @font-face {
   font-family: "GenRyuMin2";
-  src: url("./sansforest/GenRyuMin2TW-M.otf") format("opentype");
+  src: url("{{ '/assets/css/sansforest/GenRyuMin2TW-M.otf'  | relative_url }}") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "GenSekiGothic2";
-  src: url("./sansforest/GenSekiGothic2TW-R.otf") format("opentype");
+  src: url("{{ '/assets/css/sansforest/GenSekiGothic2TW-R.otf'  | relative_url }}") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "TRWUDMincho";
-  src: url("./sansforest/TRWUDMincho-R.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/TRWUDMincho-R.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Iansui";
-  src: url("./sansforest/Iansui-Regular.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/Iansui-Regular.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Muli";
-  src: url("./sansforest/Mulish-SemiBold.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/Mulish-SemiBold.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "Inter";
-  src: url("./sansforest/Inter-Regular.otf") format("opentype");
+  src: url("{{ '/assets/css/sansforest/Inter-Regular.otf'  | relative_url }}") format("opentype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "JetBrains Mono";
-  src: url("./sansforest/JetBrainsMono-Regular.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/JetBrainsMono-Regular.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: "SourceSerif";
-  src: url("./sansforest/SourceSerif4_18pt-Regular.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/SourceSerif4_18pt-Regular.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
 
 @font-face {
   font-family: "DIN1451";
-  src: url("./sansforest/din1451alt.ttf") format("truetype");
+  src: url("{{ '/assets/css/sansforest/din1451alt.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: 400;
 }
