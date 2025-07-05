@@ -1,0 +1,96 @@
+/*
+============================================================================
+  override.css - Minimal Font Overrides
+----------------------------------------------------------------------------
+  This file is used to forcefully apply custom font settings using !important
+  to ensure they override any theme defaults. It only contains font-related
+  declarations to minimize conflicts.
+============================================================================
+*/
+
+/* --- Font Definitions --- */
+@font-face {
+  font-family: "GenRyuMin2";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/GenRyuMin2TW-M.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "GenSekiGothic2";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/GenSekiGothic2TW-R.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "TRWUDMincho";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/TRWUDMincho-R.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Iansui";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/Iansui-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Muli";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/Mulish-SemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/Inter-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/JetBrainsMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "SourceSerif";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/SourceSerif4_18pt-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DIN1451";
+  src: url("/jekyll-theme-yat/assets/css/sansforest/din1451alt.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* --- Apply Fonts with High Specificity --- */
+body {
+  font-family: "Inter", "Helvetica", "Arial","GenSekiGothic2 TW R", "Aptos", sans-serif, "GenSekiGothic2", "Noto Sans TC", "Microsoft JhengHei" !important;
+  color: #1f1f1f;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Muli", "Cambria", "GenRyuMin2", "Noto Serif TC", serif !important;
+  color: #1f1f1f;
+}
+
+blockquote {
+  font-family: "SourceSerif", "Iansui" !important;
+}
+
+code, pre {
+  font-family: "JetBrains Mono", monospace !important;
+}
+
+table {
+  color: #1f1f1f;
+}
