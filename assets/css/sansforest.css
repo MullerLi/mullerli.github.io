@@ -15,7 +15,7 @@
    ============================================================================ */
 
 @font-face {
-  font-family: "GenRyuMin2 TW M";
+  font-family: "GenRyuMin2TWM";
   src: url("./sansforest/GenRyuMin2TW-M.otf") format("opentype");
   font-style: normal;
   font-weight: normal;
@@ -43,7 +43,7 @@
 }
 
 @font-face {
-  font-family: "GenSekiGothic2 TW R";
+  font-family: "源石黑體月 R";
   src: url("./sansforest/GenSekiGothic2-R.ttc") format("truetype");
   font-style: normal;
   font-weight: normal;
@@ -142,7 +142,7 @@
 @layer theme {
   #write blockquote,
   blockquote {
-    font-family: "Source Serif 4 18pt", "TRW UDMincho", "芫荽", serif;
+    font-family: "Source Serif 4 18pt", "芫荽", serif;
     font-size: 1rem;
     line-height: 1.7;
     font-weight: normal;
@@ -150,7 +150,7 @@
     letter-spacing: 0.015em;
   }
 
-  /* 中文區塊（lang=zh）優先使用 TRW UDMincho */
+  /* 中文區塊（lang=zh）優先使用芫荽 */
   #write blockquote:lang(zh),
   blockquote:lang(zh),
   #write blockquote *:lang(zh),
@@ -185,7 +185,7 @@
   --bg-color:#090d10;
   --side-bar-bg-color:#14191f; /* 更深的暗色，與主背景有區別 */
   --item-hover-bg-color:#0d1117;--item-hover-text-color:#55c95f;    
-  --text-color:#c9d1d9;--text-dimmed:#6e7681;
+  --text-color:#000000;--text-dimmed:#6e7681;
   --primary-color:#55c95f;
   --active-file-border-color:#55c95f;
   --active-file-bg-color:#0d1117;--active-item-bg-color:#0d1117;
@@ -206,7 +206,7 @@
   --mermaid-line-color:#7ee787;--mermaid-line-stroke-width:2px;
   --mermaid-edge-label-bg:#1e2e28;
   --mermaid-font-size:16px;
-  --mermaid-font-family:"Inter","GenSekiGothic2 TW R",
+  --mermaid-font-family:"Inter","源石黑體月 R",
                         "PingFang TC","Microsoft JhengHei",sans-serif;
   --mermaid-theme:dark;--mermaid-contrast-color:#58a6ff;
 
@@ -226,9 +226,9 @@
 
     /* —— Fonts —— */
     --font-latin: "Inter", "Helvetica", "Arial", "Aptos", sans-serif;     
-    --font-cjk-primary: "GenRyuMin2 TW M"; /* 主要 CJK 字體，源流明體月 M */
+    --font-cjk-primary: "GenRyuMin2TWM"; /* 主要 CJK 字體，源流明體月 M */
     --font-cjk-secondary: "Taipei Sans TC Beta"; /* 若想完全統一，可一併改 */
-    --font-sans: var(--font-latin), "GenSekiGothic2 TW R",
+    --font-sans: var(--font-latin), "源石黑體月 R",
                 var(--font-cjk-primary), 
                 var(--font-cjk-secondary), 
                 -apple-system, BlinkMacSystemFont, 
@@ -242,7 +242,7 @@
        中文 → GenRyuMin2
        其餘 fallback 皆襯線體，確保跨平台顯示 */
   --font-heading-latin: "Mulish", "Cambria", serif; /* 英文 Heading 字體，Mulish */
-  --font-heading-cjk: "GenRyuMin2 TW M", "TRW UDMincho", "Noto Serif TC", "PMingLiU", serif; /* 中文 Heading 字體，GenRyuMin2 */
+  --font-heading-cjk: "GenRyuMin2TWM", "TRW UDMincho", "Noto Serif TC", "PMingLiU", serif; /* 中文 Heading 字體，GenRyuMin2 */
 
   /* 表格左右、上下內距 & 列與列之間的縫隙 */
   --tbl-pad-x: 14px;   /* ←→ 左右 padding */
