@@ -189,14 +189,16 @@ defaults:
 # Photo previewer settings (PhotoSwipe 5)
 # the options please refer to: https://photoswipe.com/options/
 photo_previewer:
- gallery: "section.main"
- children: "a.photo-swipe"
- bgOpacity: 0.8
- padding:
-   top: 20
-   bottom: 40
-   left: 100
-   right: 100
+  gallery: "section.main"
+  children: "a.photo-swipe"
+  bgOpacity: 0.8
+  padding:
+    top: 20
+    bottom: 40
+    left: 100
+    right: 100
+
+
 
 # Click to top settings
 # click_to_top:
@@ -225,12 +227,12 @@ photo_previewer:
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
 utterances:
-  repo:  MullerLi/my-blog-comments
-  issue_term: pathname
-  label: utterances comment
-  theme: github-light
-  dark_theme: github-dark      # ← 新增
-  follow_site_theme: true
+  repo: MullerLi/my-blog-comments   # 你的留言儲存庫
+  issue_term: pathname              # 用網址當議題索引，最穩定
+  label: comment                    # 自訂 GitHub 標籤
+  theme: github-light               # ← 固定一種佈景
+
+
 
 # Build settings
 # highlighter: none
