@@ -26,13 +26,6 @@
 }
 
 @font-face {
-  font-family: "TRWUDMincho";
-  src: url("{{ '/assets/css/sansforest/TRWUDMincho-R.ttf'  | relative_url }}") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "Iansui";
   src: url("{{ '/assets/css/sansforest/Iansui-Regular.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
@@ -47,25 +40,17 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("{{ '/assets/css/sansforest/Inter-Regular.otf'  | relative_url }}") format("opentype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
   font-family: "JetBrains Mono";
   src: url("{{ '/assets/css/sansforest/JetBrainsMono-Regular.ttf'  | relative_url }}") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
 
-
 @font-face {
-  font-family: "DIN1451";
-  src: url("{{ '/assets/css/sansforest/din1451alt.ttf'  | relative_url }}") format("truetype");
+  font-family: 'jfhuninn';
+  src: url('/assets/css/sansforest/jfopenhuninn2.1.ttf') format('truetype');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 400;
 }
 
 /* --- Apply Fonts with High Specificity --- */
@@ -103,7 +88,7 @@ table {
 }
 
 .pagination .post-link {
-  font-size: 20px !important;
+  font-size: 28px !important;
 }
 
 th, td {
@@ -144,7 +129,23 @@ th, td {
 }
 
 .post-nav-title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin-top: 5px;
+}
+
+.site-nav {
+    font-size: 20px;
+    line-height: 63.84px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.site-brand .site-brand-inner {
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -1px;
+    transition: 0.1s filter color;
+    font-family: "jfhuninn", sans-serif;
 }
