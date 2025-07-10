@@ -60,12 +60,6 @@
   font-weight: normal;
 }
 
-@font-face {
-  font-family: "SourceSerif";
-  src: url("{{ '/assets/css/sansforest/SourceSerif4_18pt-Regular.ttf'  | relative_url }}") format("truetype");
-  font-style: normal;
-  font-weight: 400;
-}
 
 @font-face {
   font-family: "DIN1451";
@@ -76,14 +70,14 @@
 
 /* --- Apply Fonts with High Specificity --- */
 body, p, li {
-  font-family: "Inter", "Helvetica", "Arial","GenRyuMin2", "Aptos", sans-serif, "GenSekiGothic2", "Noto Sans TC", "Microsoft JhengHei" !important;
+  font-family:  "GenRyuMin2", "Helvetica", "Arial","Aptos", "Noto Serif TC", "Microsoft JhengHei", sans-serif  !important;
   font-size: 20px !important;
   line-height: 2;
   color: #1f1f1f;
 }
 
 h1, h2, h3, h4, h5, h6, .pagination .post-link {
-  font-family: "Muli", "Cambria", "GenSekiGothic2", "Noto Serif TC", serif !important;
+  font-family: "Muli", "Cambria", "GenSekiGothic2", "Noto Sans TC", sans-serif !important;
   color: #1f1f1f;
 }
 
@@ -95,7 +89,7 @@ h5, h6 { font-size: 20px !important; }
 
 
 blockquote {
-  font-family: "SourceSerif", "Iansui" !important;
+  font-family: "Iansui" !important;
   font-size: 20px !important;
 }
 
@@ -114,7 +108,8 @@ table {
 
 th, td {
   text-align: left !important;
-  padding-left: 0 !important;
+  padding-left: 1 !important;
+  
 }
 
 .post-nav {
