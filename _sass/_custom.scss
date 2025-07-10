@@ -46,3 +46,163 @@ a:hover {
   text-decoration: underline;
 }
 
+// ☰ 三條線動畫切換
+.menu-toggle {
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+  display: block;
+  margin-left: auto;
+
+  span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+// 下拉選單動畫與樣式
+.menu-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 60px;
+  right: 0rem; // 稍微留邊距
+  width: 150px; // ✅ 控制寬度，避免太寬
+  max-width: 90vw; // ✅ 在手機上也不會太寬
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 10px 10px;
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+
+    li {
+      margin: 8px 0;
+
+      a {
+        font-size: 1.5rem;
+        color: #fff;
+        text-decoration: none;
+        padding: 6px 12px;
+        display: block;
+        text-align: center;
+
+        &:hover {
+          color: #ffd700;
+        }
+      }
+    }
+  }
+}
+
+.menu-wrapper.open {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.menu-toggle {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  display: block;
+  position: absolute;   // ✅ 固定位置
+  top: 18px;             // ✅ 與 nav 垂直對齊（你可微調）
+  right: 20px;           // ✅ 對齊右側 nav
+    span {
+    display: block;
+    height: 3px;
+    background: #333;
+    margin: 5px 0;
+    transition: 0.4s;
+  }
+
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+}
+
+.menu-wrapper.open {
+  max-height: 500px;
+  opacity: 1;
+}
+.site-header-inner {
+  position: relative;
+}
+/* 隱藏原有的橫向導覽連結（.page-link） */
+.page-link {
+  display: none !important;
+}
+
+/* -----------------------------
+   Header – 全站透明 & 捲動收合
+   ----------------------------- */
+
+/* ① 透明背景＋去陰影（!important 確保覆寫） */
+html[data-header-transparent] header.site-header,
+header.site-header {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* ② 改回 sticky（更自然跟隨頁面） */
+html[data-header-transparent] header.site-header {
+  position: sticky !important;   /* 取代 _layout.scss 的 fixed */
+  top: 0;
+  transition: top 0.3s ease;     /* 保留滑入滑出平滑度 */
+  z-index: 1000;
+}
+
+/* ③ 捲動控制：向下滑隱藏、向上滑顯示
+      -$header-height = 64px (Yat 預設)，
+      依你的實際高度微調 */
+html[data-scroll-status='down'] header.site-header {
+  top: -64px;
+}
+html[data-scroll-status='up'],
+html[data-scroll-status='top'] header.site-header {
+  top: 0;
+}
+
+/* ④ 透明模式下，導覽文字顏色可自行調整 */
+html[data-header-transparent] header.site-header .site-brand-inner,
+html[data-header-transparent] header.site-header .page-link {
+  color: #4E3F40;      /* 深灰棕，與首頁一致 */
+}
