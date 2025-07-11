@@ -1,11 +1,6 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: 'jf open 粉圓 2.1';
-  src: url('/assets/css/sansforest/jfopenhuninn2.1.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
+
 
 @font-face {
   font-family: 'Zen Maru Gothic Medium';
@@ -119,9 +114,8 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight * 1.5;
+  font-weight: $base-font-weight;
 }
-
 /**
  * Links
  */
@@ -172,7 +166,7 @@ code {
 *:not(pre) > code {
   padding: 3px 6px;
   border-radius: 3px;
-  background-color: #eee;
+  background-color: #000000;
   margin: 0 5px;
 }
 

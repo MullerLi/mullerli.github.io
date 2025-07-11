@@ -1,0 +1,7 @@
+{%- if page.content -%}
+  {%- assign words = page.content | number_of_words -%}
+  {%- assign minutes = words | divided_by:200 -%}
+  <span class="reading-time">
+    約 {{ minutes | ceil }} 分
+  </span>
+{%- endif -%}

@@ -1,6 +1,7 @@
 /**
  * Animation for transparent header
  */
+ 
 html {
   &[data-header-transparent] {
     header.site-header {
@@ -100,7 +101,7 @@ html {
     font-weight: $base-font-weight;
     letter-spacing: -1px;
     transition: 0.1s filter color;
-    font-family: "jf open 粉圓 2.1", sans-serif;
+    font-family: "jfhuninn", sans-serif;
 
     &, &:visited {
       color: $header-text-color;
@@ -133,8 +134,8 @@ html {
     line-height: $base-line-height;
     color: $header-text-color;
     transition: 0.1s ease-in-out;
-    font-family: "jf open 粉圓 2.1", sans-serif;
-    font-weight: 500;
+    font-family: "jfhuninn", sans-serif;
+    font-weight: 400;
 
     // Gaps between nav items, but not on the last one
     &:not(:last-child) {
@@ -293,7 +294,7 @@ html {
 
   .post-link {
     @include relative-font-size(1.65);
-    font-weight: $base-font-weight * 1.5;
+    font-weight: $base-font-weight;
     color: #333;
   }
 
@@ -880,7 +881,7 @@ html {
   background-color: $brand-color;
   color: #fff;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 400;
   border-radius: 2px;
   transition-duration: $base-transition-duration;
 }
