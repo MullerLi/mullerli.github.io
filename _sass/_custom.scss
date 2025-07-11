@@ -261,9 +261,46 @@ html[data-header-transparent] header.site-header .page-link {
   font-style: normal;
 }
 
+@font-face {
+  font-family: "CrimsonPro";
+  src: url("/assets/css/fonts/CrimsonPro-Medium.otf") format("opentype");
+  font-style: normal;
+  font-weight: 400; // 使用 400，對應 normal
+
+  /* * 字體度量覆寫 (Font Metrics Overrides)
+   * 這是調整字體視覺對齊的關鍵。數值需要靠經驗與視覺來回微調。
+   * ascent: 從基線到頂部的距離
+   * descent: 從基線到底部的距離
+   * line-gap: 行與行之間的額外間距
+   *
+   * 我們的目標是讓 Crimson Pro 的垂直佔用空間接近 GenRyuMin。
+   * 以下數值是一個建議的起點，您可以自行增減 5% 來觀察變化。
+   */
+  ascent-override: 130%;   // 稍微增加頂部空間，讓大寫字母看起來與漢字同高
+  descent-override: 35%;  // 增加底部空間，避免 p, y, g 等下伸部碰到標點
+  line-gap-override: normal; // 通常先保持 normal 或 0%
+}
+
+
+
+@font-face {
+  font-family: 'Zen Maru Gothic Medium';
+  src: url('/assets/css/fonts/ZenMaruGothic-Medium.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'jfhuninn';
+  src: url("/assets/css/fonts/jfopenhuninn2.1.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* --- Apply Fonts with High Specificity --- */
 body, p, li {
-  font-family:  "GenRyuMin2", "Helvetica", "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif  !important;
+  font-family:  "CrimsonPro","GenRyuMin2", "Helvetica", "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif  !important;
   font-size: 20px !important;
   line-height: 2;
   color: #1f1f1f;
