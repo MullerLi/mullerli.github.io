@@ -166,8 +166,12 @@ a:hover {
 .site-header-inner {
   position: relative;
 }
-/* 隱藏原有的橫向導覽連結（.page-link） */
+/* 隱藏原有的橫向導覽連結與內建漢堡按鈕 */
 .page-link {
+  display: none !important;
+}
+label[for="nav-trigger"],
+.menu-icon {
   display: none !important;
 }
 
