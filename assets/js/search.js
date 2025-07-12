@@ -33,5 +33,19 @@ async function loadSearch() {
     });
   });
 }
+function initSearchToggle() {
+  const container = document.querySelector('.search-container');
+  const icon = document.getElementById('search-icon');
+  const input = document.getElementById('search-input');
+  if (!container || !icon || !input) return;
 
-document.addEventListener('DOMContentLoaded', loadSearch);
+  icon.addEventListener('click', function () {
+    container.classList.add('active');
+    input.focus();
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  initSearchToggle();
+  loadSearch();
+});
