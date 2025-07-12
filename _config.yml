@@ -145,6 +145,7 @@ header_pages:
   - archives.html
   - categories.html
   - tags.html
+  - search.html
   
 
 # Layout configuration defaults
