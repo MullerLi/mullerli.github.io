@@ -31,6 +31,7 @@
               </svg>
             </span>
           </label>
+
           <div class="trigger">
             {%- for path in page_paths -%}
               {%- assign my_page = site.pages | where: "path", path | first -%}
@@ -52,8 +53,16 @@
             {%- endif -%}
           </div>
         </nav>
+          <button class="search-toggle" id="search-toggle" aria-label="搜尋">
+    <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+      <circle cx="9" cy="9" r="7" stroke="#444" stroke-width="2"/>
+      <line x1="15.2" y1="15.2" x2="18" y2="18" stroke="#444" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  
       {%- endif -%}
       <!-- hambuger animation -->
+
 <div class="menu-toggle" id="menu-toggle">
   <span></span>
   <span></span>
@@ -61,6 +70,7 @@
 </div>
 
 <nav class="menu-wrapper" id="menu-wrapper">
+  
   <ul>
     <li><a href="/about/">關於我</a></li>
     <li><a href="/about_en">About</a></li>
@@ -109,3 +119,68 @@
   }
   document.addEventListener('DOMContentLoaded', initHeader);
 </script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    var searchBtn = document.getElementById("search-toggle");
+    var searchForm = document.getElementById("header-search-form");
+    var searchInput = searchForm.querySelector("input");
+
+    // 點擊放大鏡 icon 顯示/隱藏搜尋框
+    searchBtn.addEventListener("click", function(e){
+      e.stopPropagation();
+      if(searchForm.style.display === "block"){
+        searchForm.style.display = "none";
+      } else {
+        searchForm.style.display = "block";
+        searchInput.focus();
+      }
+    });
+
+    // 點擊頁面其他地方，收起搜尋框
+    document.addEventListener("click", function(e){
+      if(!searchForm.contains(e.target) && e.target !== searchBtn){
+        searchForm.style.display = "none";
+      }
+    });
+
+    // 送出搜尋自動收起（可選）
+    searchForm.addEventListener("submit", function(){
+      searchForm.style.display = "none";
+    });
+  });
+</script>
+
+<form class="header-search-form" id="header-search-form">
+  <input type="text" name="q" placeholder="搜尋..." autocomplete="off" />
+</form>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+  var searchBtn = document.getElementById("search-toggle");
+  var searchForm = document.getElementById("header-search-form");
+  var searchInput = searchForm.querySelector("input");
+
+  // 點擊放大鏡 icon 顯示/隱藏搜尋框
+  searchBtn.addEventListener("click", function(e){
+    e.stopPropagation();
+    searchForm.classList.toggle("show");
+    if(searchForm.classList.contains("show")) {
+      searchInput.focus();
+    }
+  });
+
+  // 點擊頁面其他地方收起搜尋框
+  document.addEventListener("click", function(e){
+    if(!searchForm.contains(e.target) && e.target !== searchBtn){
+      searchForm.classList.remove("show");
+    }
+  });
+
+  // 送出搜尋自動收起（可選）
+  searchForm.addEventListener("submit", function(){
+    searchForm.classList.remove("show");
+  });
+});
+</script>
+

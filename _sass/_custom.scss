@@ -163,6 +163,9 @@ a:hover {
   max-height: 500px;
   opacity: 1;
 }
+/* -----------------------------
+   Header – 全站透明 & 捲動收合
+   ----------------------------- */
 .site-header-inner {
   position: relative;
 }
@@ -445,4 +448,57 @@ h6.page-banner-subheading {
     font-size: 16px !important;
     /* 其他想針對手機調整的屬性可加在這 */
   }
+}
+
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 80px; /* 與漢堡icon距離，可調整 */
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.header-search-form {
+  margin-top: 10px;
+  text-align: right;
+  animation: fadein 0.2s;
+}
+.header-search-form input {
+  font-size: 1rem;
+  padding: 4px 12px;
+  border-radius: 2em;
+  border: 1px solid #aaa;
+  width: 160px;
+  outline: none;
+}
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px);}
+  to   { opacity: 1; transform: translateY(0);}
+}
+.header-search-form {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.3s, transform 0.3s;
+  position: absolute;
+  top: 60px;      /* 根據你的 header 高度微調 */
+  right: 24px;    /* 根據需求調整靠右距離 */
+  z-index: 1000;
+  background: white;
+  border-radius: 2em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  padding: 8px 16px;
+}
+
+.header-search-form.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
