@@ -55,30 +55,3 @@ $selection-background-color: unquote("{{ site.selection.background_color }}");
 @import "variables";  // 1. 先載你自己的變數
 @import "yat";        // 2. 載整包 Yat（它會用到剛剛那組新變數）
 @import "custom";     // 3. 最後再用 custom 蓋細節
-
-/* Hide any potential hr within the banner */
-.page-banner hr {
-  display: none !important;
-}
-
-/* Hide pseudo-elements on banner headings/subheadings */
-.page-banner-heading::before,
-.page-banner-heading::after,
-.page-banner-subheading::before,
-.page-banner-subheading::after {
-  content: none !important;
-  border: none !important;
-}
-
-/* Ensure no borders on the headings/subheadings themselves */
-.page-banner-heading,
-.page-banner-subheading {
-  border: none !important;
-  box-shadow: none !important;
-  background: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  font-weight: normal !important;
-  font-size: inherit !important;
-  color: inherit !important;
-}

@@ -245,8 +245,15 @@ html[data-header-transparent] header.site-header .page-link {
 }
 
 @font-face {
-  font-family: "Muli";
-  src: url("/assets/css/fonts/Mulish-SemiBold.ttf") format("truetype");
+  font-family: "PoppinsM";
+  src: url("/assets/css/fonts/Poppins-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/assets/css/fonts/Poppins-ExtraLight.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -259,33 +266,12 @@ html[data-header-transparent] header.site-header .page-link {
 }
 
 @font-face {
-  font-family: 'jfhuninn';
-  src: url("/assets/css/fonts/jfopenhuninn2.1.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: "CrimsonPro";
-  src: url("/assets/css/fonts/CrimsonPro-Medium.otf") format("opentype");
+  src: url("/assets/css/fonts/CrimsonPro-Regular.otf") format("opentype");
   font-style: normal;
-  font-weight: 400; // 使用 400，對應 normal
-
-  /* * 字體度量覆寫 (Font Metrics Overrides)
-   * 這是調整字體視覺對齊的關鍵。數值需要靠經驗與視覺來回微調。
-   * ascent: 從基線到頂部的距離
-   * descent: 從基線到底部的距離
-   * line-gap: 行與行之間的額外間距
-   *
-   * 我們的目標是讓 Crimson Pro 的垂直佔用空間接近 GenRyuMin。
-   * 以下數值是一個建議的起點，您可以自行增減 5% 來觀察變化。
-   */
-  ascent-override: 130%;   // 稍微增加頂部空間，讓大寫字母看起來與漢字同高
-  descent-override: 35%;  // 增加底部空間，避免 p, y, g 等下伸部碰到標點
-  line-gap-override: normal; // 通常先保持 normal 或 0%
+  font-weight: 400;
+  size-adjust: 120%;
 }
-
-
 
 @font-face {
   font-family: 'Zen Maru Gothic Medium';
@@ -294,10 +280,9 @@ html[data-header-transparent] header.site-header .page-link {
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'jfhuninn';
-  src: url("/assets/css/fonts/jfopenhuninn2.1.ttf") format("truetype");
+  font-family: 'ZenMaruGothic-Light';
+  src: url('/assets/css/fonts/ZenMaruGothic-Light.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -305,13 +290,13 @@ html[data-header-transparent] header.site-header .page-link {
 /* --- Apply Fonts with High Specificity --- */
 body, p, li {
   font-family:  "CrimsonPro","GenRyuMin2", "Helvetica", "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif  !important;
-  font-size: 20px !important;
-  line-height: 1.5;
+  font-size: 20px;
+  line-height: 2.0;
   color: #1f1f1f;
 }
 
 h1, h2, h3, h4, h5, h6, .pagination .post-link {
-  font-family: "Muli", "Cambria", "GenSekiGothic2", "Noto Sans TC", sans-serif !important;
+  font-family: "PoppinsM", "Cambria", "GenSekiGothic2", "Noto Sans TC", sans-serif !important;
   color: #1f1f1f;
 }
 
@@ -340,10 +325,12 @@ table {
   font-size: 28px !important;
 }
 
-th, td {
-  text-align: left !important;
-  padding-left: 1 !important;
-  
+table th, table td {
+    text-align: left !important;
+    background-color: #e5e5e5;
+    border: 1px solid lightgray;
+    border-bottom-color: #bebebe;
+    padding: 10px 15px;
 }
 
 .post-nav {
@@ -396,6 +383,56 @@ th, td {
     font-weight: 400;
     letter-spacing: -1px;
     transition: 0.1s filter color;
-    font-family: "jfhuninn", sans-serif;
+    font-family: "Zen Maru Gothic Medium", sans-serif;
 }
-/* --- End of content from override.css --- */
+/* Banner Headings and Subheadings */
+.page-banner hr {
+  display: content;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(90px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1.page-banner-heading,
+h2.page-banner-heading,
+h3.page-banner-heading,
+h4.page-banner-heading,
+h5.page-banner-heading,
+h6.page-banner-heading,
+h1.page-banner-subheading,
+h2.page-banner-subheading,
+h3.page-banner-subheading,
+h4.page-banner-subheading,
+h5.page-banner-subheading,
+h6.page-banner-subheading {
+  font-family: "Poppins", "ZenMaruGothic-Light" !important;
+  font-size: 80px !important;
+  color: #7a7976 !important;
+  font-weight: 400 !important;
+  letter-spacing: -1px !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
+  animation-fill-mode: both;
+  animation-delay: 0.5s; /* 延遲0.5秒後才開始動畫 */
+}
+
+/* 隱藏偽元素 */
+.page-banner-heading::before,
+.page-banner-heading::after,
+.page-banner-subheading::before,
+.page-banner-subheading::after {
+  content: none !important;
+  border: none !important;
+}

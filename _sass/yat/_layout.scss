@@ -517,9 +517,6 @@ html {
   }
 
   /* ---------- Paragraph & Horizontal rule ---------- */
-  p {
-    margin-bottom: 24px;
-  }
 
   hr {
     height: 1px;
@@ -527,7 +524,6 @@ html {
     border: none;
     margin: 60px 0;
   }
-
 
     img, svg, iframe {
       margin-left: auto;
@@ -539,20 +535,6 @@ html {
       max-height: 50vh;
     }
 
-    h2, h3, h4, h5, h6 {
-      margin: 60px 0 19px;
-    }
-
-    p {
-      margin-bottom: 24px;
-    }
-
-    hr {
-      height: 1px;
-      background-color: #ebebeb;
-      border: none;
-      margin: 60px 0;
-    }
   }
 
   .post-related {
