@@ -415,7 +415,7 @@ h5.page-banner-subheading,
 h6.page-banner-subheading {
   font-family: "Poppins", "ZenMaruGothic-Light" !important;
   font-size: 80px !important;
-  color: #7a7976 !important;
+  color: #000000 !important;
   font-weight: 400 !important;
   letter-spacing: -1px !important;
   border: none !important;
@@ -423,6 +423,8 @@ h6.page-banner-subheading {
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
+  text-align:center;
+  line-height: 1.0 !important;
   animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: both;
   animation-delay: 0.5s; /* 延遲0.5秒後才開始動畫 */
@@ -435,4 +437,12 @@ h6.page-banner-subheading {
 .page-banner-subheading::after {
   content: none !important;
   border: none !important;
+}
+
+@media (max-width: 600px) {
+  .page-banner-heading,
+  .page-banner-subheading {
+    font-size: 16px !important;
+    /* 其他想針對手機調整的屬性可加在這 */
+  }
 }
