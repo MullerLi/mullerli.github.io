@@ -1,24 +1,23 @@
 /* search-boot.mjs ── 繁中斷詞 + Lunr 搜尋（純 ESM，一份檔案） */
 
 /* 1. 只載一次 jieba-zh-tw  (+esm 版會自動解決相對 import) */
-import jieba from 'https://cdn.jsdelivr.net/npm/jieba-zh-tw@1.0.12/+esm';
 
 /* 2. Lunr 仍建議用 UMD <script> 方式載入（最穩定） */
 /*    如果你確實想全部用 ES module，也可以： */
 // import lunr from 'https://cdn.jsdelivr.net/npm/lunr@2.3.9/+esm';
 
 /* ---- jieba 初始化 ---- */
-await jieba.load();                     // 下載 + 解析字典
+await window.jieba.load();                     // 下載 + 解析字典
 
 /* ---- 取文章資料 ---- */
 const docs = await (await fetch('/assets/js/search-data.json')).json();
 
 /* ---- 中文斷詞器 ---- */
-const tokenizer = str => jieba.cutForSearch(String(str || ''));
+const tokenizer = str => window.jieba.cutForSearch(String(str || ''));
 
 /* ---- Lunr 建索引 ---- */
-lunr.tokenizer.register('zh', tokenizer);
-const idx = lunr(function () {
+window.lunr.tokenizer.register('zh', tokenizer);
+const idx = window.lunr(function () {
   this.tokenizerFn = tokenizer;
   this.ref('url');
   this.field('title',   { boost: 10 });
