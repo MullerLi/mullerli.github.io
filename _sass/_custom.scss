@@ -442,11 +442,37 @@ h6.page-banner-subheading {
   border: none !important;
 }
 
-@media (max-width: 600px) {
-  .page-banner-heading,
-  .page-banner-subheading {
-    font-size: 16px !important;
-    /* 其他想針對手機調整的屬性可加在這 */
+@media (max-width: 768px) {
+  h1.page-banner-heading,
+  h2.page-banner-heading,
+  h3.page-banner-heading,
+  h4.page-banner-heading,
+  h5.page-banner-heading,
+  h6.page-banner-heading,
+  h1.page-banner-subheading,
+  h2.page-banner-subheading,
+  h3.page-banner-subheading,
+  h4.page-banner-subheading,
+  h5.page-banner-subheading,
+  h6.page-banner-subheading {
+    font-size: 50px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1.page-banner-heading,
+  h2.page-banner-heading,
+  h3.page-banner-heading,
+  h4.page-banner-heading,
+  h5.page-banner-heading,
+  h6.page-banner-heading,
+  h1.page-banner-subheading,
+  h2.page-banner-subheading,
+  h3.page-banner-subheading,
+  h4.page-banner-subheading,
+  h5.page-banner-subheading,
+  h6.page-banner-subheading {
+    font-size: 35px !important;
   }
 }
 
