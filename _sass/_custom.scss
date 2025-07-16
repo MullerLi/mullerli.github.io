@@ -320,21 +320,44 @@ code, pre {
   font-size: 18px !important;
 }
 
-table {
-  color: #1f1f1f;
+/* ===== 極簡黑線表格 ===== */
+table.simple-table {                 /* ← 依需要改成全站 table 也行 */
+  width: 100%;
+  border-collapse: collapse;
+  color: #000;
 }
 
-.pagination .post-link {
-  font-size: 28px !important;
+/* 儲存格：黑框＋透明底 */
+table.simple-table th,
+table.simple-table td {
+  border: 1px solid #000;
+  padding: 10px 15px;
+  background: transparent;           /* 透明，露出頁面底色 */
+  text-align: left;
 }
 
-table th, table td {
-    text-align: left !important;
-    background-color: #e5e5e5;
-    border: 1px solid lightgray;
-    border-bottom-color: #bebebe;
-    padding: 10px 15px;
+/* 表頭微灰底做區隔 */
+table.simple-table th {
+  font-weight: 600;
+  background: rgba(0,0,0,.04);
 }
+
+/* 列懸停：直接改 <td>/<th> 背景，確保能蓋掉原本顏色 */
+table.simple-table tbody tr:hover > td,
+table.simple-table tbody tr:hover > th {
+  background: rgba(0,0,0,.06);
+}
+
+/* （可選）整張表外框 */
+table.simple-table {
+  border: 1px solid #000;
+}
+
+/* 滑鼠懸停列：微灰底，方便閱讀 */
+  tbody tr:hover {
+    background: #ffffff;
+  }
+
 
 .post-nav {
   display: flex;
