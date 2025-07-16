@@ -292,7 +292,8 @@ html[data-header-transparent] header.site-header .page-link {
 
 /* --- Apply Fonts with High Specificity --- */
 body, p, li {
-  font-family:  "CrimsonPro","GenRyuMin2", "Helvetica", "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif  !important;
+  font-family:  "CrimsonPro","GenRyuMin2", "Helvetica",
+   "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
   font-size: 20px;
   line-height: 2.0;
   color: #1f1f1f;
@@ -303,14 +304,16 @@ h1, h2, h3, h4, h5, h6, .pagination .post-link {
   color: #1f1f1f;
 }
 
-h1 { font-size: 36px !important; }
-h2 { font-size: 30px !important; }
-h3 { font-size: 25px !important; }
-h4 { font-size: 22px !important; }
-h5, h6 { font-size: 20px !important; }
+h1 { font-size: 36px; }
+h2 { font-size: 30px; }
+h3 { font-size: 25px; }
+h4 { font-size: 22px; }
+h5, h6 { font-size: 20px; }
 
 
-blockquote {
+blockquote,
+blockquote p,
+blockquote li {
   font-family: "Iansui" !important;
   font-size: 20px !important;
 }
