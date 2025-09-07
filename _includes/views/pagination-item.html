@@ -21,9 +21,18 @@
 {%- include functions.html func='get_value' -%}
 {%- assign default_image = return -%}
 
+{%- assign content_parts = post.content | split: '<img src="' -%}
+{%- if content_parts.size > 1 -%}
+  {%- assign src_parts = content_parts[1] | split: '"' -%}
+  {%- assign first_image_in_content = src_parts[0] -%}
+{%- else -%}
+  {%- assign first_image_in_content = nil -%}
+{%- endif -%}
+
 {%- assign post_image = post.excerpt_image
   | default: post.banner.image
   | default: post.banner
+  | default: first_image_in_content
   | default: default_image
   | default: '/assets/images/default-image.jpeg' -%}
 
@@ -44,7 +53,7 @@
   <div class="post-excerpt">
     {%- if post_image and post_image != 'NO_EXCERPT_IMAGE' -%}
     <a  class="post-image" href="{{ post_url }}" style="flex: 0 1 {{ image_width }}">
-      <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}"></div>
+      <div style="background-image: url({{ post_image | relative_url }}); height: {{ image_height }}; background-size: contain; background-repeat: no-repeat; background-position: center;"></div>
     </a>
     {%- endif -%}
     <a class="post-text" href="{{ post_url }}">
