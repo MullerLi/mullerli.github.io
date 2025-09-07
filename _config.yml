@@ -234,6 +234,7 @@ utterances:
   theme: github-light               # ← 固定一種佈景
 
 # Build settings
+future: true
 # highlighter: none
 markdown: kramdown
 kramdown:

@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-noto-sans@0.0.72/index.min.css">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <script src="{{ "/assets/js/main.js" | relative_url }}"></script>
+  <meta name="baseurl" content="{{ site.baseurl | default: '' }}">
+  <script defer src="https://cdn.jsdelivr.net/npm/jieba-zh-tw/dist/jieba.umd.min.js"></script>
+  <script type="module" defer src="{{ '/assets/js/search-boot.mjs' | relative_url }}"></script>
   {%- feed_meta -%}
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
   {%- include extensions/google-analytics.html -%}

@@ -1,13 +1,17 @@
+---
+layout: null
+permalink: /assets/js/search-data.json
+---
+
 [
-{% for post in site.posts %}
+  {%- assign pages = site.pages | where_exp: "p", "p.search != false" -%}
+  {%- assign docs  = pages | concat: site.posts -%}
+  {%- for d in docs -%}
   {
-    "title": {{ post.title | jsonify }},
-    "url":   {{ post.url   | relative_url | jsonify }},
-    "date":  {{ post.date  | date: "%Y-%m-%d" | jsonify }},
-    "content": {{ post.content
-                  | strip_html
-                  | strip_newlines
-                  | jsonify }}
+    "title": {{ d.title | default: d.name | jsonify }},
+    "url": {{ d.url | relative_url | jsonify }},
+    "content": {{ d.content | strip_html | jsonify }},
+    "tags": {{ d.tags | default: empty | jsonify }}
   }{% unless forloop.last %},{% endunless %}
-{% endfor %}
+  {%- endfor -%}
 ]

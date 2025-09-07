@@ -416,7 +416,7 @@ table.simple-table {
 }
 /* Banner Headings and Subheadings */
 .page-banner hr {
-  display: content;
+  display: contents;
 }
 
 @keyframes fadeInUp {
@@ -452,7 +452,7 @@ h6.page-banner-subheading {
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  text-align:center;
+  text-align: center;
   line-height: 1.0 !important;
   animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: both;
@@ -553,4 +553,182 @@ h6.page-banner-subheading {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
+}
+
+/* === Minimal Search UI (fixed/beautified) ================================== */
+
+.search-overlay {
+  /* layout */
+  position: fixed;
+  inset: 0;                /* top/right/bottom/left: 0 */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10vh 2rem;
+
+  /* visuals */
+  background: rgba(0, 0, 0, .12);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.search-overlay.hidden {
+  display: none;
+}
+
+.search-panel {
+  /* layout */
+  position: relative;
+  width: min(500px, 100%);
+  padding: 1rem 1rem 0;
+
+  /* visuals */
+  background: rgba(255, 255, 255, .88);
+  border: 1px solid transparent; /* 看起來無框線 */
+  border-radius: 12px;
+  box-shadow: none;
+}
+
+/* ── 讓關閉鈕與輸入框同列並水平對齊 ───────────────────────────── */
+.search-header{
+  display: flex;
+  align-items: center;    /* 與輸入文字垂直置中 → 視覺上同一水平線 */
+  gap: .5rem;
+  padding-right: 0;       /* 覆蓋先前為絕對定位預留的空間 */
+}
+
+.search-header #search-input{
+  flex: 1;                /* 輸入框吃滿寬度，關閉鈕貼右側 */
+}
+
+/* 隱藏 type=search 內建清除鈕（Chrome/Edge/Safari） */
+#search-input[type="search"]::-webkit-search-cancel-button,
+#search-input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
+}
+
+/* 舊 Edge/IE（保險） */
+#search-input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* 輸入框：極簡、無邊框 */
+#search-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: .9rem 1.1rem;
+}
+
+#search-results {
+  max-height: 60vh;
+  overflow: auto;
+  margin-top: .75rem;
+}
+
+/* 結果項目：極簡 hover */
+.search-item {
+  border-top: 1px solid rgba(0, 0, 0, .06);
+}
+.search-item:hover {
+  background: rgba(0, 0, 0, .035);
+}
+
+/* 關閉按鈕（右上角） */
+#search-close {
+  position: absolute;
+  top: .6rem;
+  right: .6rem;
+  appearance: none;
+  background: transparent;
+  border: 1px solid transparent;
+  box-shadow: none;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: .35rem .5rem;
+  opacity: .7;
+}
+#search-close:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, .04);
+}
+
+/* 零碎排版 */
+.search-title { font-weight: 600; }
+.search-snippet { font-size: .9rem; opacity: .85; margin-top: .25rem; }
+mark { background: #ffe58f; padding: 0 .1em; }
+
+
+/* === Search panel bigger & readable ======================================= */
+/* 可調整變數：一次控制整體尺寸 */
+:root{
+  --search-width: min(720px, 96vw);
+  --search-input-font: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
+  --search-title-font: clamp(1.2rem, 0.95rem + 0.5vw, 1.3rem);
+  --search-snippet-font: clamp(0.95rem, 0.9rem + 0.4vw, 1.1rem);
+}
+
+.search-panel{
+  width: var(--search-width);
+  padding: 1.25rem 1.25rem 0; /* 四邊留白更寬 */
+}
+
+/* 頂部列：輸入框與關閉鈕同列置中 */
+.search-header{
+  display: flex;
+  align-items: center;
+  gap: .75rem;              /* 元件間距略放大 */
+  padding-right: 0;
+}
+
+/* 輸入框放大、增加可點擊高度 */
+.search-header #search-input{
+  flex: 1;
+  font-size: var(--search-input-font);
+  padding: 1rem 1.25rem;    /* 左右與上下內距加大 */
+  min-height: 52px;         /* 觸控友善 */
+  line-height: 1.35;
+}
+
+/* 關閉鈕同步放大（仍極簡） */
+.search-panel #search-close{
+  position: static !important;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  min-height: 42px;
+  padding: .4rem .65rem;
+  font-size: 20px;
+}
+
+/* 列表與字級放大 */
+#search-results{
+  max-height: 70vh;
+  margin-top: 1rem;
+}
+.search-item{
+  padding: 1rem 1.25rem;
+}
+.search-title{
+  font-weight: 600;
+  font-size: var(--search-title-font);
+}
+.search-snippet{
+  margin-top: .35rem;
+  font-size: var(--search-snippet-font);
+  opacity: .85;
+}
+
+/* 手機微調：更寬版面、較高輸入框 */
+@media (max-width: 480px){
+  .search-panel{ width: min(94vw, 720px); }
+  .search-header #search-input{ min-height: 48px; }
 }

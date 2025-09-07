@@ -23,5 +23,15 @@
 
     {%- include views/footer.html -%}
 
+<div id="search-overlay" class="search-overlay hidden" aria-hidden="true">
+  <div class="search-panel" role="dialog" aria-modal="true" aria-labelledby="search-title">
+    <div class="search-header">
+      <input id="search-input" type="search" placeholder="搜尋文章與頁面…" autocomplete="off" />
+      <button id="search-close" aria-label="關閉">×</button>
+    </div>
+    <div id="search-results" class="search-results" role="listbox" aria-live="polite"></div>
+  </div>
+</div>
+
   </body>
 </html>

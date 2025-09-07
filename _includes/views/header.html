@@ -1,4 +1,3 @@
-
 {%- include functions.html func='get_banner' -%}
 
 {%- include functions.html func='log' level='debug' msg='Get header_transparent value' -%}
@@ -53,7 +52,7 @@
             {%- endif -%}
           </div>
         </nav>
-          <button class="search-toggle" id="search-toggle" aria-label="搜尋">
+          <button class="search-toggle" id="search-toggle" data-search-open aria-label="搜尋">
     <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
       <circle cx="9" cy="9" r="7" stroke="#444" stroke-width="2"/>
       <line x1="15.2" y1="15.2" x2="18" y2="18" stroke="#444" stroke-width="2" stroke-linecap="round"/>
@@ -119,77 +118,3 @@
   }
   document.addEventListener('DOMContentLoaded', initHeader);
 </script>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function(){
-    var searchBtn = document.getElementById("search-toggle");
-    var searchForm = document.getElementById("header-search-form");
-    var searchInput = searchForm.querySelector("input");
-
-    // 點擊放大鏡 icon 顯示/隱藏搜尋框
-    searchBtn.addEventListener("click", function(e){
-      e.stopPropagation();
-      if(searchForm.style.display === "block"){
-        searchForm.style.display = "none";
-      } else {
-        searchForm.style.display = "block";
-        searchInput.focus();
-      }
-    });
-
-    // 點擊頁面其他地方，收起搜尋框
-    document.addEventListener("click", function(e){
-      if(!searchForm.contains(e.target) && e.target !== searchBtn){
-        searchForm.style.display = "none";
-      }
-    });
-
-    // 送出搜尋自動收起（可選）
-    searchForm.addEventListener("submit", function(){
-      searchForm.style.display = "none";
-    });
-  });
-</script>
-
-<div class="header-search-form" id="header-search-container">
-  <input type="text" placeholder="搜尋..." autocomplete="off" id="search-input" />
-  <ul id="search-results" style="display:none;"></ul>
-</div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function(){
-  var searchBtn = document.getElementById("search-toggle");
-  var searchForm = document.getElementById("header-search-form");
-  var searchInput = searchForm.querySelector("input");
-
-  // 點擊放大鏡 icon 顯示/隱藏搜尋框
-  searchBtn.addEventListener("click", function(e){
-    e.stopPropagation();
-    searchForm.classList.toggle("show");
-    if(searchForm.classList.contains("show")) {
-      searchInput.focus();
-    }
-  });
-
-  // 點擊頁面其他地方收起搜尋框
-  document.addEventListener("click", function(e){
-    if(!searchForm.contains(e.target) && e.target !== searchBtn){
-      searchForm.classList.remove("show");
-    }
-  });
-
-  // 送出搜尋自動收起（可選）
-  searchForm.addEventListener("submit", function(){
-    searchForm.classList.remove("show");
-  });
-});
-</script>
-<!-- Lunr 核心 -->
-<script src="/assets/js/lunr.min.js"></script>
-<script type="module" src="/assets/js/search-boot.mjs"></script>
-
-<!-- 
-<div class="search-container">
-  <input type="text" id="search-input" placeholder="輸入關鍵字…" autocomplete="off">
-  <ul id="search-results" style="display:none;"></ul>
-</div> -->
