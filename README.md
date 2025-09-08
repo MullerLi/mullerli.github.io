@@ -1,4 +1,4 @@
-# Levi 食米研究 | Personal Blog
+# 李誠紘的食米研究室 | Personal Blog
 
 It is my personal blog.
 
@@ -30,7 +30,6 @@ This blog is based on the following:
 ## ✅ To Do
 
 - [ ] Herp Banner in Mobile.
-- [ ] English font improvement.
 
 _Last updated: 2025-09-07_
 
