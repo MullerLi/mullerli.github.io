@@ -1,6 +1,5 @@
 ---
 layout: post
-categories: Cultivation
 date: 2025-09-08 14:00:00 +0800
 last_modified_at: 2025-09-08 14:00:00 +0800
 categories: ["Rice", "Quality", "Cultivation"]
@@ -9,7 +8,7 @@ title: 水稻「中暑」白堊質多？水稻專家推薦「這一招」緩解 
 subtitle: 高溫施用氮素肥，緩解白堊質生成 #文章副標題(Yat支援)
 toc: true
 toc_sticky: true
-published: TRUE
+published: true
 description: "夏季高溫使稻米易出現白堊質，影響外觀與碎米率。透過調整氮肥時機與用量，於抽穗開花後7日內補追氮以提升容積重與完整米率。"
 ---
 

@@ -44,7 +44,7 @@ author: 李誠紘 | Levi
 copyright: "© 2024-{currentYear} {author} All rights reserved."
 
 description: >- # this means to ignore newlines until "baseurl:"
-  Rice Quality 稻米品質研究文獻選讀，無論您是追求卓越的碾米廠業者、致力於食農教育的推廣者，或是學術領域的研究人員，都能在此獲得有深度的實用資訊。
+  Rice Quality 稻米品質研究文獻選讀與資料分享，碾米廠業者、食農教育推廣者，或是研究人員，都能在此獲得實用資訊。
 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mullerli.github.io" # the base hostname & protocol for your site
