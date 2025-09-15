@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 李誠紘的食米研究室
+title: 誠紘的食米研究
 email: lemax112@gmail.com
 author: 李誠紘 | Levi
 
