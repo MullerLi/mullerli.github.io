@@ -226,81 +226,25 @@ html[data-header-transparent] header.site-header .page-link {
 */
 
 /* --- Font Definitions --- */
+/* All fonts are now loaded via Google Fonts in _includes/custom-head.html */
 @font-face {
-  font-family: "GenRyuMin2";
-  src: url("/assets/css/fonts/GenRyuMin2TW-M.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "GenSekiGothic2";
-  src: url("/assets/css/fonts/GenSekiGothic2TW-R.otf") format("opentype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Iansui";
-  src: url("/assets/css/fonts/Iansui-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "PoppinsM";
-  src: url("/assets/css/fonts/Poppins-Medium.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "Poppins";
-  src: url("/assets/css/fonts/Poppins-ExtraLight.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("/assets/css/fonts/JetBrainsMono-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: normal;
-}
-
-@font-face {
-  font-family: "CrimsonPro";
-  src: url("/assets/css/fonts/CrimsonPro-Regular.otf") format("opentype");
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Crimson Pro Adjusted";
+  src: local("Crimson Pro");
   size-adjust: 120%;
-}
-
-@font-face {
-  font-family: 'Zen Maru Gothic Medium';
-  src: url('/assets/css/fonts/ZenMaruGothic-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'ZenMaruGothic-Light';
-  src: url('/assets/css/fonts/ZenMaruGothic-Light.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
 }
 
 /* --- Apply Fonts with High Specificity --- */
 body, p, li {
-  font-family:  "CrimsonPro","GenRyuMin2", "Helvetica",
+  font-family:  "Crimson Pro Adjusted", "Crimson Pro","GenRyuMinTW", "Helvetica",
    "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
   font-size: 20px;
+  font-weight: 500;
   line-height: 2.0;
   color: #1f1f1f;
 }
 
 h1, h2, h3, h4, h5, h6, .pagination .post-link {
-  font-family: "PoppinsM", "Cambria", "GenSekiGothic2", "Noto Sans TC", sans-serif !important;
+  font-family: "Poppins", "Cambria", "GenSekiGothicTW", "Noto Sans TC", sans-serif !important;
   color: #1f1f1f;
 }
 
@@ -409,10 +353,10 @@ table.simple-table {
 
 .site-brand .site-brand-inner {
     font-size: 20px;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: -1px;
     transition: 0.1s filter color;
-    font-family: "Zen Maru Gothic Medium", sans-serif;
+    font-family: "Zen Maru Gothic", sans-serif;
 }
 /* Banner Headings and Subheadings */
 .page-banner hr {
@@ -442,10 +386,10 @@ h3.page-banner-subheading,
 h4.page-banner-subheading,
 h5.page-banner-subheading,
 h6.page-banner-subheading {
-  font-family: "Poppins", "ZenMaruGothic-Light" !important;
+  font-family: "Poppins", "Zen Maru Gothic" !important;
   font-size: 80px !important;
   color: #000000 !important;
-  font-weight: 400 !important;
+  font-weight: 200 !important;
   letter-spacing: -1px !important;
   border: none !important;
   box-shadow: none !important;

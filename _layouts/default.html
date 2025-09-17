@@ -15,7 +15,7 @@
 
     {%- include extensions/click-to-top.html -%}
 
-    <main class="page-content" aria-label="Content">
+    <main class="page-content emfont-GenRyuMinTW" aria-label="Content">
       <div class="wrapper">
         {{ content }}
       </div>
@@ -32,6 +32,16 @@
     <div id="search-results" class="search-results" role="listbox" aria-live="polite"></div>
   </div>
 </div>
+
+<script>
+  // Dynamically add class to headings for emfont
+  var headings = document.querySelectorAll('.page-content h1, .page-content h2, .page-content h3, .page-content h4, .page-content h5, .page-content h6');
+  for (var i = 0; i < headings.length; i++) {
+    headings[i].classList.add('emfont-GenSekiGothicTW');
+  }
+</script>
+<script src="https://font.emtech.cc/emfont.js"></script>
+<script>emfont.init({ autoApply: false });</script>
 
   </body>
 </html>
