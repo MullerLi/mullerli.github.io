@@ -19,15 +19,15 @@ CNS稻米標準將包裝米分為秈米、稉米、糯米。糯米指的是稻�
 直鏈澱粉和支鏈澱粉為碳水化合物，皆是由α葡萄糖單元(α-D-glucose units)，由澱粉合成酶、支鏈酶、去分支酶形成。直鏈澱粉的結構猶如直條義大利麵、支鏈澱粉則像樹枝一樣具有許多分支。
 
 澱粉的六級結構
-![IMG1]({{'/assets/images/260203starch.JPG' | relative_url}})
+![澱粉六級結構]({{'/assets/images/260203starch.jpg' | relative_url}})
 cited from Li, H, Gilbert, R G, 2018. Starch molecular structure the basis for an improved
 
 
 ## 不太黏的支鏈澱粉?
 雖然直鏈澱粉含量接近，但有些人會覺得秈糯較硬和稉糯較軟。細究其分子機制，發現不同品種支鏈澱粉的分支，鏈長的部分有長有短，長鏈支鏈澱粉性質與直鏈澱粉接近，不易溶出，將使口感偏硬與不黏；短鏈容易在煮飯時溶出，形成光滑外觀與軟黏質地。
 
-支鏈澱粉的鍊長大小，不只影響硬度，更可能影響血糖指數。
-https://biomedres.us/fulltexts/BJSTR.MS.ID.003316.php
+支鏈澱粉的鍊長大小，不只影響硬度，更可能影響[血糖指數](https://biomedres.us/fulltexts/BJSTR.MS.ID.003316.php)。
+
 
 
 糯性的形成是因為稻米中的Waxy基因發生隱性突變，直鏈澱粉形成功能受損，導致葡萄糖單元主要形成支鏈澱粉。近年由於氣候變遷，充實期溫度增加，觀察到Waxy編碼形成的GBSS mRNA表現量減少；同時，可能使中長鏈支鏈澱粉比例增加、短鏈比例下降的方向移動，影響米飯的口感質地。
@@ -46,10 +46,9 @@ https://biomedres.us/fulltexts/BJSTR.MS.ID.003316.php
 例如義大利的燉飯米，即屬於稉型中直鏈澱粉含量稻米，因為稻米偏大顆，商品分類屬於「中粒米」，具有乾爽硬實的口感。適合烹煮具有「al dente」彈牙口感的義大利燉飯，特別強調「外軟內硬」的米芯，與我國習慣食用的中式炒飯、燴飯等，差異很大。
 
 世界各國對食米的偏好
-![IMG3]({{'/assets/images/250203worldrice.JPG' | relative_url}})
-cited from PLos One 9, e85106
-https://doi.org/10.1371/journal.pone.0085106
-...
+![IMG3]({{'/assets/images/260203worldrice.jpg' | relative_url}})
+cited from [PLos One 9, e85106](https://doi.org/10.1371/journal.pone.0085106)
+
 
 
 
