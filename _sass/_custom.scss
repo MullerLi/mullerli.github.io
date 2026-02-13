@@ -1,53 +1,123 @@
-/* 補沒有變數可改、但你又想換色的小區塊 */
-.card {                /* 文章卡片維持白底舉例 */
-  background-color: #ffffff;
+/* ==========================================================================
+   Custom Aesthetics & Overrides
+   1. Theme Variables (Warm Paper & Dark Mode)
+   2. Component Overrides (Cards, Pagination, Footer)
+   3. Element Overrides (Tables, Fonts)
+   ========================================================================== */
+
+/* --- 1. CSS Variables for Theming --- */
+:root {
+  /* Warm Paper Theme (Light Mode) */
+  --bg-color-primary: #f9f6ef;
+  --bg-color-card: #ffffff;
+  --bg-color-footer: #f2f2f2;
+  --text-color-primary: #1f1f1f;
+  --text-color-secondary: #4E3F40;
+  /* Warm dark grey */
+  --border-color-soft: rgba(78, 63, 64, 0.15);
+  --border-color-strong: rgba(78, 63, 64, 0.8);
+  --shadow-card: 0 4px 12px rgba(78, 63, 64, 0.05);
+  --shadow-card-hover: 0 8px 20px rgba(78, 63, 64, 0.12);
 }
-/* 專改分頁連結顏色 → 全黑 */
-.pagination .post-list > li {
-  background: $card-background-color;
+
+@mixin dark-mode-vars {
+  /* Dark Mode Overrides */
+  --bg-color-primary: #1a1a1a;
+  --bg-color-card: #252525;
+  --bg-color-footer: #141414;
+  --text-color-primary: #e0e0e0;
+  --text-color-secondary: #b0b0b0;
+  --border-color-soft: rgba(255, 255, 255, 0.15);
+  --border-color-strong: rgba(255, 255, 255, 0.6);
+  --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @include dark-mode-vars;
+  }
+}
+
+html[data-theme="dark"] {
+  @include dark-mode-vars;
+}
+
+/* --- 2. Component Overrides --- */
+
+/* Base Background Override (Optional, ensures consistency) */
+body {
+  background-color: var(--bg-color-primary) !important;
+  color: var(--text-color-primary) !important;
+}
+
+/* Post Cards */
+.card {
+  background-color: var(--bg-color-card) !important;
+  color: var(--text-color-primary);
+  border: 1px solid var(--border-color-soft);
+}
+
+/* Pagination */
+.pagination .post-list>li {
+  background: var(--bg-color-card);
   padding: 40px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  border-bottom: none !important; /* 覆寫主題預設的底線 */
+  box-shadow: var(--shadow-card);
+  border-bottom: none !important;
   transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-card-hover);
   }
 }
 
 @media screen and (max-width: 800px) {
-  .pagination .post-list > li {
+  .pagination .post-list>li {
     padding: 25px;
   }
 }
 
-
 .pagination .post-link {
-  color: #1f1f1f !important;   /* 加 !important 保證蓋掉主題預設 #333 */
+  color: var(--text-color-primary) !important;
 }
 
 .pagination .post-link:hover {
   text-decoration: underline;
+  color: $brand-color !important;
+  /* Use Sass variable or CSS var if defined */
 }
 
 .pagination .post-text {
-    color: #1f1f1f;
+  color: var(--text-color-primary);
 }
 
+/* Footer */
 .site-footer {
-    color: #1f1f1f;
-    background-color: #f2f2f2;
-    text-align: left;
-    transition: background-color 0.2s;
+  color: var(--text-color-secondary);
+  background-color: var(--bg-color-footer) !important;
+  text-align: left;
+  transition: background-color 0.2s;
 }
+
 a:hover {
   text-decoration: underline;
 }
 
-// ☰ 三條線動畫切換
+/* Hamburger Menu Toggle (Color Adjustment) */
+.menu-toggle span {
+  background: var(--text-color-primary) !important;
+}
+
+/* --- 3. Element Overrides --- */
+
+/* Minimal Search / Menu Wrapper */
+/* ... (Menu wrapper styles kept mostly same, but using vars where possible) ... */
+
+// ☰ 三條線動畫切換 (Existing logic maintained)
 .menu-toggle {
+  // ... (geometry kept same)
   width: 30px;
   height: 22px;
   position: relative;
@@ -59,11 +129,13 @@ a:hover {
   span {
     display: block;
     height: 3px;
-    background: #333;
+    background: var(--text-color-primary);
+    /* Changed to var */
     margin: 5px 0;
     transition: 0.4s;
   }
 
+  // ... (rest of animation logic is fine)
   &.open span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
@@ -83,15 +155,16 @@ a:hover {
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.85);
+  /* Darker background for contrast in all modes */
   position: absolute;
   top: 60px;
-  right: 0rem; // 稍微留邊距
-  width: 150px; // ✅ 控制寬度，避免太寬
-  max-width: 90vw; // ✅ 在手機上也不會太寬
+  right: 0rem;
+  width: 150px;
+  max-width: 90vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 0 0 10px 10px;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(8px);
   z-index: 1000;
 
   display: flex;
@@ -111,6 +184,7 @@ a:hover {
       a {
         font-size: 1.5rem;
         color: #fff;
+        /* Always white in this dark dropdown */
         text-decoration: none;
         padding: 6px 12px;
         display: block;
@@ -129,19 +203,22 @@ a:hover {
   opacity: 1;
 }
 
+/* Menu Toggle Positioning */
 .menu-toggle {
   width: 30px;
   height: 22px;
   cursor: pointer;
   z-index: 1001;
   display: block;
-  position: absolute;   // ✅ 固定位置
-  top: 18px;             // ✅ 與 nav 垂直對齊（你可微調）
-  right: 20px;           // ✅ 對齊右側 nav
-    span {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+
+  span {
     display: block;
     height: 3px;
-    background: #333;
+    background: var(--text-color-primary);
+    /* Consistent var */
     margin: 5px 0;
     transition: 0.4s;
   }
@@ -163,96 +240,100 @@ a:hover {
   max-height: 500px;
   opacity: 1;
 }
+
 /* -----------------------------
    Header – 全站透明 & 捲動收合
    ----------------------------- */
 .site-header-inner {
   position: relative;
 }
-/* 隱藏原有的橫向導覽連結與內建漢堡按鈕 */
-.page-link {
-  display: none !important;
-}
+
+.page-link,
 label[for="nav-trigger"],
 .menu-icon {
   display: none !important;
 }
 
-/* -----------------------------
-   Header – 全站透明 & 捲動收合
-   ----------------------------- */
-
-/* ① 透明背景＋去陰影（!important 確保覆寫） */
 html[data-header-transparent] header.site-header,
 header.site-header {
   background: transparent !important;
   box-shadow: none !important;
 }
 
-/* ② 改回 sticky（更自然跟隨頁面） */
 html[data-header-transparent] header.site-header {
-  position: sticky !important;   /* 取代 _layout.scss 的 fixed */
+  position: sticky !important;
   top: 0;
-  transition: top 0.3s ease;     /* 保留滑入滑出平滑度 */
+  transition: top 0.3s ease;
   z-index: 1000;
 }
 
-/* ③ 捲動控制：向下滑隱藏、向上滑顯示
-      -$header-height = 64px (Yat 預設)，
-      依你的實際高度微調 */
 html[data-scroll-status='down'] header.site-header {
   top: -64px;
 }
+
 html[data-scroll-status='up'],
 html[data-scroll-status='top'] header.site-header {
   top: 0;
 }
 
-/* ④ 透明模式下，導覽文字顏色可自行調整 */
 html[data-header-transparent] header.site-header .site-brand-inner,
 html[data-header-transparent] header.site-header .page-link {
-  color: #4E3F40;      /* 深灰棕，與首頁一致 */
+  color: var(--text-color-secondary);
+  /* Use warm dark grey var */
 }
 
-/* --- Start of content from override.css --- */
-/*
-============================================================================
-  override.css - Minimal Font Overrides
-----------------------------------------------------------------------------
-  This file is used to forcefully apply custom font settings using !important
-  to ensure they override any theme defaults. It only contains font-related
-  declarations to minimize conflicts.
-============================================================================
-*/
+/* --- Font Overrides --- */
+/* (Kept mostly as is, but ensuring color uses vars) */
 
-/* --- Font Definitions --- */
-/* All fonts are now loaded via Google Fonts in _includes/custom-head.html */
 @font-face {
   font-family: "Crimson Pro Adjusted";
   src: local("Crimson Pro");
   size-adjust: 120%;
 }
 
-/* --- Apply Fonts with High Specificity --- */
-body, p, li {
-  font-family:  "Crimson Pro Adjusted", "Crimson Pro","GenRyuMinTW", "Helvetica",
-   "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
+body,
+p,
+li {
+  font-family: "Crimson Pro Adjusted", "Crimson Pro", "GenRyuMinTW", "Helvetica",
+    "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
   font-size: 20px;
   font-weight: 500;
   line-height: 2.0;
-  color: #1f1f1f;
+  color: var(--text-color-primary);
+  /* Var override */
 }
 
-h1, h2, h3, h4, h5, h6, .pagination .post-link {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.pagination .post-link {
   font-family: "Poppins", "Cambria", "GenSekiGothicTW", "Noto Sans TC", sans-serif !important;
-  color: #1f1f1f;
+  color: var(--text-color-primary);
 }
 
-h1 { font-size: 36px; }
-h2 { font-size: 30px; }
-h3 { font-size: 25px; }
-h4 { font-size: 22px; }
-h5, h6 { font-size: 20px; }
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+h4 {
+  font-size: 22px;
+}
+
+h5,
+h6 {
+  font-size: 20px;
+}
 
 
 blockquote,
@@ -260,50 +341,72 @@ blockquote p,
 blockquote li {
   font-family: "Iansui" !important;
   font-size: 20px !important;
+  color: var(--text-color-secondary);
+  /* Slightly softer for quotes */
 }
 
-code, pre {
+code,
+pre {
   font-family: "JetBrains Mono", monospace !important;
   font-size: 18px !important;
 }
 
-/* ===== 極簡黑線表格 ===== */
-table.simple-table {                 /* ← 依需要改成全站 table 也行 */
+/* ===== 極簡黑線表格 (Refined) ===== */
+table.simple-table {
   width: 100%;
   border-collapse: collapse;
-  color: #000;
+  color: var(--text-color-primary);
+  /* Adapts to dark mode */
 }
 
-/* 儲存格：黑框＋透明底 */
+/* 儲存格：色框＋透明底 */
 table.simple-table th,
 table.simple-table td {
-  border: 1px solid #000;
+  border: 1px solid var(--border-color-soft);
+  /* Softer border */
   padding: 10px 15px;
-  background: transparent;           /* 透明，露出頁面底色 */
+  background: transparent;
   text-align: left;
 }
 
 /* 表頭微灰底做區隔 */
 table.simple-table th {
   font-weight: 600;
-  background: rgba(0,0,0,.04);
+  background: rgba(0, 0, 0, 0.04);
+  /* Kept subtle */
 }
 
-/* 列懸停：直接改 <td>/<th> 背景，確保能蓋掉原本顏色 */
-table.simple-table tbody tr:hover > td,
-table.simple-table tbody tr:hover > th {
-  background: rgba(0,0,0,.06);
-}
-
-/* （可選）整張表外框 */
-table.simple-table {
-  border: 1px solid #000;
-}
-
-/* 滑鼠懸停列：微灰底，方便閱讀 */
-  tbody tr:hover {
-    background: #ffffff;
+@media (prefers-color-scheme: dark) {
+  table.simple-table th {
+    background: rgba(255, 255, 255, 0.05);
+    /* Light highlight in dark mode */
   }
+}
+
+/* 列懸停 */
+table.simple-table tbody tr:hover>td,
+table.simple-table tbody tr:hover>th {
+  background: rgba(0, 0, 0, .04);
+}
+
+@media (prefers-color-scheme: dark) {
+
+  table.simple-table tbody tr:hover>td,
+  table.simple-table tbody tr:hover>th {
+    background: rgba(255, 255, 255, .05);
+  }
+}
+
+/* 整張表外框 */
+table.simple-table {
+  border: 1px solid var(--border-color-strong);
+}
+
+/* 滑鼠懸停列 */
+tbody tr:hover {
+  background: transparent;
+  /* Let the td hover handle it to avoid conflicts */
+}
 
 
 .post-nav {
@@ -311,7 +414,7 @@ table.simple-table {
   justify-content: space-between;
   margin-top: 30px;
   padding-top: 20px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border-color-soft);
 }
 
 .post-nav-item {
@@ -325,16 +428,17 @@ table.simple-table {
 .post-nav-link {
   display: block;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color-soft);
   border-radius: 5px;
-  color: #333;
+  color: var(--text-color-primary);
   text-decoration: none;
   transition: all 0.3s;
 }
 
 .post-nav-link:hover {
-  background-color: #f5f5f5;
-  border-color: #ccc;
+  background-color: var(--bg-color-footer);
+  /* Reusing footer bg for hover */
+  border-color: var(--border-color-strong);
 }
 
 .post-nav-title {
@@ -344,20 +448,21 @@ table.simple-table {
 }
 
 .site-nav {
-    font-size: 20px;
-    line-height: 63.84px;
-    position: absolute;
-    right: 0;
-    top: 0;
+  font-size: 20px;
+  line-height: 63.84px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .site-brand .site-brand-inner {
-    font-size: 20px;
-    font-weight: 500;
-    letter-spacing: -1px;
-    transition: 0.1s filter color;
-    font-family: "Zen Maru Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  transition: 0.1s filter color;
+  font-family: "Zen Maru Gothic", sans-serif;
 }
+
 /* Banner Headings and Subheadings */
 .page-banner hr {
   display: contents;
@@ -368,6 +473,7 @@ table.simple-table {
     opacity: 0;
     transform: translateY(90px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -388,7 +494,7 @@ h5.page-banner-subheading,
 h6.page-banner-subheading {
   font-family: "Poppins", "Zen Maru Gothic" !important;
   font-size: 80px !important;
-  color: #000000 !important;
+  color: var(--text-color-primary) !important;
   font-weight: 200 !important;
   letter-spacing: -1px !important;
   border: none !important;
@@ -400,7 +506,8 @@ h6.page-banner-subheading {
   line-height: 1.0 !important;
   animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
   animation-fill-mode: both;
-  animation-delay: 0.5s; /* 延遲0.5秒後才開始動畫 */
+  animation-delay: 0.5s;
+  /* 延遲0.5秒後才開始動畫 */
 }
 
 /* 隱藏偽元素 */
@@ -413,6 +520,7 @@ h6.page-banner-subheading {
 }
 
 @media (max-width: 768px) {
+
   h1.page-banner-heading,
   h2.page-banner-heading,
   h3.page-banner-heading,
@@ -430,6 +538,7 @@ h6.page-banner-subheading {
 }
 
 @media (max-width: 480px) {
+
   h1.page-banner-heading,
   h2.page-banner-heading,
   h3.page-banner-heading,
@@ -451,11 +560,13 @@ h6.page-banner-subheading {
   align-items: center;
   justify-content: space-between;
 }
+
 .search-toggle {
   background: none;
   border: none;
   cursor: pointer;
-  margin-right: 80px; /* 與漢堡icon距離，可調整 */
+  margin-right: 80px;
+  /* 與漢堡icon距離，可調整 */
   display: flex;
   align-items: center;
   height: 40px;
@@ -466,30 +577,44 @@ h6.page-banner-subheading {
   text-align: right;
   animation: fadein 0.2s;
 }
+
 .header-search-form input {
   font-size: 1rem;
   padding: 4px 12px;
   border-radius: 2em;
-  border: 1px solid #aaa;
+  border: 1px solid var(--border-color-soft);
   width: 160px;
   outline: none;
+  background: var(--bg-color-card);
+  color: var(--text-color-primary);
 }
+
 @keyframes fadein {
-  from { opacity: 0; transform: translateY(-10px);}
-  to   { opacity: 1; transform: translateY(0);}
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
+
 .header-search-form {
   opacity: 0;
   pointer-events: none;
   transform: translateY(-10px);
   transition: opacity 0.3s, transform 0.3s;
   position: absolute;
-  top: 60px;      /* 根據你的 header 高度微調 */
-  right: 24px;    /* 根據需求調整靠右距離 */
+  top: 60px;
+  /* 根據你的 header 高度微調 */
+  right: 24px;
+  /* 根據需求調整靠右距離 */
   z-index: 1000;
-  background: white;
+  background: var(--bg-color-card);
   border-radius: 2em;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.09);
+  box-shadow: var(--shadow-card);
   padding: 8px 16px;
 }
 
@@ -504,7 +629,8 @@ h6.page-banner-subheading {
 .search-overlay {
   /* layout */
   position: fixed;
-  inset: 0;                /* top/right/bottom/left: 0 */
+  inset: 0;
+  /* top/right/bottom/left: 0 */
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -528,22 +654,26 @@ h6.page-banner-subheading {
   padding: 1rem 1rem 0;
 
   /* visuals */
-  background: rgba(255, 255, 255, .88);
-  border: 1px solid transparent; /* 看起來無框線 */
+  background: var(--bg-color-card);
+  border: 1px solid transparent;
+  /* 看起來無框線 */
   border-radius: 12px;
   box-shadow: none;
 }
 
 /* ── 讓關閉鈕與輸入框同列並水平對齊 ───────────────────────────── */
-.search-header{
+.search-header {
   display: flex;
-  align-items: center;    /* 與輸入文字垂直置中 → 視覺上同一水平線 */
+  align-items: center;
+  /* 與輸入文字垂直置中 → 視覺上同一水平線 */
   gap: .5rem;
-  padding-right: 0;       /* 覆蓋先前為絕對定位預留的空間 */
+  padding-right: 0;
+  /* 覆蓋先前為絕對定位預留的空間 */
 }
 
-.search-header #search-input{
-  flex: 1;                /* 輸入框吃滿寬度，關閉鈕貼右側 */
+.search-header #search-input {
+  flex: 1;
+  /* 輸入框吃滿寬度，關閉鈕貼右側 */
 }
 
 /* 隱藏 type=search 內建清除鈕（Chrome/Edge/Safari） */
@@ -568,6 +698,7 @@ h6.page-banner-subheading {
   outline: none;
   box-shadow: none;
   padding: .9rem 1.1rem;
+  color: var(--text-color-primary);
 }
 
 #search-results {
@@ -578,10 +709,11 @@ h6.page-banner-subheading {
 
 /* 結果項目：極簡 hover */
 .search-item {
-  border-top: 1px solid rgba(0, 0, 0, .06);
+  border-top: 1px solid var(--border-color-soft);
 }
+
 .search-item:hover {
-  background: rgba(0, 0, 0, .035);
+  background: var(--border-color-soft);
 }
 
 /* 關閉按鈕（右上角） */
@@ -598,51 +730,68 @@ h6.page-banner-subheading {
   cursor: pointer;
   padding: .35rem .5rem;
   opacity: .7;
+  color: var(--text-color-primary);
 }
+
 #search-close:hover {
   opacity: 1;
-  background: rgba(0, 0, 0, .04);
+  background: var(--border-color-soft);
 }
 
 /* 零碎排版 */
-.search-title { font-weight: 600; }
-.search-snippet { font-size: .9rem; opacity: .85; margin-top: .25rem; }
-mark { background: #ffe58f; padding: 0 .1em; }
+.search-title {
+  font-weight: 600;
+}
+
+.search-snippet {
+  font-size: .9rem;
+  opacity: .85;
+  margin-top: .25rem;
+}
+
+mark {
+  background: #ffe58f;
+  padding: 0 .1em;
+}
 
 
 /* === Search panel bigger & readable ======================================= */
 /* 可調整變數：一次控制整體尺寸 */
-:root{
+:root {
   --search-width: min(720px, 96vw);
   --search-input-font: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
   --search-title-font: clamp(1.2rem, 0.95rem + 0.5vw, 1.3rem);
   --search-snippet-font: clamp(0.95rem, 0.9rem + 0.4vw, 1.1rem);
 }
 
-.search-panel{
+.search-panel {
   width: var(--search-width);
-  padding: 1.25rem 1.25rem 0; /* 四邊留白更寬 */
+  padding: 1.25rem 1.25rem 0;
+  /* 四邊留白更寬 */
 }
 
 /* 頂部列：輸入框與關閉鈕同列置中 */
-.search-header{
+.search-header {
   display: flex;
   align-items: center;
-  gap: .75rem;              /* 元件間距略放大 */
+  gap: .75rem;
+  /* 元件間距略放大 */
   padding-right: 0;
 }
 
 /* 輸入框放大、增加可點擊高度 */
-.search-header #search-input{
+.search-header #search-input {
   flex: 1;
   font-size: var(--search-input-font);
-  padding: 1rem 1.25rem;    /* 左右與上下內距加大 */
-  min-height: 52px;         /* 觸控友善 */
+  padding: 1rem 1.25rem;
+  /* 左右與上下內距加大 */
+  min-height: 52px;
+  /* 觸控友善 */
   line-height: 1.35;
 }
 
 /* 關閉鈕同步放大（仍極簡） */
-.search-panel #search-close{
+.search-panel #search-close {
   position: static !important;
   display: inline-flex;
   align-items: center;
@@ -654,25 +803,33 @@ mark { background: #ffe58f; padding: 0 .1em; }
 }
 
 /* 列表與字級放大 */
-#search-results{
+#search-results {
   max-height: 70vh;
   margin-top: 1rem;
 }
-.search-item{
+
+.search-item {
   padding: 1rem 1.25rem;
 }
-.search-title{
+
+.search-title {
   font-weight: 600;
   font-size: var(--search-title-font);
 }
-.search-snippet{
+
+.search-snippet {
   margin-top: .35rem;
   font-size: var(--search-snippet-font);
   opacity: .85;
 }
 
 /* 手機微調：更寬版面、較高輸入框 */
-@media (max-width: 480px){
-  .search-panel{ width: min(94vw, 720px); }
-  .search-header #search-input{ min-height: 48px; }
+@media (max-width: 480px) {
+  .search-panel {
+    width: min(94vw, 720px);
+  }
+
+  .search-header #search-input {
+    min-height: 48px;
+  }
 }
