@@ -11,13 +11,13 @@
   --bg-color-primary: #f5f5f5;
   --bg-color-card: #ffffff;
   --bg-color-footer: #f2f2f2;
-  --text-color-primary: #1f1f1f;
+  --text-color-primary: #333333; /* Softer dark gray for reading */
   --text-color-secondary: #4E3F40;
   /* Warm dark grey */
-  --border-color-soft: rgba(78, 63, 64, 0.15);
-  --border-color-strong: rgba(78, 63, 64, 0.8);
-  --shadow-card: 0 4px 12px rgba(78, 63, 64, 0.05);
-  --shadow-card-hover: 0 8px 20px rgba(78, 63, 64, 0.12);
+  --border-color-soft: rgba(0, 0, 0, 0.08); /* Minimal noise */
+  --border-color-strong: rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04); /* Lifted and elegant */
+  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 @mixin dark-mode-vars {
@@ -25,12 +25,12 @@
   --bg-color-primary: #f5f5f5;
   --bg-color-card: #ffffff;
   --bg-color-footer: #f2f2f2;
-  --text-color-primary: #1f1f1f;
+  --text-color-primary: #333333;
   --text-color-secondary: #4E3F40;
-  --border-color-soft: rgba(78, 63, 64, 0.15);
-  --border-color-strong: rgba(78, 63, 64, 0.8);
-  --shadow-card: 0 4px 12px rgba(78, 63, 64, 0.05);
-  --shadow-card-hover: 0 8px 20px rgba(78, 63, 64, 0.12);
+  --border-color-soft: rgba(0, 0, 0, 0.08);
+  --border-color-strong: rgba(0, 0, 0, 0.4);
+  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.08);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -302,13 +302,17 @@ html[data-header-transparent] header.site-header .page-link {
 body,
 p,
 li {
-  font-family: "Crimson Pro Adjusted", "Crimson Pro", "GenRyuMinTW", "Helvetica",
+  font-family: "Crimson Pro Adjusted", "Crimson Pro", "GenRyuMinTW", "GenSekiGothicTW", "Helvetica",
     "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
   font-size: 20px;
   font-weight: 500;
-  line-height: 2.0;
+  line-height: 1.85; /* Tensed up for better reading rhythm */
   color: var(--text-color-primary);
   /* Var override */
+}
+
+p {
+  margin-bottom: 1.5em; /* Clearer paragraph separation */
 }
 
 h1,
@@ -344,13 +348,22 @@ h6 {
 }
 
 
-blockquote,
+blockquote {
+  font-family: "Iansui" !important;
+  font-size: 20px !important;
+  color: var(--text-color-secondary);
+  background: rgba(0, 0, 0, 0.02); /* Soft highlight */
+  border-left: 4px solid $brand-color; /* Elegant brand accent */
+  padding: 15px 20px;
+  margin: 1.5em 0;
+  border-radius: 0 4px 4px 0;
+}
+
 blockquote p,
 blockquote li {
   font-family: "Iansui" !important;
   font-size: 20px !important;
   color: var(--text-color-secondary);
-  /* Slightly softer for quotes */
 }
 
 code,
