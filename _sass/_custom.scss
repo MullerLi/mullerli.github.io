@@ -7,30 +7,27 @@
 
 /* --- 1. CSS Variables for Theming --- */
 :root {
-  /* Low-Reflective White Theme */
-  --bg-color-primary: #f5f5f5;
-  --bg-color-card: #ffffff;
-  --bg-color-footer: #f2f2f2;
-  --text-color-primary: #333333; /* Softer dark gray for reading */
-  --text-color-secondary: #4E3F40;
-  /* Warm dark grey */
-  --border-color-soft: rgba(0, 0, 0, 0.08); /* Minimal noise */
-  --border-color-strong: rgba(0, 0, 0, 0.4);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04); /* Lifted and elegant */
-  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --bg-color-primary: #F5F5F2;
+  --bg-color-card: #FFFFFF;
+  --bg-color-footer: #F5F5F2;
+  --text-color-primary: #111111;
+  --text-color-secondary: #5E5E5A;
+  --border-color-soft: #D9D8D2;
+  --border-color-strong: #8C7A5B;
+  --shadow-card: none;
+  --shadow-card-hover: none;
 }
 
 @mixin dark-mode-vars {
-  /* Dark Mode Disabled: Using the same low-reflective white theme colors */
-  --bg-color-primary: #f5f5f5;
-  --bg-color-card: #ffffff;
-  --bg-color-footer: #f2f2f2;
-  --text-color-primary: #333333;
-  --text-color-secondary: #4E3F40;
-  --border-color-soft: rgba(0, 0, 0, 0.08);
-  --border-color-strong: rgba(0, 0, 0, 0.4);
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.04);
-  --shadow-card-hover: 0 10px 24px rgba(0, 0, 0, 0.08);
+  --bg-color-primary: #F5F5F2;
+  --bg-color-card: #FFFFFF;
+  --bg-color-footer: #F5F5F2;
+  --text-color-primary: #111111;
+  --text-color-secondary: #5E5E5A;
+  --border-color-soft: #D9D8D2;
+  --border-color-strong: #8C7A5B;
+  --shadow-card: none;
+  --shadow-card-hover: none;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -56,27 +53,43 @@ body {
   background-color: var(--bg-color-card) !important;
   color: var(--text-color-primary);
   border: 1px solid var(--border-color-soft);
+  border-radius: 2px !important;
+  box-shadow: none !important;
 }
 
 /* Pagination */
 .pagination .post-list>li {
   background: var(--bg-color-card);
   padding: 40px;
-  border-radius: 8px;
-  box-shadow: var(--shadow-card);
-  border-bottom: none !important;
-  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border-radius: 2px;
+  box-shadow: none !important;
+  border: 1px solid var(--border-color-soft) !important;
+  border-bottom: 1px solid var(--border-color-soft) !important;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
 
   &:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-card-hover);
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: var(--border-color-strong) !important;
   }
 }
 
 @media screen and (max-width: 800px) {
   .pagination .post-list>li {
-    padding: 25px;
+  background: var(--bg-color-card);
+  padding: 40px;
+  border-radius: 2px;
+  box-shadow: none !important;
+  border: 1px solid var(--border-color-soft) !important;
+  border-bottom: 1px solid var(--border-color-soft) !important;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+
+  &:hover {
+    transform: none !important;
+    box-shadow: none !important;
+    border-color: var(--border-color-strong) !important;
   }
+}
 }
 
 .pagination .post-link {
@@ -85,7 +98,7 @@ body {
 
 .pagination .post-link:hover {
   text-decoration: underline;
-  color: $brand-color !important;
+  color: var(--border-color-strong) !important;
   /* Use Sass variable or CSS var if defined */
 }
 
@@ -155,16 +168,17 @@ a:hover {
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  background: rgba(0, 0, 0, 0.85);
+  background: var(--bg-color-card);
+  border: 1px solid var(--border-color-soft);
   /* Darker background for contrast in all modes */
   position: absolute;
   top: 60px;
   right: 0rem;
   width: 150px;
   max-width: 90vw;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 0 0 10px 10px;
-  backdrop-filter: blur(8px);
+  box-shadow: none;
+  border-radius: 0 0 2px 2px;
+  backdrop-filter: none;
   z-index: 1000;
 
   display: flex;
@@ -183,8 +197,7 @@ a:hover {
 
       a {
         font-size: 1.5rem;
-        color: #fff;
-        /* Always white in this dark dropdown */
+        color: var(--text-color-primary);
         text-decoration: none;
         padding: 6px 12px;
         display: block;
@@ -293,30 +306,18 @@ html[data-header-transparent] header.site-header .page-link {
   font-display: swap;
 }
 
-@font-face {
-  font-family: "GenRyuMinTW";
-  src: url("/assets/css/fonts/GenRyuMin2TW-M.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 
-@font-face {
-  font-family: "Crimson Pro Adjusted";
-  src: local("Crimson Pro");
-  size-adjust: 120%;
-}
+
+
 
 body,
 p,
 li {
-  font-family: "Crimson Pro Adjusted", "Crimson Pro", "GenRyuMinTW", "GenSekiGothicTW", "Helvetica",
-    "Arial", "Noto Serif TC", "Microsoft JhengHei", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.85; /* Tensed up for better reading rhythm */
+  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.8;
   color: var(--text-color-primary);
-  /* Var override */
 }
 
 p {
@@ -330,8 +331,9 @@ h4,
 h5,
 h6,
 .pagination .post-link {
-  font-family: "Poppins", "Cambria", "GenSekiGothicTW", "Noto Sans TC", sans-serif !important;
+  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif !important;
   color: var(--text-color-primary);
+  font-weight: 600;
 }
 
 h1 {
@@ -357,20 +359,20 @@ h6 {
 
 
 blockquote {
-  font-family: "Iansui" !important;
-  font-size: 20px !important;
+  font-family: "Lora", "IBM Plex Sans TC", serif !important;
+  font-size: 17px !important;
   color: var(--text-color-secondary);
-  background: rgba(0, 0, 0, 0.02); /* Soft highlight */
-  border-left: 4px solid $brand-color; /* Elegant brand accent */
-  padding: 15px 20px;
-  margin: 1.5em 0;
-  border-radius: 0 4px 4px 0;
+  background: #F5F5F2;
+  border-left: 2px solid #D9D8D2;
+  padding: 16px 24px;
+  margin: 2em 0;
+  border-radius: 0;
 }
 
 blockquote p,
 blockquote li {
-  font-family: "Iansui" !important;
-  font-size: 20px !important;
+  font-family: "Lora", "IBM Plex Sans TC", serif !important;
+  font-size: 17px !important;
   color: var(--text-color-secondary);
 }
 
@@ -458,7 +460,7 @@ tbody tr:hover {
   display: block;
   padding: 10px;
   border: 1px solid var(--border-color-soft);
-  border-radius: 5px;
+  border-radius: 2px;
   color: var(--text-color-primary);
   text-decoration: none;
   transition: all 0.3s;
@@ -489,7 +491,7 @@ tbody tr:hover {
   font-weight: 500;
   letter-spacing: -1px;
   transition: 0.1s filter color;
-  font-family: "Zen Maru Gothic", sans-serif;
+  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif;
 }
 
 /* Banner Headings and Subheadings */
@@ -521,21 +523,19 @@ h3.page-banner-subheading,
 h4.page-banner-subheading,
 h5.page-banner-subheading,
 h6.page-banner-subheading {
-  font-family: "Playfair Display", "GenRyuMinTW", "Poppins", "Zen Maru Gothic" !important;
+  font-family: "Satoshi", "GenSekiGothicTW", sans-serif !important;
   font-size: 80px !important;
   color: var(--text-color-primary) !important;
-  font-weight: 400 !important;
-  letter-spacing: -1px !important;
+  font-weight: normal !important;
+  letter-spacing: 0.05em !important;
   border: none !important;
   box-shadow: none !important;
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
   text-align: center;
-  line-height: 1.0 !important;
-  animation: fadeInUp 1.5s cubic-bezier(0.23, 1, 0.32, 1);
-  animation-fill-mode: both;
-  animation-delay: 0.5s;
+  line-height: 1.3 !important;
+  
   /* 延遲0.5秒後才開始動畫 */
 }
 
@@ -610,7 +610,7 @@ h6.page-banner-subheading {
 .header-search-form input {
   font-size: 1rem;
   padding: 4px 12px;
-  border-radius: 2em;
+  border-radius: 2px;
   border: 1px solid var(--border-color-soft);
   width: 160px;
   outline: none;
@@ -642,7 +642,7 @@ h6.page-banner-subheading {
   /* 根據需求調整靠右距離 */
   z-index: 1000;
   background: var(--bg-color-card);
-  border-radius: 2em;
+  border-radius: 2px;
   box-shadow: var(--shadow-card);
   padding: 8px 16px;
 }
@@ -668,8 +668,8 @@ h6.page-banner-subheading {
 
   /* visuals */
   background: rgba(0, 0, 0, .12);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }
 
 .search-overlay.hidden {
@@ -686,7 +686,7 @@ h6.page-banner-subheading {
   background: var(--bg-color-card);
   border: 1px solid transparent;
   /* 看起來無框線 */
-  border-radius: 12px;
+  border-radius: 2px;
   box-shadow: none;
 }
 
@@ -861,4 +861,18 @@ mark {
   .search-header #search-input {
     min-height: 48px;
   }
+}
+
+/* Override banner backgrounds for solid color approach */
+.page-banner {
+  background-image: none !important;
+  background-color: var(--bg-color-primary) !important;
+}
+
+
+/* Article width restriction ONLY (to avoid breaking global homepage) */
+.post-header, .post-content {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
 }

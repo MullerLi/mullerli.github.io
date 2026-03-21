@@ -151,7 +151,7 @@ header_pages:
 # Layout configuration defaults
 layout_defaults:
   home:
-    banner: "/assets/images/banners/home.svg"
+    banner: ""
 
 # Default preview image for pages
 defaults:
