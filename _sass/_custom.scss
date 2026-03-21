@@ -294,6 +294,14 @@ html[data-header-transparent] header.site-header .page-link {
 }
 
 @font-face {
+  font-family: "GenRyuMinTW";
+  src: url("/assets/css/fonts/GenRyuMin2TW-M.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "Crimson Pro Adjusted";
   src: local("Crimson Pro");
   size-adjust: 120%;
@@ -513,10 +521,10 @@ h3.page-banner-subheading,
 h4.page-banner-subheading,
 h5.page-banner-subheading,
 h6.page-banner-subheading {
-  font-family: "Poppins", "Zen Maru Gothic" !important;
+  font-family: "Playfair Display", "GenRyuMinTW", "Poppins", "Zen Maru Gothic" !important;
   font-size: 80px !important;
   color: var(--text-color-primary) !important;
-  font-weight: 200 !important;
+  font-weight: 400 !important;
   letter-spacing: -1px !important;
   border: none !important;
   box-shadow: none !important;
