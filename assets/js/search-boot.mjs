@@ -25,9 +25,9 @@ const USER_DICT_URL = `${BASE_URL}/assets/js/jieba.userdict.txt`;
 
 const els = {
   overlay: document.getElementById('search-overlay'),
-  input: document.getElementById('search-input'),
+  inputs: document.querySelectorAll('#search-input, #search-page-input'),
   close: document.getElementById('search-close'),
-  results: document.getElementById('search-results'),
+  resultsContainers: document.querySelectorAll('#search-results, #search-page-results'),
   panel: document.querySelector('#search-overlay .search-panel'),
 };
 
@@ -59,11 +59,13 @@ function openOverlay() {
   if (!els.overlay) return;
   els.overlay.classList.remove('hidden');
   els.overlay.setAttribute('aria-hidden', 'false');
-  if (els.input) {
-    els.input.value = '';
-    setTimeout(() => els.input.focus(), 0);
+  if (els.inputs.length) {
+    els.inputs.forEach(input => {
+      input.value = '';
+    });
+    setTimeout(() => els.inputs[0].focus(), 0);
   }
-  if (els.results) els.results.innerHTML = ''; 
+  els.resultsContainers.forEach(res => res.innerHTML = ''); 
 }
 
 
@@ -235,37 +237,56 @@ function highlight(text, tokens) {
 
   let out = safeText;
   for (const t of uniq) {
-    // 注意：對 token 做 RegExp 跳脫（不是 HTML 跳脫）
     const re = new RegExp(escapeRegExp(t), 'giu');
     out = out.replace(re, (m) => `<mark>${m}</mark>`);
   }
   return out;
 }
 
+function getBestSnippet(content, tokens) {
+  if (!tokens?.length) return String(content).slice(0, CONFIG.SNIPPET_LENGTH);
+  const text = String(content);
+  const lowText = text.toLowerCase();
+  let firstIdx = -1;
+  
+  for (const t of tokens) {
+    const idx = lowText.indexOf(t.toLowerCase());
+    if (idx !== -1 && (firstIdx === -1 || idx < firstIdx)) {
+      firstIdx = idx;
+    }
+  }
+
+  if (firstIdx === -1) return text.slice(0, CONFIG.SNIPPET_LENGTH);
+
+  const start = Math.max(0, firstIdx - 60);
+  const end = Math.min(text.length, start + CONFIG.SNIPPET_LENGTH);
+  let snippet = text.slice(start, end);
+  
+  if (start > 0) snippet = '...' + snippet;
+  if (end < text.length) snippet = snippet + '...';
+  return snippet;
+}
+
 function renderResults(q, results, message) {
-  if (!els.results) return;
+  if (!els.resultsContainers.length) return;
 
-  if (message) {
-    els.results.innerHTML = `<div class="search-item search-item--message">${escapeHTML(message)}</div>`;
-    return;
-  }
-
-  if (!results.length) {
-    els.results.innerHTML = `<div class="search-item search-item--message">找不到符合「${escapeHTML(q)}」的內容。</div>`;
-    return;
-  }
-
-  const html = results.map((r) => {
+  const html = results.length || message ? results.map((r) => {
     const { title, url, content } = r.ref;
-    const snippet = String(content).slice(0, CONFIG.SNIPPET_LENGTH);
+    const snippet = getBestSnippet(content, r.qTokens);
     return `
       <a class="search-item" href="${url}">
         <div class="search-title">${highlight(title || url, r.qTokens)}</div>
         <div class="search-snippet">${highlight(snippet, r.qTokens)}</div>
       </a>`;
-  }).join('');
+  }).join('') : (message ? `<div class="search-item search-item--message">${escapeHTML(message)}</div>` : `<div class="search-item search-item--message">找不到符合「${escapeHTML(q)}」的內容。</div>`);
 
-  els.results.innerHTML = html;
+  els.resultsContainers.forEach(container => {
+    // 確保如果 results 有內容，它是可見的 (針對 search.html)
+    if (results.length || message) {
+      container.style.display = 'block';
+    }
+    container.innerHTML = (message && !results.length) ? `<div class="search-item search-item--message">${escapeHTML(message)}</div>` : html;
+  });
 }
 
 // ============================================================================
@@ -275,7 +296,7 @@ function doSearch(qRaw) {
   const q = normalizeZh(qRaw).trim();
 
   if (!q) { 
-    if (els.results) els.results.innerHTML = '';
+    els.resultsContainers.forEach(res => res.innerHTML = '');
     return;
   }
 
@@ -334,11 +355,14 @@ async function init() {
 function bindEvents() {
   // 即時搜尋（debounce）
   const debouncedSearch = debounce(doSearch, CONFIG.DEBOUNCE_MS);
-  els.input?.addEventListener('input', (e) => debouncedSearch(e.target.value));
+  
+  els.inputs.forEach(input => {
+    input.addEventListener('input', (e) => debouncedSearch(e.target.value));
 
-  // Enter 立即搜尋
-  els.input?.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter') doSearch(els.input.value);
+    // Enter 立即搜尋
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') doSearch(input.value);
+    });
   });
 }
 

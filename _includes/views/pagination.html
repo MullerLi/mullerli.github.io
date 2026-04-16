@@ -10,6 +10,13 @@
 
 {%- if paginator.posts.size > 0 -%}
 <div class="pagination">
+  <!-- Magazine column header -->
+  <div class="post-list-header" aria-hidden="true">
+    <span class="col-num">No.</span>
+    <span class="col-date">Date</span>
+    <span class="col-title">Title</span>
+    <span class="col-tags">Tags</span>
+  </div>
   <!-- Post list links -->
   <ul class="post-list {{ image_style }}">
     <!-- Top list item -->

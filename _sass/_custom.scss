@@ -1,276 +1,279 @@
 /* ==========================================================================
-   Custom Aesthetics & Overrides
-   1. Theme Variables (Warm Paper & Dark Mode)
-   2. Component Overrides (Cards, Pagination, Footer)
-   3. Element Overrides (Tables, Fonts)
+   Swiss Typography / Web Brutalism Design System
+   Aesthetic reference: Aaron Nieh Workshop
+   Load order: this file is last — all rules here beat Yat theme defaults.
    ========================================================================== */
 
-/* --- 1. CSS Variables for Theming --- */
+/* ─── 1. Custom properties ─────────────────────────────────────────────── */
 :root {
-  --bg-color-primary: #F5F5F2;
-  --bg-color-card: #FFFFFF;
-  --bg-color-footer: #F5F5F2;
-  --text-color-primary: #111111;
-  --text-color-secondary: #5E5E5A;
-  --border-color-soft: #D9D8D2;
-  --border-color-strong: #8C7A5B;
-  --shadow-card: none;
-  --shadow-card-hover: none;
+  --white: #FFFFFF;
+  --black: #111111;
+  --accent: #0000FF;
+
+  /* Hover & selection: light blue */
+  --hover-bg: #DBEAFE;
+  /* light blue background */
+  --hover-text: #1e3a5f;
+  /* dark navy for readable contrast on hover */
+
+  /* Search overlay sizing */
+  --search-width: min(720px, 96vw);
+  --search-input-font: clamp(1.0rem, 0.9rem + 0.5vw, 1.15rem);
+  --search-title-font: clamp(0.95rem, 0.85rem + 0.4vw, 1.1rem);
+  --search-snippet-font: clamp(0.85rem, 0.8rem + 0.3vw, 0.95rem);
 }
 
-@mixin dark-mode-vars {
-  --bg-color-primary: #F5F5F2;
-  --bg-color-card: #FFFFFF;
-  --bg-color-footer: #F5F5F2;
-  --text-color-primary: #111111;
-  --text-color-secondary: #5E5E5A;
-  --border-color-soft: #D9D8D2;
-  --border-color-strong: #8C7A5B;
-  --shadow-card: none;
-  --shadow-card-hover: none;
+/* ─── Text selection: blue highlight ────────────────────────────────────── */
+::selection {
+  background-color: var(--hover-bg);
+  color: var(--hover-text);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    @include dark-mode-vars;
-  }
+::-moz-selection {
+  background-color: var(--hover-bg);
+  color: var(--hover-text);
 }
 
-html[data-theme="dark"] {
-  @include dark-mode-vars;
+/* ─── 2. Global hard resets ─────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }
 
-/* --- 2. Component Overrides --- */
+/* Instant interactions — no transitions */
+a,
+button,
+input,
+.menu-wrapper,
+.menu-toggle span {
+  transition: none !important;
+}
 
-/* Base Background Override (Optional, ensures consistency) */
+/* ─── 3. Base ────────────────────────────────────────────────────────────── */
 body {
-  background-color: var(--bg-color-primary) !important;
-  color: var(--text-color-primary) !important;
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+  /* Inter handles Latin; Blix (卜力士) handles CJK body text */
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, 'Segoe UI',
+    'Blix', 'IBM Plex Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+  /* Blix-Medium for comfortable CJK reading weight */
 }
 
-/* Post Cards */
-.card {
-  background-color: var(--bg-color-card) !important;
-  color: var(--text-color-primary);
-  border: 1px solid var(--border-color-soft);
-  border-radius: 2px !important;
-  box-shadow: none !important;
+/* Japanese — Blix first, then Zen Maru */
+html[lang="ja"] body {
+  font-family: 'Inter', 'Helvetica Neue', 'Blix', 'Zen Maru Gothic Medium', sans-serif !important;
 }
 
-/* Pagination */
-.pagination .post-list>li {
-  background: var(--bg-color-card);
-  padding: 40px;
-  border-radius: 2px;
-  box-shadow: none !important;
-  border: 1px solid var(--border-color-soft) !important;
-  border-bottom: 1px solid var(--border-color-soft) !important;
-  transition: border-color 0.2s ease, opacity 0.2s ease;
+/* ─── 4. Local font faces ────────────────────────────────────────────────── */
 
-  &:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    border-color: var(--border-color-strong) !important;
-  }
+/* GenSekiGothicTW (源石黑體) — 3 weights, used for CJK headings */
+@font-face {
+  font-family: "GenSekiGothicTW";
+  src: url("/assets/css/fonts/GenSekiGothic2TW-R.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }
 
-@media screen and (max-width: 800px) {
-  .pagination .post-list>li {
-  background: var(--bg-color-card);
-  padding: 40px;
-  border-radius: 2px;
-  box-shadow: none !important;
-  border: 1px solid var(--border-color-soft) !important;
-  border-bottom: 1px solid var(--border-color-soft) !important;
-  transition: border-color 0.2s ease, opacity 0.2s ease;
-
-  &:hover {
-    transform: none !important;
-    box-shadow: none !important;
-    border-color: var(--border-color-strong) !important;
-  }
-}
+@font-face {
+  font-family: "GenSekiGothicTW";
+  src: url("/assets/css/fonts/GenSekiGothic2TW-M.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
 }
 
-.pagination .post-link {
-  color: var(--text-color-primary) !important;
+@font-face {
+  font-family: "GenSekiGothicTW";
+  src: url("/assets/css/fonts/GenSekiGothic2TW-B.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
-.pagination .post-link:hover {
-  text-decoration: underline;
-  color: var(--border-color-strong) !important;
-  /* Use Sass variable or CSS var if defined */
+/* Blix (卜力士) — 8 weights, used for CJK body text */
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Thin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
-.pagination .post-text {
-  color: var(--text-color-primary);
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-ExtraLight.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
 }
 
-/* Footer */
-.site-footer {
-  color: var(--text-color-secondary);
-  background-color: var(--bg-color-footer) !important;
-  text-align: left;
-  transition: background-color 0.2s;
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Text.otf") format("opentype");
+  font-weight: 450;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-SemiBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blix";
+  src: url("/assets/css/fonts/Blix-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── 5. Typography: Body ───────────────────────────────────────────────── */
+p,
+li,
+span,
+figcaption {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, 'Segoe UI',
+    'Blix', 'IBM Plex Sans TC', 'PingFang TC', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+p {
+  margin-bottom: 1.4em;
+}
+
+blockquote {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  color: var(--black);
+  background: none;
+  border-left: none !important;
+  padding: 0 0 0 2rem;
+  margin: 2rem 0;
+  letter-spacing: 0;
+}
+
+blockquote p,
+blockquote li {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+  font-size: 1rem !important;
+  color: var(--black) !important;
+}
+
+code,
+pre {
+  font-family: 'JetBrains Mono', 'Fira Mono', monospace !important;
+  font-size: 0.8rem !important;
+}
+
+/* ─── 6. Typography: Headings ───────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* Inter for Latin; GenSekiGothicTW for CJK; Blix as CJK fallback */
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial,
+    'GenSekiGothicTW', 'Blix', 'PingFang TC', sans-serif !important;
+  color: var(--black) !important;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.65rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+}
+
+h4 {
+  font-size: 1.15rem;
+}
+
+h5 {
+  font-size: 1.0rem;
+}
+
+h6 {
+  font-size: 0.9rem;
+}
+
+/* Metadata labels: dates, categories, tags */
+.post-meta,
+time {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 400;
+}
+
+/* ─── 7. Links ───────────────────────────────────────────────────────────── */
+a {
+  color: var(--black);
+  text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: var(--hover-text) !important;
+  background-color: var(--hover-bg) !important;
+  text-decoration: none !important;
 }
 
-/* Hamburger Menu Toggle (Color Adjustment) */
-.menu-toggle span {
-  background: var(--text-color-primary) !important;
+/* Prevent inversion from bleeding into thumbnails */
+a:hover img {
+  background: transparent !important;
+  filter: none;
 }
 
-/* --- 3. Element Overrides --- */
-
-/* Minimal Search / Menu Wrapper */
-/* ... (Menu wrapper styles kept mostly same, but using vars where possible) ... */
-
-// ☰ 三條線動畫切換 (Existing logic maintained)
-.menu-toggle {
-  // ... (geometry kept same)
-  width: 30px;
-  height: 22px;
-  position: relative;
-  cursor: pointer;
-  z-index: 1001;
-  display: block;
-  margin-left: auto;
-
-  span {
-    display: block;
-    height: 3px;
-    background: var(--text-color-primary);
-    /* Changed to var */
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  // ... (rest of animation logic is fine)
-  &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-}
-
-// 下拉選單動畫與樣式
-.menu-wrapper {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.4s ease;
-  background: var(--bg-color-card);
-  border: 1px solid var(--border-color-soft);
-  /* Darker background for contrast in all modes */
-  position: absolute;
-  top: 60px;
-  right: 0rem;
-  width: 150px;
-  max-width: 90vw;
-  box-shadow: none;
-  border-radius: 0 0 2px 2px;
-  backdrop-filter: none;
-  z-index: 1000;
-
-  display: flex;
-  justify-content: center;
-  text-align: center;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 10px 0;
-    margin: 0;
-
-    li {
-      margin: 8px 0;
-
-      a {
-        font-size: 1.5rem;
-        color: var(--text-color-primary);
-        text-decoration: none;
-        padding: 6px 12px;
-        display: block;
-        text-align: center;
-
-        &:hover {
-          color: #ffd700;
-        }
-      }
-    }
-  }
-}
-
-.menu-wrapper.open {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* Menu Toggle Positioning */
-.menu-toggle {
-  width: 30px;
-  height: 22px;
-  cursor: pointer;
-  z-index: 1001;
-  display: block;
-  position: absolute;
-  top: 18px;
-  right: 20px;
-
-  span {
-    display: block;
-    height: 3px;
-    background: var(--text-color-primary);
-    /* Consistent var */
-    margin: 5px 0;
-    transition: 0.4s;
-  }
-
-  &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(6px, -6px);
-  }
-}
-
-.menu-wrapper.open {
-  max-height: 500px;
-  opacity: 1;
-}
-
-/* -----------------------------
-   Header – 全站透明 & 捲動收合
-   ----------------------------- */
-.site-header-inner {
-  position: relative;
-}
-
-.page-link,
-label[for="nav-trigger"],
-.menu-icon {
-  display: none !important;
-}
-
+/* ─── 8. Site header ────────────────────────────────────────────────────── */
 html[data-header-transparent] header.site-header,
 header.site-header {
-  background: transparent !important;
+  background: var(--white) !important;
   box-shadow: none !important;
+  border-bottom: none !important;
 }
 
 html[data-header-transparent] header.site-header {
@@ -291,163 +294,461 @@ html[data-scroll-status='top'] header.site-header {
 
 html[data-header-transparent] header.site-header .site-brand-inner,
 html[data-header-transparent] header.site-header .page-link {
-  color: var(--text-color-secondary);
-  /* Use warm dark grey var */
+  color: var(--black);
 }
 
-/* --- Font Overrides --- */
-/* (Kept mostly as is, but ensuring color uses vars) */
-
-@font-face {
-  font-family: "GenSekiGothicTW";
-  src: url("/assets/css/fonts/GenSekiGothic2TW-R.otf") format("opentype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+.site-header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
 }
 
+/* Hide the small favicon/logo in the navbar */
+.site-favicon {
+  display: none !important;
+}
 
-
-
-
-body,
-p,
-li {
-  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif;
-  font-size: 18px;
+/* Brand / site title: regular weight, compact */
+.site-brand .site-brand-inner {
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial,
+    'Blix', 'PingFang TC', sans-serif;
+  font-size: 1.0rem;
   font-weight: 400;
-  line-height: 1.8;
-  color: var(--text-color-primary);
+  letter-spacing: 0;
+  color: var(--black);
 }
 
-p {
-  margin-bottom: 1.5em; /* Clearer paragraph separation */
+.site-brand .site-brand-inner:hover,
+.site-brand .site-brand-inner:visited:hover {
+  color: var(--hover-text) !important;
+  background-color: var(--hover-bg) !important;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.pagination .post-link {
-  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif !important;
-  color: var(--text-color-primary);
-  font-weight: 600;
+/* Hide Jekyll's built-in checkbox nav — we use the hamburger */
+.page-link,
+label[for="nav-trigger"],
+.menu-icon {
+  display: none !important;
 }
 
-h1 {
-  font-size: 36px;
+.site-nav {
+  font-size: 0.85rem;
+  line-height: 63.84px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-h2 {
-  font-size: 30px;
+/* ─── 9. Search toggle ───────────────────────────────────────────────────── */
+.search-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-right: 60px;
+  display: flex;
+  align-items: center;
+  height: 40px;
+  color: var(--black);
 }
 
-h3 {
-  font-size: 25px;
+.search-toggle:hover {
+  color: var(--hover-text) !important;
+  background-color: var(--hover-bg) !important;
 }
 
-h4 {
-  font-size: 22px;
-}
+/* ─── 10. Hamburger menu ─────────────────────────────────────────────────── */
+.menu-toggle {
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 20px;
 
-h5,
-h6 {
-  font-size: 20px;
-}
+  span {
+    display: block;
+    height: 2px;
+    background: var(--black);
+    margin: 6px 0;
+  }
 
+  &.open span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
 
-blockquote {
-  font-family: "Lora", "IBM Plex Sans TC", serif !important;
-  font-size: 17px !important;
-  color: var(--text-color-secondary);
-  background: #F5F5F2;
-  border-left: 2px solid #D9D8D2;
-  padding: 16px 24px;
-  margin: 2em 0;
-  border-radius: 0;
-}
+  &.open span:nth-child(2) {
+    opacity: 0;
+  }
 
-blockquote p,
-blockquote li {
-  font-family: "Lora", "IBM Plex Sans TC", serif !important;
-  font-size: 17px !important;
-  color: var(--text-color-secondary);
-}
-
-code,
-pre {
-  font-family: "JetBrains Mono", monospace !important;
-  font-size: 18px !important;
-}
-
-/* ===== 極簡黑線表格 (Refined) ===== */
-table.simple-table {
-  width: 100%;
-  border-collapse: collapse;
-  color: var(--text-color-primary);
-  /* Adapts to dark mode */
-}
-
-/* 儲存格：色框＋透明底 */
-table.simple-table th,
-table.simple-table td {
-  border: 1px solid var(--border-color-soft);
-  /* Softer border */
-  padding: 10px 15px;
-  background: transparent;
-  text-align: left;
-}
-
-/* 表頭微灰底做區隔 */
-table.simple-table th {
-  font-weight: 600;
-  background: rgba(0, 0, 0, 0.04);
-  /* Kept subtle */
-}
-
-@media (prefers-color-scheme: dark) {
-  table.simple-table th {
-    background: rgba(255, 255, 255, 0.05);
-    /* Light highlight in dark mode */
+  &.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
 
-/* 列懸停 */
-table.simple-table tbody tr:hover>td,
-table.simple-table tbody tr:hover>th {
-  background: rgba(0, 0, 0, .04);
-}
+.menu-wrapper {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--black);
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 160px;
+  max-width: 90vw;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-start;
 
-@media (prefers-color-scheme: dark) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0.5rem 0;
+    margin: 0;
+    width: 100%;
 
-  table.simple-table tbody tr:hover>td,
-  table.simple-table tbody tr:hover>th {
-    background: rgba(255, 255, 255, .05);
+    li {
+      margin: 0;
+
+      a {
+        font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: var(--black);
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        display: block;
+        text-align: left;
+
+        &:hover {
+          color: var(--hover-text) !important;
+          background-color: var(--hover-bg) !important;
+        }
+      }
+    }
+  }
+
+  &.open {
+    max-height: 400px;
+    opacity: 1;
   }
 }
 
-/* 整張表外框 */
-table.simple-table {
-  border: 1px solid var(--border-color-strong);
+/* ─── 11. Page layout & wrapper ─────────────────────────────────────────── */
+.page-content {
+  padding: 0 !important;
 }
 
-/* 滑鼠懸停列 */
-tbody tr:hover {
-  background: transparent;
-  /* Let the td hover handle it to avoid conflicts */
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
+/* ─── 12. Post list (homepage / articles) ───────────────────────────────── */
+.pagination {
 
+  .post-list {
+    margin-left: 0;
+    list-style: none;
+
+    >li {
+      background: transparent !important;
+      padding: 4rem 0;
+      margin-bottom: 0;
+      border: none !important;
+      border-bottom: none !important;
+
+      &:hover {
+        transform: none !important;
+        border: none !important;
+        background: transparent !important;
+      }
+    }
+
+    /* Remove the nth-child separator set in _layout.scss */
+    >li:not(:last-child) {
+      border-bottom: none !important;
+    }
+  }
+
+  .post-title {
+    margin-bottom: 0.4rem;
+
+    a {
+      text-decoration: none;
+    }
+  }
+
+  .post-link {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
+    font-size: 1.2rem !important;
+    font-weight: 400 !important;
+    letter-spacing: -0.03em;
+    color: var(--black) !important;
+  }
+
+  .post-meta {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--black) !important;
+    opacity: 0.45;
+    margin-bottom: 0.6rem;
+  }
+
+  .post-text {
+    color: var(--black) !important;
+    font-size: 0.85rem;
+  }
+
+  .post-tags .post-tag {
+    border: none !important;
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--black) !important;
+    padding: 0;
+    margin-right: 0.75rem;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+  }
+
+  .paginator {
+    padding: 2rem 0 4rem;
+    text-align: left;
+
+    .previous,
+    .next {
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: var(--black);
+
+      &:hover {
+        color: var(--hover-text) !important;
+        background-color: var(--hover-bg) !important;
+      }
+    }
+
+    .previous span,
+    .next span {
+      color: rgba(17, 17, 17, 0.3);
+    }
+
+    /* Remove CSS-border chevrons — keep them but strip the visual border */
+    &>.previous:before,
+    &>.next:after {
+      border-color: rgba(17, 17, 17, 0.4) !important;
+    }
+
+    .indicator {
+      padding: 0 1rem;
+      font-size: 0.8rem;
+      opacity: 0.45;
+    }
+  }
+}
+
+/* ─── 13. Single post ───────────────────────────────────────────────────── */
+.post {
+
+  .post-header {
+    max-width: 760px;
+    margin: 4rem auto 2rem;
+    padding: 0 0 2rem;
+    border: none !important;
+
+    .post-title {
+      font-size: 2rem !important;
+      letter-spacing: -0.04em;
+      line-height: 1.1 !important;
+      margin-bottom: 0.75rem;
+      font-weight: 400;
+    }
+
+    .post-subtitle {
+      font-size: 1rem !important;
+      font-weight: 400;
+      color: var(--black);
+      opacity: 0.55;
+      margin-bottom: 0.4rem;
+    }
+
+    .post-meta {
+      font-size: 0.72rem !important;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--black) !important;
+      opacity: 0.45;
+      padding-bottom: 0;
+    }
+
+    .post-tags {
+      padding-right: 0;
+
+      .post-tag {
+        border: none !important;
+        font-size: 0.72rem !important;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--black);
+        margin-right: 0.75rem;
+
+        &:hover {
+          color: var(--hover-text) !important;
+          background-color: var(--hover-bg) !important;
+        }
+      }
+    }
+  }
+}
+
+/* Constrain article width */
+.post-content,
+.post-header {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-content {
+  margin-bottom: 0;
+
+  h1 {
+    font-size: 1.8rem !important;
+    letter-spacing: -0.04em;
+    line-height: 1.1 !important;
+    margin: 3.5rem 0 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+    letter-spacing: -0.04em;
+    line-height: 1.1 !important;
+    margin: 3rem 0 1rem;
+  }
+
+  h3 {
+    font-size: 1.3rem !important;
+    letter-spacing: -0.04em;
+    line-height: 1.1 !important;
+    margin: 2.5rem 0 0.75rem;
+  }
+
+  h4 {
+    font-size: 1.1rem !important;
+    letter-spacing: -0.03em;
+    margin: 2rem 0 0.5rem;
+  }
+
+  h5,
+  h6 {
+    font-size: 1.0rem !important;
+    letter-spacing: -0.02em;
+    margin: 1.5rem 0 0.5rem;
+  }
+
+  /* Horizontal rule: pure whitespace, no line */
+  hr {
+    height: 0;
+    background: none;
+    border: none;
+    margin: 3rem 0;
+  }
+
+  img,
+  svg,
+  iframe {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 70vh;
+  }
+}
+
+/* Related posts section */
+.post-related {
+  max-width: 760px;
+  margin: 0 auto;
+
+  &>*:first-child {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--black) !important;
+    opacity: 0.45;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-link {
+    font-size: 1rem !important;
+    color: var(--black) !important;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+  }
+}
+
+/* ─── 14. Post navigation (prev / next) ─────────────────────────────────── */
+/* Override both the theme's .post-nav AND the custom classes from old design */
 .post-nav {
   display: flex;
   justify-content: space-between;
-  margin-top: 30px;
-  padding-top: 20px;
-  border-top: 1px solid var(--border-color-soft);
+  max-width: 760px;
+  margin: 4rem auto;
+  padding-top: 0;
+  border-top: none !important;
+  gap: 2rem;
+
+  a {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    color: var(--black) !important;
+    font-weight: 400;
+    max-width: 45%;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+
+    * {
+      overflow: hidden;
+      text-wrap-mode: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+
+  /* Replace CSS-border arrows with text characters */
+  .previous:before {
+    content: '←';
+    border: none !important;
+    margin-right: 0.5rem;
+    padding: 0;
+  }
+
+  .next:after {
+    content: '→';
+    border: none !important;
+    margin-left: 0.5rem;
+    padding: 0;
+  }
 }
 
+/* Old custom post-nav class variants */
 .post-nav-item {
   width: 48%;
 }
@@ -458,56 +759,43 @@ tbody tr:hover {
 
 .post-nav-link {
   display: block;
-  padding: 10px;
-  border: 1px solid var(--border-color-soft);
-  border-radius: 2px;
-  color: var(--text-color-primary);
-  text-decoration: none;
-  transition: all 0.3s;
-}
+  padding: 0;
+  border: none !important;
+  background: transparent !important;
+  color: var(--black);
 
-.post-nav-link:hover {
-  background-color: var(--bg-color-footer);
-  /* Reusing footer bg for hover */
-  border-color: var(--border-color-strong);
+  &:hover {
+    background-color: transparent !important;
+  }
 }
 
 .post-nav-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 5px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
 }
 
-.site-nav {
-  font-size: 20px;
-  line-height: 63.84px;
-  position: absolute;
-  right: 0;
-  top: 0;
+/* ─── 15. Page banner ───────────────────────────────────────────────────── */
+.page-banner {
+  background-image: none !important;
+  background-color: var(--white) !important;
 }
 
-.site-brand .site-brand-inner {
-  font-size: 20px;
-  font-weight: 500;
-  letter-spacing: -1px;
-  transition: 0.1s filter color;
-  font-family: "Satoshi", "IBM Plex Sans TC", sans-serif;
-}
+.page-banner-inner {
+  text-shadow: none !important;
 
-/* Banner Headings and Subheadings */
-.page-banner hr {
-  display: contents;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(90px);
+  .left-vsplit:before {
+    background: transparent;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  .post-subtitle,
+  .post-meta {
+    color: rgba(17, 17, 17, 0.55) !important;
+  }
+
+  .post-tags .post-tag {
+    color: var(--black) !important;
+    border: none !important;
   }
 }
 
@@ -523,23 +811,20 @@ h3.page-banner-subheading,
 h4.page-banner-subheading,
 h5.page-banner-subheading,
 h6.page-banner-subheading {
-  font-family: "Satoshi", "GenSekiGothicTW", sans-serif !important;
-  font-size: 80px !important;
-  color: var(--text-color-primary) !important;
-  font-weight: normal !important;
-  letter-spacing: 0.05em !important;
+  font-family: 'Inter', 'Helvetica Neue', 'GenSekiGothicTW', 'Blix', sans-serif !important;
+  font-size: 2.2rem !important;
+  color: var(--black) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.1 !important;
   border: none !important;
-  box-shadow: none !important;
   background: none !important;
   padding: 0 !important;
   margin: 0 !important;
-  text-align: center;
-  line-height: 1.3 !important;
-  
-  /* 延遲0.5秒後才開始動畫 */
+  text-align: left;
+  text-shadow: none !important;
 }
 
-/* 隱藏偽元素 */
 .page-banner-heading::before,
 .page-banner-heading::after,
 .page-banner-subheading::before,
@@ -548,126 +833,89 @@ h6.page-banner-subheading {
   border: none !important;
 }
 
-@media (max-width: 768px) {
+/* ─── 16. Site footer ───────────────────────────────────────────────────── */
+.site-footer {
+  background-color: var(--white) !important;
+  color: var(--black) !important;
+  border: none !important;
+  font-size: 0.75rem;
 
-  h1.page-banner-heading,
-  h2.page-banner-heading,
-  h3.page-banner-heading,
-  h4.page-banner-heading,
-  h5.page-banner-heading,
-  h6.page-banner-heading,
-  h1.page-banner-subheading,
-  h2.page-banner-subheading,
-  h3.page-banner-subheading,
-  h4.page-banner-subheading,
-  h5.page-banner-subheading,
-  h6.page-banner-subheading {
-    font-size: 50px !important;
+  .site-footer-inner {
+    border-top: none !important;
+    padding: 4rem 0 2rem;
+  }
+
+  a {
+    color: var(--black);
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
   }
 }
 
-@media (max-width: 480px) {
+/* ─── 17. Tables ────────────────────────────────────────────────────────── */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+  margin-bottom: 2rem;
+  color: var(--black) !important;
 
-  h1.page-banner-heading,
-  h2.page-banner-heading,
-  h3.page-banner-heading,
-  h4.page-banner-heading,
-  h5.page-banner-heading,
-  h6.page-banner-heading,
-  h1.page-banner-subheading,
-  h2.page-banner-subheading,
-  h3.page-banner-subheading,
-  h4.page-banner-subheading,
-  h5.page-banner-subheading,
-  h6.page-banner-subheading {
-    font-size: 35px !important;
+  tr:nth-child(even) {
+    background-color: transparent !important;
+  }
+
+  th,
+  td {
+    border: 1px solid rgba(17, 17, 17, 0.15) !important;
+    padding: 0.5rem 0.75rem;
+    background: transparent !important;
+    text-align: left;
+    font-size: 0.8rem;
+    color: var(--black);
+  }
+
+  th {
+    font-weight: 700;
+    border-color: rgba(17, 17, 17, 0.35) !important;
+    background: transparent !important;
   }
 }
 
-.site-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+/* Explicit simple-table class (used in posts) */
+table.simple-table {
 
-.search-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  margin-right: 80px;
-  /* 與漢堡icon距離，可調整 */
-  display: flex;
-  align-items: center;
-  height: 40px;
-}
-
-.header-search-form {
-  margin-top: 10px;
-  text-align: right;
-  animation: fadein 0.2s;
-}
-
-.header-search-form input {
-  font-size: 1rem;
-  padding: 4px 12px;
-  border-radius: 2px;
-  border: 1px solid var(--border-color-soft);
-  width: 160px;
-  outline: none;
-  background: var(--bg-color-card);
-  color: var(--text-color-primary);
-}
-
-@keyframes fadein {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
+  th,
+  td {
+    border: 1px solid rgba(17, 17, 17, 0.15);
+    padding: 0.5rem 0.75rem;
+    background: transparent;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  th {
+    font-weight: 700;
+    border-color: rgba(17, 17, 17, 0.35);
+    background: transparent !important;
+  }
+
+  tbody tr:hover>td,
+  tbody tr:hover>th {
+    background: rgba(17, 17, 17, 0.03) !important;
   }
 }
 
-.header-search-form {
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: opacity 0.3s, transform 0.3s;
-  position: absolute;
-  top: 60px;
-  /* 根據你的 header 高度微調 */
-  right: 24px;
-  /* 根據需求調整靠右距離 */
-  z-index: 1000;
-  background: var(--bg-color-card);
-  border-radius: 2px;
-  box-shadow: var(--shadow-card);
-  padding: 8px 16px;
-}
-
-.header-search-form.show {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-
-/* === Minimal Search UI (fixed/beautified) ================================== */
-
+/* ─── 18. Search overlay ────────────────────────────────────────────────── */
 .search-overlay {
-  /* layout */
   position: fixed;
   inset: 0;
-  /* top/right/bottom/left: 0 */
   z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 10vh 2rem;
-
-  /* visuals */
-  background: rgba(0, 0, 0, .12);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
@@ -677,35 +925,28 @@ h6.page-banner-subheading {
 }
 
 .search-panel {
-  /* layout */
   position: relative;
-  width: min(500px, 100%);
-  padding: 1rem 1rem 0;
-
-  /* visuals */
-  background: var(--bg-color-card);
-  border: 1px solid transparent;
-  /* 看起來無框線 */
-  border-radius: 2px;
-  box-shadow: none;
+  width: var(--search-width);
+  padding: 1.25rem 1.25rem 0;
+  background: var(--white);
+  border: 1px solid var(--black);
 }
 
-/* ── 讓關閉鈕與輸入框同列並水平對齊 ───────────────────────────── */
 .search-header {
   display: flex;
   align-items: center;
-  /* 與輸入文字垂直置中 → 視覺上同一水平線 */
-  gap: .5rem;
+  gap: 0.75rem;
   padding-right: 0;
-  /* 覆蓋先前為絕對定位預留的空間 */
 }
 
 .search-header #search-input {
   flex: 1;
-  /* 輸入框吃滿寬度，關閉鈕貼右側 */
+  font-size: var(--search-input-font);
+  padding: 1rem 1.25rem;
+  min-height: 52px;
+  line-height: 1.35;
 }
 
-/* 隱藏 type=search 內建清除鈕（Chrome/Edge/Safari） */
 #search-input[type="search"]::-webkit-search-cancel-button,
 #search-input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -713,147 +954,269 @@ h6.page-banner-subheading {
   display: none;
 }
 
-/* 舊 Edge/IE（保險） */
 #search-input[type="search"]::-ms-clear {
   display: none;
   width: 0;
   height: 0;
 }
 
-/* 輸入框：極簡、無邊框 */
 #search-input {
   background: transparent;
   border: none;
   outline: none;
-  box-shadow: none;
-  padding: .9rem 1.1rem;
-  color: var(--text-color-primary);
+  padding: 0.9rem 1.1rem;
+  color: var(--black);
+  font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 #search-results {
-  max-height: 60vh;
+  max-height: 70vh;
   overflow: auto;
-  margin-top: .75rem;
+  margin-top: 0.75rem;
 }
 
-/* 結果項目：極簡 hover */
 .search-item {
-  border-top: 1px solid var(--border-color-soft);
-}
-
-.search-item:hover {
-  background: var(--border-color-soft);
-}
-
-/* 關閉按鈕（右上角） */
-#search-close {
-  position: absolute;
-  top: .6rem;
-  right: .6rem;
-  appearance: none;
-  background: transparent;
-  border: 1px solid transparent;
-  box-shadow: none;
-  font-size: 18px;
-  line-height: 1;
-  cursor: pointer;
-  padding: .35rem .5rem;
-  opacity: .7;
-  color: var(--text-color-primary);
-}
-
-#search-close:hover {
-  opacity: 1;
-  background: var(--border-color-soft);
-}
-
-/* 零碎排版 */
-.search-title {
-  font-weight: 600;
-}
-
-.search-snippet {
-  font-size: .9rem;
-  opacity: .85;
-  margin-top: .25rem;
-}
-
-mark {
-  background: #ffe58f;
-  padding: 0 .1em;
-}
-
-
-/* === Search panel bigger & readable ======================================= */
-/* 可調整變數：一次控制整體尺寸 */
-:root {
-  --search-width: min(720px, 96vw);
-  --search-input-font: clamp(1.05rem, 0.95rem + 0.6vw, 1.25rem);
-  --search-title-font: clamp(1.2rem, 0.95rem + 0.5vw, 1.3rem);
-  --search-snippet-font: clamp(0.95rem, 0.9rem + 0.4vw, 1.1rem);
-}
-
-.search-panel {
-  width: var(--search-width);
-  padding: 1.25rem 1.25rem 0;
-  /* 四邊留白更寬 */
-}
-
-/* 頂部列：輸入框與關閉鈕同列置中 */
-.search-header {
-  display: flex;
-  align-items: center;
-  gap: .75rem;
-  /* 元件間距略放大 */
-  padding-right: 0;
-}
-
-/* 輸入框放大、增加可點擊高度 */
-.search-header #search-input {
-  flex: 1;
-  font-size: var(--search-input-font);
+  border-top: none !important;
   padding: 1rem 1.25rem;
-  /* 左右與上下內距加大 */
-  min-height: 52px;
-  /* 觸控友善 */
-  line-height: 1.35;
+
+  &:hover {
+    background: var(--hover-bg) !important;
+
+    * {
+      color: var(--hover-text) !important;
+    }
+  }
 }
 
-/* 關閉鈕同步放大（仍極簡） */
-.search-panel #search-close {
+#search-close {
   position: static !important;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-width: 42px;
   min-height: 42px;
-  padding: .4rem .65rem;
+  padding: 0.4rem 0.65rem;
   font-size: 20px;
-}
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.7;
+  color: var(--black);
 
-/* 列表與字級放大 */
-#search-results {
-  max-height: 70vh;
-  margin-top: 1rem;
-}
-
-.search-item {
-  padding: 1rem 1.25rem;
+  &:hover {
+    opacity: 1;
+    background: var(--hover-bg) !important;
+    color: var(--hover-text) !important;
+  }
 }
 
 .search-title {
-  font-weight: 600;
+  font-weight: 700;
   font-size: var(--search-title-font);
+  color: var(--black);
 }
 
 .search-snippet {
-  margin-top: .35rem;
+  margin-top: 0.35rem;
   font-size: var(--search-snippet-font);
-  opacity: .85;
+  opacity: 0.8;
+  color: var(--black);
 }
 
-/* 手機微調：更寬版面、較高輸入框 */
-@media (max-width: 480px) {
+mark {
+  background: rgba(0, 0, 255, 0.12);
+  padding: 0 0.1em;
+}
+
+/* ─── 19. Header inline search form ─────────────────────────────────────── */
+.header-search-form {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: opacity 0.2s, transform 0.2s;
+  position: absolute;
+  top: 60px;
+  right: 24px;
+  z-index: 1000;
+  background: var(--white);
+  border: 1px solid var(--black);
+  padding: 0.5rem 1rem;
+
+  &.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  input {
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 0.85rem;
+    padding: 0.25rem 0.5rem;
+    border: none;
+    background: transparent;
+    color: var(--black);
+    outline: none;
+    width: 160px;
+  }
+}
+
+/* ─── 20. Archives ──────────────────────────────────────────────────────── */
+.page-archives {
+  .page-archives-list {
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .archives-time {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .post-meta {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.45;
+  }
+}
+
+/* ─── 21. Segments (categories / tags pages) ─────────────────────────────── */
+.page-segments {
+  .page-segments-list {
+    margin-left: 0;
+    list-style: none;
+  }
+
+  .segment-name {
+    font-size: 0.72rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 0.75rem;
+
+    /* Remove '#' hover pseudo-element */
+    &:hover:before {
+      content: none;
+    }
+  }
+
+  .post-meta {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.45;
+  }
+
+  li a {
+    color: var(--black);
+    font-size: 0.85rem;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+
+    &.post-link {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+/* ─── 22. Vertical split separator — remove ─────────────────────────────── */
+.left-vsplit:before {
+  display: none;
+}
+
+/* ─── 23. Post badges ───────────────────────────────────────────────────── */
+.post-badge {
+  background-color: var(--black) !important;
+  color: var(--white) !important;
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0 3px;
+}
+
+/* ─── 24. Dark mode — keep pure white regardless of OS preference ────────── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --white: #FFFFFF;
+    --black: #111111;
+  }
+
+  html,
+  body,
+  .page-content,
+  .site-header,
+  .site-footer {
+    background-color: #FFFFFF !important;
+    color: #111111 !important;
+  }
+}
+
+html[data-theme="dark"] {
+  --white: #FFFFFF;
+  --black: #111111;
+}
+
+html[data-theme="dark"],
+html[data-theme="dark"] body,
+html[data-theme="dark"] .page-content,
+html[data-theme="dark"] .site-header,
+html[data-theme="dark"] .site-footer {
+  background-color: #FFFFFF !important;
+  color: #111111 !important;
+}
+
+/* ─── 25. Responsive: tablet (≤ 800px) ──────────────────────────────────── */
+@media screen and (max-width: 800px) {
+  .wrapper {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .pagination .post-list>li {
+    padding: 2.5rem 0;
+  }
+
+  .post .post-header {
+    margin: 2.5rem auto 1.5rem;
+  }
+
+  .post-nav {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 3rem auto;
+  }
+
+  .post-nav-item,
+  .post-nav a {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .post-nav-next {
+    text-align: left;
+  }
+}
+
+/* ─── 26. Responsive: mobile (≤ 480px) ──────────────────────────────────── */
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .pagination .post-list>li {
+    padding: 2rem 0;
+  }
+
   .search-panel {
     width: min(94vw, 720px);
   }
@@ -861,18 +1224,411 @@ mark {
   .search-header #search-input {
     min-height: 48px;
   }
+
+  h1.page-banner-heading,
+  h2.page-banner-heading,
+  h3.page-banner-heading,
+  h4.page-banner-heading,
+  h5.page-banner-heading,
+  h6.page-banner-heading,
+  h1.page-banner-subheading,
+  h2.page-banner-subheading,
+  h3.page-banner-subheading,
+  h4.page-banner-subheading,
+  h5.page-banner-subheading,
+  h6.page-banner-subheading {
+    font-size: 1.5rem !important;
+  }
 }
 
-/* Override banner backgrounds for solid color approach */
-.page-banner {
-  background-image: none !important;
-  background-color: var(--bg-color-primary) !important;
+/* ─── 27. Responsive: banner headings (≤ 768px) ─────────────────────────── */
+@media screen and (max-width: 768px) {
+
+  h1.page-banner-heading,
+  h2.page-banner-heading,
+  h3.page-banner-heading,
+  h4.page-banner-heading,
+  h5.page-banner-heading,
+  h6.page-banner-heading,
+  h1.page-banner-subheading,
+  h2.page-banner-subheading,
+  h3.page-banner-subheading,
+  h4.page-banner-subheading,
+  h5.page-banner-subheading,
+  h6.page-banner-subheading {
+    font-size: 1.75rem !important;
+  }
 }
 
+/* ═══════════════════════════════════════════════════════════════════════════
+   28. MAGAZINE LAYOUT — Swiss/Brutalist editorial grid
+   ═══════════════════════════════════════════════════════════════════════════ */
 
-/* Article width restriction ONLY (to avoid breaking global homepage) */
-.post-header, .post-content {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+/* — Narrow wrapper: tight left/right margins, full-bleed feel — */
+.wrapper {
+  max-width: 1400px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* — Header: thin bottom rule, no bg, no shadow — */
+.site-header {
+  border-bottom: 1.5px solid var(--black) !important;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+/* — Brand: uppercase mono-style label — */
+.site-brand .site-brand-inner {
+  font-size: 0.7rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* — Desktop nav: inline layout — */
+@media screen and (min-width: 801px) {
+  /* Hamburger: hide */
+  .menu-toggle {
+    display: none !important;
+  }
+
+  /* Pull old .site-nav out of absolute positioning into flex flow */
+  .site-nav {
+    position: static !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    margin-left: auto; /* push nav + search to the right */
+    font-size: 0 !important; /* collapse the checkbox whitespace */
+  }
+
+  /* Show trigger items inline */
+  .site-nav .trigger {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  label[for="nav-trigger"],
+  .menu-icon {
+    display: none !important;
+  }
+
+  .site-nav .trigger .page-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    font-size: 0.68rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    padding: 0.3rem 0.75rem !important;
+    color: var(--black) !important;
+    text-decoration: none !important;
+    white-space: nowrap !important;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+  }
+
+  /* Search toggle: no right-margin gap for hamburger */
+  .search-toggle {
+    margin-right: 0 !important;
+  }
+}
+
+/* — Hide banner entirely on homepage (no heading set) — */
+.page-banner:not(:has(h1, h2, h3, h4, h5, h6)) {
+  display: none !important;
+}
+
+/* — Hide sidebar on list/pagination pages — */
+.framework:has(.pagination) .sidebar {
+  display: none !important;
+}
+
+/* — Post list header row — */
+.post-list-header {
+  display: grid;
+  grid-template-columns: 2.5rem 6rem 1fr auto;
+  grid-template-areas: "num date title tags";
+  align-items: baseline;
+  padding: 0.4rem 0;
+  border-top: 1.5px solid var(--black);
+  border-bottom: 1px solid var(--black);
+  margin-bottom: 0;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--black);
+  opacity: 0.5;
+
+  .col-num   { grid-area: num; }
+  .col-date  { grid-area: date; }
+  .col-title { grid-area: title; }
+  .col-tags  { grid-area: tags; text-align: right; padding-right: 0.5rem; }
+}
+
+/* — Post list: reset default card style — */
+.pagination .post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: post-counter;
+
+  > li.post-item,
+  > li.top-post {
+    counter-increment: post-counter;
+    display: grid;
+    grid-template-columns: 2.5rem 6rem 1fr auto;
+    grid-template-areas: "num date title tags";
+    align-items: baseline;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.12);
+    gap: 0;
+    margin: 0;
+
+    /* Remove old card padding/background */
+    background: transparent !important;
+    box-shadow: none !important;
+
+    /* Counter number */
+    &::before {
+      content: counter(post-counter, decimal-leading-zero);
+      grid-area: num;
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--black);
+      opacity: 0.35;
+      align-self: center;
+    }
+
+    /* Hide everything we don't want */
+    .post-excerpt,
+    .post-author,
+    .post-reading-time,
+    .post-image,
+    .post-text,
+    .left-vsplit,
+    .fa,
+    .fa-solid,
+    .fa-regular {
+      display: none !important;
+    }
+
+    /* Date — grid area */
+    .post-date {
+      grid-area: date;
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--black);
+      opacity: 0.5;
+      letter-spacing: 0;
+      align-self: center;
+    }
+
+    /* Title link — grid area */
+    .post-title {
+      grid-area: title;
+      margin: 0;
+      padding: 0;
+      align-self: center;
+
+      .post-link {
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: var(--black);
+        text-decoration: none;
+        letter-spacing: -0.01em;
+        line-height: 1.3;
+        display: block;
+        padding: 0.1rem 0.5rem;
+
+        &:hover {
+          color: var(--hover-text) !important;
+          background-color: var(--hover-bg) !important;
+        }
+      }
+    }
+
+    /* Tags — grid area */
+    .post-tags {
+      grid-area: tags;
+      display: flex;
+      gap: 0.35rem;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0.25rem;
+
+      .post-tag {
+        font-size: 0.58rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        padding: 0.1rem 0.4rem;
+        color: var(--black);
+        background: transparent;
+        border: 1px solid var(--black);
+        text-decoration: none;
+
+        &:hover {
+          color: var(--hover-text) !important;
+          background-color: var(--hover-bg) !important;
+          border-color: var(--hover-text) !important;
+        }
+      }
+    }
+
+    /* Post meta wrapper — flatten */
+    .post-meta {
+      display: contents;
+    }
+  }
+
+  /* Pin badge on top post */
+  > li.top-post .post-badge {
+    display: inline-block !important;
+  }
+}
+
+/* — Paginator links — */
+.paginator {
+  margin-top: 2rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+
+  a {
+    color: var(--black);
+    padding: 0.2rem 0.5rem;
+    text-decoration: none;
+
+    &:hover {
+      color: var(--hover-text) !important;
+      background-color: var(--hover-bg) !important;
+    }
+  }
+}
+
+/* — Mobile (≤ 640px): collapse to 2-column — */
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .post-list-header {
+    grid-template-columns: 2.5rem 1fr;
+    grid-template-areas: "num title";
+
+    .col-date,
+    .col-tags {
+      display: none;
+    }
+  }
+
+  .pagination .post-list > li.post-item,
+  .pagination .post-list > li.top-post {
+    grid-template-columns: 2.5rem 1fr;
+    grid-template-areas:
+      "num title"
+      ".   tags";
+
+    .post-date {
+      display: none;
+    }
+
+    .post-tags {
+      justify-content: flex-start;
+      padding-left: 0;
+    }
+  }
+}
+
+/* ─── 29. Google Translate widget — brutalist reset ─────────────────────── */
+
+/* Trigger button */
+.ct-language {
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  padding: 0.3rem 0.75rem !important;
+
+  &:before {
+    font-size: 0.68rem;
+    font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    content: "TR \25BE" !important; /* plain text label + small arrow */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    font-family: inherit !important;
+  }
+
+  &:hover {
+    background-color: var(--hover-bg) !important;
+
+    &:before {
+      color: var(--hover-text);
+    }
+  }
+}
+
+/* Dropdown panel */
+.ct-language-dropdown {
+  border-radius: 0 !important;
+  transition: none !important;
+  -webkit-transition: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  background-color: var(--white) !important;
+  border: 1px solid var(--black) !important;
+  width: 110px !important;
+  right: 0 !important;
+  top: 100% !important;
+
+  li {
+    padding: 0 !important;
+    border-bottom: none !important;
+
+    &:first-child { padding-top: 0 !important; }
+    &:last-child  { padding-bottom: 0 !important; }
+
+    a {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.4rem !important;
+      padding: 0.35rem 0.6rem !important;
+      font-size: 0.68rem !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.08em !important;
+      color: var(--black) !important;
+      text-decoration: none !important;
+
+      img {
+        width: 16px !important;
+        height: auto !important;
+        flex-shrink: 0 !important;
+      }
+
+      &:hover {
+        background-color: var(--hover-bg) !important;
+        color: var(--hover-text) !important;
+      }
+    }
+  }
+}
+
+/* Show on hover (instant) */
+.ct-language:hover .ct-language-dropdown {
+  max-height: 10000px !important;
+  visibility: visible !important;
+  margin-top: 0 !important;
+}
+
+.ct-language-selected {
+  background-color: transparent !important;
 }
