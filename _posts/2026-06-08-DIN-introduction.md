@@ -3,7 +3,7 @@ layout: post
 categories: ["Typography", "Design"]
 date: 2026-06-08 09:00:00 +0800
 tags: ["DIN", "Typography", "Font"]
-title: DIN的介紹
+title: DIN-德國工業感字體
 subtitle: "德國工業風格字體與免費替代方案"
 toc: true
 toc_sticky: true
@@ -35,3 +35,7 @@ D-DIN 原本是 Datto 免費提供的字體，後續下載點移除後，作者�
 Dinish 是參考 DIN 1451 標準繪製的字體，在嚴格的德國規範中保留 DIN 的清晰度，同時兼顧人們喜歡的閱讀感。
 
 [Dinish 下載點](https://github.com/playbeing/dinish)
+
+Gidole 是作者Andreas Larsen的家鄉，位於衣索比亞南部的一個美麗的小山城，這個字體是一款人文主義極簡風格的DIN字體。
+[Gidole 下載點](https://github.com/larsenwork/Gidole/releases)
+[Gidole](https://gidole.github.io/#)
