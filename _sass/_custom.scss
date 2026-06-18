@@ -71,6 +71,15 @@ html[lang="ja"] body {
 
 /* ─── 4. Local font faces ────────────────────────────────────────────────── */
 
+/* Satoshi - used for Latin text in banner headings */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/assets/css/fonts/Satoshi-Variable.ttf") format("truetype");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* GenSekiGothicTW (源石黑體) — 3 weights, used for CJK headings */
 @font-face {
   font-family: "GenSekiGothicTW";
@@ -811,10 +820,10 @@ h3.page-banner-subheading,
 h4.page-banner-subheading,
 h5.page-banner-subheading,
 h6.page-banner-subheading {
-  font-family: 'Inter', 'Helvetica Neue', 'GenSekiGothicTW', 'Blix', sans-serif !important;
+  font-family: 'Satoshi', 'Helvetica Neue', 'GenSekiGothicTW', 'Blix', sans-serif !important;
   font-size: 2.2rem !important;
   color: var(--black) !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   letter-spacing: -0.04em !important;
   line-height: 1.1 !important;
   border: none !important;
@@ -1280,7 +1289,7 @@ html[data-theme="dark"] .site-footer {
 
 /* — Brand: uppercase mono-style label — */
 .site-brand .site-brand-inner {
-  font-size: 0.7rem !important;
+  font-size: 0.9rem !important;
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 0.12em !important;
@@ -1317,7 +1326,7 @@ html[data-theme="dark"] .site-footer {
   .site-nav .trigger .page-link {
     display: inline-flex !important;
     align-items: center !important;
-    font-size: 0.68rem !important;
+    font-size: 0.82rem !important;
     font-weight: 700 !important;
     text-transform: uppercase !important;
     letter-spacing: 0.1em !important;

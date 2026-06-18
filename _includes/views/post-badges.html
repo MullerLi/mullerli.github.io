@@ -1,4 +1,6 @@
 <span class="post-badges">
   <span class="post-badge badge-top">TOP</span>
+  {%- if post.url == site.posts.first.url -%}
   <span class="post-badge badge-new">NEW</span>
+  {%- endif -%}
 </span>
