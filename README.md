@@ -1,4 +1,4 @@
-# 誠紘的食米研究 | Personal Blog
+# Personal Blog
 
 It is my personal blog.
 

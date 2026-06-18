@@ -19,7 +19,7 @@ CNS稻米標準將包裝米分為秈米、稉米、糯米。糯米指的是稻�
 直鏈澱粉和支鏈澱粉為碳水化合物，皆是由α葡萄糖單元(α-D-glucose units)，由澱粉合成酶、支鏈酶、去分支酶形成。直鏈澱粉的結構猶如直條義大利麵、支鏈澱粉則像樹枝一樣具有許多分支。
 
 澱粉的六級結構
-![澱粉六級結構]({{'/assets/images/260203starch.jpg' | relative_url}})
+![澱粉六級結構]({{'/assets/images/260203starch.JPG' | relative_url}})
 cited from Li, H, Gilbert, R G, 2018. Starch molecular structure the basis for an improved
 
 
@@ -46,7 +46,7 @@ cited from Li, H, Gilbert, R G, 2018. Starch molecular structure the basis for a
 例如義大利的燉飯米，即屬於稉型中直鏈澱粉含量稻米，因為稻米偏大顆，商品分類屬於「中粒米」，具有乾爽硬實的口感。適合烹煮具有「al dente」彈牙口感的義大利燉飯，特別強調「外軟內硬」的米芯，與我國習慣食用的中式炒飯、燴飯等，差異很大。
 
 世界各國對食米的偏好
-![IMG3]({{'/assets/images/260203worldrice.jpg' | relative_url}})
+![IMG3]({{'/assets/images/260203worldrice.JPG' | relative_url}})
 cited from [PLos One 9, e85106](https://doi.org/10.1371/journal.pone.0085106)
 
 
