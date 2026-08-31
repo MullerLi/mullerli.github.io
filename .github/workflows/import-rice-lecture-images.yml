@@ -1,0 +1,61 @@
+name: Import full-resolution rice lecture photos
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/import-rice-lecture-images.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-photos:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Download original-resolution photos
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/rice-lecture
+          curl --fail --location --retry 3 'https://at.adobe.com/Oip8eu0CdjOxYbGu' -o assets/images/rice-lecture/speaker-portrait.png
+          curl --fail --location --retry 3 'https://at.adobe.com/fom7WAggCH0o78G8' -o assets/images/rice-lecture/speaker-media.jpg
+          curl --fail --location --retry 3 'https://at.adobe.com/XOymYQIE4H2XFAJ4' -o assets/images/rice-lecture/lecture-room.jpg
+          curl --fail --location --retry 3 'https://at.adobe.com/gvHaBqvUIe2qrG8D' -o assets/images/rice-lecture/lecture-land-to-table.jpg
+          curl --fail --location --retry 3 'https://at.adobe.com/NoBs6aSKZuhDFt5Z' -o assets/images/rice-lecture/field-rice.jpg
+          file assets/images/rice-lecture/*
+          du -h assets/images/rice-lecture/*
+
+      - name: Point lecture page to dedicated assets
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('rice-lecture/index.html')
+          s = p.read_text(encoding='utf-8')
+          s = s.replace('https://mullerli.github.io/assets/images/profile2.jpg', 'https://mullerli.github.io/assets/images/rice-lecture/lecture-room.jpg')
+          s = s.replace('../assets/images/profile2.jpg', '../assets/images/rice-lecture/lecture-room.jpg', 1)
+          s = s.replace('../assets/images/profile.jpg', '../assets/images/rice-lecture/speaker-portrait.png')
+          s = s.replace('../assets/images/sensory1.png', '../assets/images/rice-lecture/lecture-land-to-table.jpg')
+          s = s.replace('../assets/images/sensory2.png', '../assets/images/rice-lecture/lecture-room.jpg')
+          s = s.replace('../assets/images/sensory3.png', '../assets/images/rice-lecture/speaker-media.jpg')
+          s = s.replace('../assets/images/profile2.jpg', '../assets/images/rice-lecture/field-rice.jpg')
+          s = s.replace('註：YouTube 以原影片直接嵌入；其他案例優先使用講師自有網站既有授課／品評素材，第三方活動頁則以來源連結保留原始脈絡。', '註：照片均使用講師本人確認可公開使用之原始素材；YouTube 以原影片直接嵌入，第三方活動頁保留原始來源連結。')
+          p.write_text(s, encoding='utf-8')
+          PY
+
+      - name: Commit imported originals
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/import-rice-lecture-images.yml
+          git add assets/images/rice-lecture rice-lecture/index.html
+          git commit -m 'Import full-resolution rice lecture photos'
+          git push origin master
