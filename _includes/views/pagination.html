@@ -21,6 +21,27 @@
   <ul class="post-list {{ image_style }}">
     <!-- Top list item -->
     {%- if paginator == site or paginator.page == 1 -%}
+      <li class="post-item top-post rice-lecture-link">
+        <h2 class="post-title">
+          <a class="post-link" href="{{ '/rice-lecture/' | relative_url }}">
+            演講邀約
+            <span class="post-badges"><span class="post-badge badge-top">TOP</span></span>
+          </a>
+        </h2>
+        <div class="post-meta">
+          <span class="post-date"><i class="fa fa-calendar"></i> 2026/09/01</span>
+        </div>
+        <div class="post-excerpt">
+          <a class="post-text" href="{{ '/rice-lecture/' | relative_url }}">
+            <p>稻米品質與品評專業講座之邀約說明，包含授課形式、米飯品評、設備、人力與經費準備。 <span class="read_more">查看邀約說明</span></p>
+          </a>
+        </div>
+        <div class="post-tags">
+          <span class="post-tag">#Lecture</span>
+          <span class="post-tag">#Rice</span>
+        </div>
+      </li>
+
       {%- assign post_item_class = "top-post" -%}
       {%- assign posts = site.posts
         | where_exp: "item", "item.top > 0"
