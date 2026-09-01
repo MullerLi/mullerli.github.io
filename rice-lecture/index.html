@@ -46,7 +46,7 @@
     .hero{border-bottom:1px solid var(--ink);overflow:hidden}
     .hero-stage{position:relative;min-height:760px;padding:90px 0 72px}
     .hero-copy{position:relative;z-index:5;width:72%}
-    h1{margin:0;font-family:var(--serif);font-size:clamp(72px,10.2vw,148px);font-weight:900;line-height:.94;letter-spacing:-.075em}
+    h1{margin:0;font-family:var(--serif);font-size:clamp(72px,10.2vw,148px);font-weight:900;line-height:1.14;letter-spacing:.045em}
     h1 .second{display:block;margin-left:.72em;white-space:nowrap}
     .hero-lead{position:relative;z-index:5;width:45%;max-width:535px;margin:58px 0 0;font-size:20px;line-height:1.9}
     .hero-links{display:flex;gap:26px;flex-wrap:wrap;margin-top:32px;font-size:13px;font-weight:600}
@@ -62,14 +62,14 @@
     section{padding:94px 0;border-bottom:1px solid var(--ink)}
     .section-head{display:grid;grid-template-columns:110px minmax(260px,420px) 1fr;gap:34px;align-items:start;margin-bottom:62px}
     .section-no{font-size:11px;font-weight:700;letter-spacing:.16em;color:var(--mint);padding-top:10px}
-    h2{margin:0;font-size:clamp(36px,4.2vw,58px);font-weight:700;line-height:1.18;letter-spacing:-.045em}
+    h2{margin:0;font-size:clamp(36px,4.2vw,58px);font-weight:700;line-height:1.28;letter-spacing:.025em}
     .section-intro{margin:4px 0 0;max-width:600px;font-size:17px;color:var(--muted)}
 
     .about-grid{display:grid;grid-template-columns:minmax(300px,430px) 1fr;gap:9vw;align-items:start}
     .portrait-wrap{position:relative;width:86%;background:transparent;overflow:visible;isolation:isolate}
     .portrait-wrap::before{content:"";position:absolute;inset:0;background:var(--mint);transform:translate(18px,18px);z-index:0;pointer-events:none}
     .portrait-wrap img{position:relative;z-index:2;aspect-ratio:4/5;object-fit:cover;filter:none!important;mix-blend-mode:normal!important;opacity:1!important;background:var(--white);border:5px solid var(--paper);outline:1px solid var(--ink)}
-    .profile-name{margin:0;font-size:38px;font-weight:700;line-height:1.25}
+    .profile-name{margin:0;font-size:38px;font-weight:700;line-height:1.35;letter-spacing:.025em}
     .profile-en{margin:8px 0 34px;font-size:12px;letter-spacing:.12em;color:var(--muted)}
     .about-copy p{max-width:710px;margin:0 0 22px}
     .expertise{margin:38px 0 0;padding:18px 0;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);display:grid;grid-template-columns:repeat(5,1fr);gap:10px;font-family:var(--sans);font-size:11px;font-weight:600;text-align:center}
@@ -125,14 +125,14 @@
     .case-media iframe{filter:none!important;opacity:1!important}
     .case-media.photo::before{content:"";position:absolute;inset:0;background:var(--mint);transform:translate(14px,14px);z-index:0;pointer-events:none}
     .case-source{font-size:10px;font-weight:700;letter-spacing:.14em;color:var(--mint);margin-bottom:11px}
-    .case-copy h3{margin:0 0 18px;font-size:31px;line-height:1.35;font-weight:600;letter-spacing:-.025em}
+    .case-copy h3{margin:0 0 18px;font-size:31px;line-height:1.42;font-weight:600;letter-spacing:.015em}
     .case-copy p{margin:0 0 20px;color:var(--muted);font-size:16px}
     .linkline{font-size:12px;font-weight:600}
     .portfolio-foot{margin:70px 0 0;font-family:var(--sans);font-size:11px;color:var(--muted);border-top:1px solid var(--rule-light);padding-top:15px}
 
     .contact{padding:84px 0 96px;background:var(--mint)}
     .contact-inner{display:grid;grid-template-columns:1fr minmax(320px,520px);gap:70px;align-items:end}
-    .contact h2{font-size:clamp(58px,8vw,112px);line-height:.95;letter-spacing:-.07em}
+    .contact h2{font-size:clamp(58px,8vw,112px);line-height:1.22;letter-spacing:.08em}
     .contact-copy{font-size:17px}
     .email{display:inline-block;margin-top:28px;font-family:var(--sans);font-size:15px;font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink);padding-bottom:5px}
 
@@ -145,7 +145,7 @@
 
     @media(max-width:980px){
       .nav{display:none}.hero-stage{min-height:auto;padding:70px 0 54px}.hero-copy{width:100%}
-      h1{font-size:clamp(62px,14vw,112px)}h1 .second{margin-left:.28em}
+      h1{font-size:clamp(62px,14vw,112px);line-height:1.15;letter-spacing:.04em}h1 .second{margin-left:.28em}
       .hero-media{position:relative;top:auto;right:auto;width:82%;height:auto;aspect-ratio:4/3;margin:54px 22px 0 auto}
       .hero-credit{position:static;width:auto;margin-top:38px}.hero-lead{width:70%;margin-top:42px}
       .section-head{grid-template-columns:70px 1fr;gap:24px}.section-intro{grid-column:2}
@@ -157,9 +157,9 @@
 
     @media(max-width:700px){
       body{font-size:16px;line-height:1.85}.wrap{width:min(calc(100% - 30px),var(--max))}.topbar-inner{height:55px}.brand{font-size:15px}
-      .hero-stage{padding-top:54px}h1{font-size:clamp(55px,18vw,86px);letter-spacing:-.08em}h1 .second{margin-left:0;white-space:normal}
+      .hero-stage{padding-top:54px}h1{font-size:clamp(55px,18vw,86px);line-height:1.18;letter-spacing:.035em}h1 .second{margin-left:0;white-space:normal}
       .hero-lead{width:100%;font-size:18px;margin-top:36px}.hero-media{width:calc(94% - 22px);margin-top:42px}.vertical-note{right:-12px;top:22px}
-      section{padding:68px 0}.section-head{grid-template-columns:44px 1fr;margin-bottom:42px;gap:14px}.section-no{font-size:9px}.section-intro{grid-column:1 / -1;margin-top:5px}h2{font-size:38px}
+      section{padding:68px 0}.section-head{grid-template-columns:44px 1fr;margin-bottom:42px;gap:14px}.section-no{font-size:9px}.section-intro{grid-column:1 / -1;margin-top:5px}h2{font-size:38px;line-height:1.32;letter-spacing:.03em}
       .about-grid{grid-template-columns:1fr;gap:44px}.portrait-wrap{width:calc(72% - 18px);margin-left:auto}.profile-name{font-size:32px}.expertise{grid-template-columns:1fr 1fr}
       .format-row{grid-template-columns:44px 1fr;gap:14px;padding:27px 0}.format-row h3{font-size:21px}
       .prepare-grid{grid-template-columns:1fr}.prepare-item:nth-child(odd){border-right:0;padding-right:0}.prepare-item:nth-child(even){padding-left:0}.prepare-item{grid-template-columns:44px 1fr}
@@ -167,7 +167,7 @@
       .price-row{grid-template-columns:1fr;gap:6px;padding:25px 0}.price-value{font-size:22px}
       .content-grid{grid-template-columns:1fr}.topic,.topic+.topic{padding:25px 0;border-left:0;border-bottom:1px solid var(--ink)}
       .case-row,.case-row:nth-child(even){grid-template-columns:1fr;gap:24px}.case-row:nth-child(even) .case-media,.case-row:nth-child(even) .case-copy{order:initial}.portfolio-list{gap:64px}.case-copy h3{font-size:26px}.case-media{width:calc(100% - 14px)}
-      .contact{padding:66px 0}.contact-inner{grid-template-columns:1fr;gap:40px}.contact h2{font-size:66px}
+      .contact{padding:66px 0}.contact-inner{grid-template-columns:1fr;gap:40px}.contact h2{font-size:66px;line-height:1.24;letter-spacing:.08em}
       .refs-grid{grid-template-columns:1fr;gap:20px}.footer{flex-direction:column;gap:8px}
     }
 
@@ -204,7 +204,7 @@
 <main>
 <section id="about">
   <div class="wrap">
-    <div class="section-head"><div class="section-no">01</div><h2>關於講師</h2><p class="section-intro">授課內容依邀請單位需求與參與者背景調整，可面向一般消費者、教師、大學生、農民及相關產業從業者。</p></div>
+    <div class="section-head"><div class="section-no">01</div><h2>關於講師</h2></div>
     <div class="about-grid">
       <div class="portrait-wrap"><img src="../assets/images/rice-lecture/speaker-portrait.png" alt="李誠紘個人照片" /></div>
       <div class="about-copy">
@@ -220,7 +220,7 @@
 
 <section id="formats">
   <div class="wrap">
-    <div class="section-head"><div class="section-no">02</div><h2>授課形式</h2><p class="section-intro">以下為常見授課安排。實際內容、時數與是否搭配米飯品評，均可依邀請單位需求調整。</p></div>
+    <div class="section-head"><div class="section-no">02</div><h2>授課形式</h2></div>
     <div class="formats">
       <article class="format-row"><div class="format-no">形式 01</div><h3>稻米品種與品質基礎講座</h3><p>介紹臺灣水稻品種、品種差異與稻米品質內涵，不含現場米飯品評。適合一般消費者、食農教育、社區大學及推廣活動。</p><div class="duration">建議 60–90 分鐘</div></article>
       <article class="format-row"><div class="format-no">形式 02</div><h3>稻米品種、品質與米飯品評</h3><p>介紹品種與品質，搭配 3–5 種米飯進行實際品評、比較或盲測。最低約 30 分鐘講授＋30 分鐘品評與討論。</p><div class="duration">最低 60 分鐘<br>建議 90 分鐘以上</div></article>
@@ -231,7 +231,7 @@
 
 <section id="prepare" class="prepare-band">
   <div class="wrap">
-    <div class="section-head"><div class="section-no">03</div><h2>邀約前準備</h2><p class="section-intro">提供下列資訊，即可較快確認授課內容、品評安排、設備、人力與經費。</p></div>
+    <div class="section-head"><div class="section-no">03</div><h2>邀約前準備</h2></div>
     <div class="prepare-grid">
       <div class="prepare-item"><span class="prepare-no">01</span><span>主辦單位／活動名稱</span></div><div class="prepare-item"><span class="prepare-no">02</span><span>日期、時間與地點</span></div>
       <div class="prepare-item"><span class="prepare-no">03</span><span>預估參與人數</span></div><div class="prepare-item"><span class="prepare-no">04</span><span>參與對象</span></div>
@@ -260,7 +260,7 @@
 
 <section id="pricing">
   <div class="wrap">
-    <div class="section-head"><div class="section-no">05</div><h2>經費參考</h2><p class="section-intro">以下供邀請單位進行活動規劃與經費估列。實際支應方式可依各單位規定調整。</p></div>
+    <div class="section-head"><div class="section-no">05</div><h2>經費參考</h2></div>
     <div class="price-list">
       <div class="price-row"><div class="price-label">講師鐘點費</div><div class="price-value">2,000 元／小時</div><div class="price-note">依授課時數與邀請單位核支規定辦理。</div></div>
       <div class="price-row"><div class="price-label">品評前置執行</div><div class="price-value">建議 2,000 元</div><div class="price-note">含米飯品評時，講師需提前約 1 小時到場炊煮與準備。</div></div>
@@ -286,7 +286,7 @@
 
 <section id="portfolio">
   <div class="wrap">
-    <div class="section-head"><div class="section-no">07</div><h2>授課實例</h2><p class="section-intro">以下列出部分公開活動紀錄，供邀請單位了解實際授課對象、形式與內容尺度。</p></div>
+    <div class="section-head"><div class="section-no">07</div><h2>授課實例</h2></div>
     <div class="portfolio-list">
       <article class="case-row"><div class="case-media photo"><img src="../assets/images/rice-lecture/lecture-land-to-table.jpg" alt="上下游餐桌解密稻米講座" loading="lazy"></div><div class="case-copy"><div class="case-source">上下游｜餐桌與食米教育</div><h3>從品種到餐桌，吃出臺灣米差異</h3><p>從品種、澱粉、栽培到煮飯，搭配多種臺灣米盲測，讓參與者實際吃出米飯品質與風味差異。</p><a class="linkline" href="https://www.newsmarket.com.tw/blog/241614/" target="_blank" rel="noopener">查看活動紀錄</a></div></article>
       <article class="case-row"><div class="case-media"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/yQVRIPwsTR8" title="稻米專業講座影音紀錄一" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="case-copy"><div class="case-source">YouTube｜完整講座影音</div><h3>稻米品質與食味的公開講座紀錄</h3><p>完整影音呈現實際授課節奏，從稻米知識、研究案例一路延伸到品質判讀與米飯食味理解。</p><a class="linkline" href="https://www.youtube.com/watch?v=yQVRIPwsTR8" target="_blank" rel="noopener">前往 YouTube</a></div></article>
