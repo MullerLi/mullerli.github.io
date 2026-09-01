@@ -1,0 +1,39 @@
+name: Replace speaker media privacy-safe photo
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - '.github/workflows/replace-speaker-media-privacy.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  replace-photo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: master
+
+      - name: Download privacy-safe JPEG
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/images/rice-lecture
+          curl --fail --location --retry 3 'https://photoshop-api.adobe.io/v2/short-url/urn:aaid:ps:US:ae5af147-fa7f-4a44-a70a-3b5b535d74f9' -o assets/images/rice-lecture/speaker-media.jpg
+          file assets/images/rice-lecture/speaker-media.jpg
+          test -s assets/images/rice-lecture/speaker-media.jpg
+
+      - name: Commit replacement and remove one-time workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git rm .github/workflows/replace-speaker-media-privacy.yml
+          git add assets/images/rice-lecture/speaker-media.jpg
+          git commit -m 'Replace speaker media with privacy-safe photo'
+          git push origin master
