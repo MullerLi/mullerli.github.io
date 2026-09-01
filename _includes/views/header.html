@@ -38,6 +38,7 @@
               <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | upcase | escape }}</a>
               {%- endif -%}
             {%- endfor -%}
+            <a class="page-link" href="{{ '/rice-lecture/' | relative_url }}">演講邀約</a>
 
             {%- assign name = 'translate_langs' -%}
             {%- include functions.html func='get_value' -%}
@@ -72,6 +73,7 @@
   
   <ul>
     <li><a href="{{ '/about.html' | relative_url }}">關於我</a></li>
+    <li><a href="{{ '/rice-lecture/' | relative_url }}">演講邀約</a></li>
     <li><a href="{{ '/about_en.html' | relative_url }}">About</a></li>
     <li><a href="{{ '/about_ja.html' | relative_url }}">私について</a></li>
     <li><a href="{{ '/archives/' | relative_url }}">文章</a></li>
