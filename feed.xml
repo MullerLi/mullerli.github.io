@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-TW"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://mullerli.github.io/jekyll-theme-yat/feed.xml" rel="self" type="application/atom+xml" /><link href="https://mullerli.github.io/jekyll-theme-yat/" rel="alternate" type="text/html" hreflang="zh-TW" /><updated>2026-09-04T06:48:20+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/feed.xml</id><title type="html">誠紘的食米研究</title><subtitle>Rice Quality 稻米品質研究文獻選讀與資料分享，碾米廠業者、食農教育推廣者，或是研究人員，都能在此獲得實用資訊。</subtitle><author><name>李誠紘 | Levi</name></author><entry><title type="html">DIN-德國工業感字體</title><link href="https://mullerli.github.io/jekyll-theme-yat/typography/design/2026/06/08/DIN-introduction.html" rel="alternate" type="text/html" title="DIN-德國工業感字體" /><published>2026-06-08T01:00:00+00:00</published><updated>2026-06-08T01:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/typography/design/2026/06/08/DIN-introduction</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/typography/design/2026/06/08/DIN-introduction.html"><![CDATA[<p>有天在製作簡報，想使用德國風格來設計簡報，就此開始選擇字體。</p>
+
+<p>關於德國風格，大致上有兩種方向。第一種是冷靜、工業的字體，首先想到的就是 DIN。</p>
+
+<p>DIN 是一款 sans-serif 無襯線字體，整體偏窄，給人冷靜的工業感。其設計參考德國標準化學會（Deutsches Institut für Normung，German Institute for Standardization）的標準，因為可讀性良好，被廣泛應用於高速公路標誌。</p>
+
+<p>DIN 最初是為工業用途而設計的，因為設計簡單樸實且易讀，後來被廣泛運用於不同場合。</p>
+
+<h2 id="windows-中的-din-替代字體">Windows 中的 DIN 替代字體</h2>
+
+<p>在 Windows 中，想使用 DIN，可以採用內建的 <a href="https://learn.microsoft.com/zh-tw/typography/font-list/bahnschrift">Bahnschrift</a>。</p>
+
+<p>Bahnschrift 的字體品質良好，不過輸出檔案時可能會遇到問題，需要再確認。取而代之，免費的 D-DIN、Dinish 也是可以採用的字體。</p>
+
+<h2 id="free-din-alternative">Free DIN Alternative</h2>
+
+<p>D-DIN 原本是 Datto 免費提供的字體，後續下載點移除後，作者將其開源為 D-DIN Pro，並提供完整的字重。</p>
+
+<ul>
+  <li><a href="https://github.com/CyberFei/D-DIN-PRO/tree/main">D-DIN Pro 下載點</a></li>
+  <li><a href="https://www.fontsquirrel.com/fonts/d-din">D-DIN 下載點</a></li>
+</ul>
+
+<p>Dinish 是參考 DIN 1451 標準繪製的字體，在嚴格的德國規範中保留 DIN 的清晰度，同時兼顧人們喜歡的閱讀感。</p>
+
+<p><a href="https://github.com/playbeing/dinish">Dinish 下載點</a></p>
+
+<p>Gidole 是作者Andreas Larsen的家鄉，位於衣索比亞南部的一個美麗的小山城，這個字體是一款人文主義極簡風格的DIN字體。
+<a href="https://github.com/larsenwork/Gidole/releases">Gidole 下載點</a>
+<a href="https://gidole.github.io/#">Gidole</a></p>]]></content><author><name>李誠紘 | Levi</name></author><category term="Typography" /><category term="Design" /><category term="DIN" /><category term="Typography" /><category term="Font" /><summary type="html"><![CDATA[介紹 DIN 字體的德國工業風格、Windows 內建替代字體 Bahnschrift，以及免費的 D-DIN 與 Dinish。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">不用吃飼料的「機器鴨」有機抑草農法──從「合鴨農法」到「禾鴨機」</title><link href="https://mullerli.github.io/jekyll-theme-yat/farming/2026/03/18/aigamo-robot.html" rel="alternate" type="text/html" title="不用吃飼料的「機器鴨」有機抑草農法──從「合鴨農法」到「禾鴨機」" /><published>2026-03-18T00:00:00+00:00</published><updated>2026-03-18T00:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/farming/2026/03/18/aigamo-robot</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/farming/2026/03/18/aigamo-robot.html"><![CDATA[<h2 id="從傳統養鴨到現代合鴨農法">從傳統養鴨到現代合鴨農法</h2>
+
+<p>鴨子和稻田密不可分，早期台灣農村，有群被稱為「逃冬」或「討冬」的養鴨人家，他們如同農業中的遊牧民族，帶著大群鴨子由南向北移動，利用稻作收割後的空檔讓鴨群啄食落穗、雜草與蟲類；在日本，農民古野隆雄於1990年出版書籍，提出現代「<strong>合鴨農法</strong>」；本場李健捀博士研究「<strong>鴨間稻</strong>」，在水田養殖特定品種鴨子，不僅可抑制雜草與害蟲，更可提供有機質。過程不使用化學資材，因此成為有機水稻田的雜草抑制手段。但因鴨群管理不易，放養時易受<strong>野狗或猛禽攻擊、放養環境不穩定</strong>等，仍有待改進空間。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/aigamo-robot.png" alt="高科技禾鴨機在水田裡巡邏" /></p>
+
+<h2 id="科技的介入第二代禾鴨機誕生">科技的介入：第二代「禾鴨機」誕生</h2>
+
+<p>近年因有機水稻雜草措施有限，本場114年自日本原廠引進最新研發<strong>第二代「禾鴨機」</strong>（Aigamo Robot）進行試驗。禾鴨機的發明旨在<strong>取代不安定鴨群</strong>，作為機械化的替代方案，其設計為浮筒式結構，搭載<strong>GPS導航系統</strong>與<strong>太陽能電源</strong>，放置在水田中，可在稻株間自動行進。其抑草原理是模仿鴨子划水時導致「<strong>水變成混濁</strong>」的現象，透過小螺旋槳攪動田水，使田水變得混濁以遮蔽光線，達到<strong>抑制雜草光合作用與萌發</strong>的效果。此外，攪動後土壤表面將形成一層柔軟的土層；運作時的聲波，更可驅趕福壽螺，從物理層面達到抑制雜草與福壽螺的目的。</p>
+
+<h2 id="彰化地區實地測試成效亮眼">彰化地區實地測試成效亮眼</h2>
+
+<p>根據本場於114年（2025年）一期作在彰化地區研究成果，禾鴨機處理後，試驗田的<strong>雜草與福壽螺卵塊數量均顯著下降</strong>。試驗數據顯示，對照區的雜草數量平均每小區約49.4株，而使用禾鴨機處理的田區大幅降至7.8株，<strong>抑草率高達84%</strong>。在福壽螺防治方面，禾鴨機處理田區福壽螺卵塊顯著減少，較對照田區<strong>減幅達48%</strong>。最終處理後，稻米產量與品質均無顯著改變，顯示禾鴨機可抑制雜草與福壽螺，並不影響水稻植株。為進一步了解此農具基於實際場域的應用性，本場115年亦與中部地區友善栽培的契作集團產區合作，了解此機器在產業端的應用面。</p>
+
+<h2 id="智慧型農機與使用成本分析">智慧型農機與使用成本分析</h2>
+
+<p>在使用方面，禾鴨機為<strong>智慧農機</strong>，可直接和手機APP連動，亦具有GPS功能，只需在陽光下開機連結後，即可自行作動。目前廠商暫定售價為8萬元新台幣，原設計廠商估計應可使用5年(以上)。</p>
+
+<p>然而，使用禾鴨機的田區，須注意：</p>
+<ol>
+  <li><strong>初期水位管理：</strong> 插秧後應先行淹水，待7~14天，秧苗紮根、穩固後再操作，避免因機器運行而缺株；於曬田期前(約水稻秧苗株高達55公分)即停止操作。</li>
+  <li><strong>整地平整度：</strong> 整地務求平整，禾鴨機雖有自動轉向功能，能在田間會隨機移動，但若整地不平，可能導致機器卡在田間較高土面上「刁車」。</li>
+  <li><strong>每日運作時間：</strong> 每1分地每天使禾鴨機作動 <strong>2小時</strong>，即可達成減降雜草效果。</li>
+  <li><strong>設備投資成本：</strong> 成本方面，每期作若讓禾鴨機服務至少2分地以上，預計使用5年兩期作，成本為4,000元，則其單位成本會<strong>低於紙蓆插秧法</strong>（6,250元/分）。面積愈大，平均成本愈低。</li>
+</ol>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">成本項目</th>
+      <th style="text-align: left">禾鴨機</th>
+      <th style="text-align: left">紙蓆插秧</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>固定設備/資材</strong></td>
+      <td style="text-align: left"><strong>折舊費：8,000/期作</strong><br />購置價格/(使用期作x幾分地)<br />1分地為8,000元，係以8萬元除以10期作(五年)</td>
+      <td style="text-align: left"><strong>紙膜材料：4,800/分地</strong><br />（1捲國產紙蓆1,200元，1分地需要約4捲）</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>作業/人工</strong></td>
+      <td style="text-align: left"><strong>人力搬運：自理</strong>，成本極低（每天約10分鐘）<br /><strong>機器運行：太陽能供電</strong>免燃料費</td>
+      <td style="text-align: left"><strong>機械插秧費：1,200</strong>（視地區有所變動）</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>其他</strong></td>
+      <td style="text-align: left"><strong>維護費：幾乎無</strong>（不含電池折舊）<br />運行50天×2小時/日</td>
+      <td style="text-align: left"><strong>回收費：無需回收</strong>，紙膜自然分解<br /><strong>後續除草：</strong>幾乎無需人工除草</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>單期作合計</strong></td>
+      <td style="text-align: left"><strong>每分地 NT$8,000</strong></td>
+      <td style="text-align: left"><strong>每分地 NT$6,000</strong></td>
+    </tr>
+  </tbody>
+</table>]]></content><author><name>李誠紘 | Levi</name></author><category term="Farming" /><category term="Organic" /><category term="Technology" /><category term="Robot" /><summary type="html"><![CDATA[從傳統養鴨到現代合鴨農法]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">稻米的澱粉</title><link href="https://mullerli.github.io/jekyll-theme-yat/rice/physiochemistry/quality/2026/02/03/RiceStarch.html" rel="alternate" type="text/html" title="稻米的澱粉" /><published>2026-02-03T01:00:00+00:00</published><updated>2026-02-03T01:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/rice/physiochemistry/quality/2026/02/03/RiceStarch</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/rice/physiochemistry/quality/2026/02/03/RiceStarch.html"><![CDATA[<h2 id="什麼是直鏈和支鏈澱粉">什麼是直鏈和支鏈澱粉</h2>
+<p>澱粉包含直鏈澱粉（amylose）和支鏈澱粉（amylopectin），兩者是稻米澱粉的重要組成之一，其質地猶如「鋼筋」及「醬糊」，鋼筋使其越發硬實爽口、醬如使其軟黏甜口。兩種澱粉合計為白米乾重近95%，不同品種的直鏈澱粉含量差異，會直接反應在米食成品的口感。</p>
+
+<p>CNS稻米標準將包裝米分為秈米、稉米、糯米。糯米指的是稻米的胚乳澱粉含量，秈稉則指的是品種，但在品種分類上，可進而分為秈糯、稉糯、秈米、稉米。</p>
+
+<p>直鏈澱粉和支鏈澱粉為碳水化合物，皆是由α葡萄糖單元(α-D-glucose units)，由澱粉合成酶、支鏈酶、去分支酶形成。直鏈澱粉的結構猶如直條義大利麵、支鏈澱粉則像樹枝一樣具有許多分支。</p>
+
+<p>澱粉的六級結構
+<img src="/jekyll-theme-yat/assets/images/260203starch.JPG" alt="澱粉六級結構" />
+cited from Li, H, Gilbert, R G, 2018. Starch molecular structure the basis for an improved</p>
+
+<h2 id="不太黏的支鏈澱粉">不太黏的支鏈澱粉?</h2>
+<p>雖然直鏈澱粉含量接近，但有些人會覺得秈糯較硬和稉糯較軟。細究其分子機制，發現不同品種支鏈澱粉的分支，鏈長的部分有長有短，長鏈支鏈澱粉性質與直鏈澱粉接近，不易溶出，將使口感偏硬與不黏；短鏈容易在煮飯時溶出，形成光滑外觀與軟黏質地。</p>
+
+<p>支鏈澱粉的鍊長大小，不只影響硬度，更可能影響<a href="https://biomedres.us/fulltexts/BJSTR.MS.ID.003316.php">血糖指數</a>。</p>
+
+<p>糯性的形成是因為稻米中的Waxy基因發生隱性突變，直鏈澱粉形成功能受損，導致葡萄糖單元主要形成支鏈澱粉。近年由於氣候變遷，充實期溫度增加，觀察到Waxy編碼形成的GBSS mRNA表現量減少；同時，可能使中長鏈支鏈澱粉比例增加、短鏈比例下降的方向移動，影響米飯的口感質地。</p>
+
+<p>糯米(glutinous)的直鏈澱粉含量低於2%；一般米飯食用米為5-20%；東南亞特殊食米及加工米則為20-33%不等。</p>
+
+<p>台中農改場的品種中，台稉9號及台中秈10、198、199號等，為15~20%之食米，其口感軟黏適中；台中200號為8~15%，軟黏程度較前者更加；台中糯196號與台中秈糯2號，為屬於&lt;2%的糯米，因此可用於製作湯圓、年糕、麻糬、粿食。</p>
+
+<p>澱粉的形成pathway
+<img src="/jekyll-theme-yat/assets/images/2260203formationStarch.png" alt="IMG2" /></p>
+
+<h2 id="世界各地對米有不同黏性偏好">世界各地對米有不同黏性偏好</h2>
+<p>此外，世界各地對直鏈澱粉含量與米飯口感的偏好並不一致；日本與台灣多偏好短圓、直鏈澱粉偏低之稻米。相較歐美、東南亞及南亞等地，北美與南美、北歐與西非等地較常偏好長粒、直鏈澱粉中等的長米，煮熟後口感較硬挺、粒粒分明；東南亞多偏好長而細的米粒，而南亞（如印度、巴基斯坦）長粒米亦普遍受歡迎。</p>
+
+<p>例如義大利的燉飯米，即屬於稉型中直鏈澱粉含量稻米，因為稻米偏大顆，商品分類屬於「中粒米」，具有乾爽硬實的口感。適合烹煮具有「al dente」彈牙口感的義大利燉飯，特別強調「外軟內硬」的米芯，與我國習慣食用的中式炒飯、燴飯等，差異很大。</p>
+
+<p>世界各國對食米的偏好
+<img src="/jekyll-theme-yat/assets/images/260203worldrice.JPG" alt="IMG3" />
+cited from <a href="https://doi.org/10.1371/journal.pone.0085106">PLos One 9, e85106</a></p>]]></content><author><name>李誠紘 | Levi</name></author><category term="Rice" /><category term="Physiochemistry" /><category term="Quality" /><category term="Physiochemistry" /><summary type="html"><![CDATA[介紹稻米中的澱粉組成與食味的影響]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">日本「米・食味鑑定士協會」商業推廣模式</title><link href="https://mullerli.github.io/jekyll-theme-yat/rice/culture/quality/2025/09/18/Misway.html" rel="alternate" type="text/html" title="日本「米・食味鑑定士協會」商業推廣模式" /><published>2025-09-18T01:00:00+00:00</published><updated>2025-09-18T01:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/rice/culture/quality/2025/09/18/Misway</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/rice/culture/quality/2025/09/18/Misway.html"><![CDATA[<h2 id="背景">背景</h2>
+<p>日本氣溫涼爽及日照時數長，適合生產稉稻，因而成為米食國家。但近年亦受飲食西化影響，2024年人均食米量從1962年高點118.3公斤/年，降至54.2公斤/年，與<a href="https://www.agriharvest.tw/archives/11577">臺灣同呈逐年下降趨勢</a>。</p>
+
+<h2 id="米食味鑑定士的成立">米食味鑑定士的成立</h2>
+<p>為維繫日本米食文化，米食愛好者以高食味品質的精緻米食為推廣目標，成立「米・食味鑑定士協會」，辦理教育課程以及品質競賽。本文將介紹此一日本民間推展模式，包含米食味鑑定士及其鑑定士認定制度，作為台灣未來米食推廣的借鏡及參考。</p>
+
+<h2 id="米食味鑑定士課程">米食味鑑定士課程</h2>
+<p>「米・食味鑑定士協會」是由曾任大阪第一食品株式會社的鈴木秀之先生，於1998年成立的民間組織，起初目的將米視為嗜好品，培養有興趣人員，每年舉行「米・食味鑑定士」講習會，課程內容包含（一）日本米文化、（二）品評、（三）煮飯法及（四）栽培等相關內容。</p>
+
+<p>相關課程，台灣目前已有<a href="https://www.facebook.com/share/1JEAWit192/">食農推廣教育組織進行</a>。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/misway2.png" alt="IMG1" /></p>
+
+<h2 id="是否需參加米食味鑑定士課程">是否需參加米食味鑑定士課程?</h2>
+<p>一般民眾可付費報名參加，完成者可取得「米・食味鑑定士」資格，然而，課程收費不斐，內容不具專業性質，完課後僅需繳費，即可取得會員證照，證照每年需付費續約。會員則可向協會申請認證，將標章印於包裝米，目前臺灣市面亦不乏協會認證之商品。</p>
+
+<h2 id="其他鑑定士">其他鑑定士</h2>
+<p>除前述「米・食味鑑定士」以外，協會更辦理「水田環境鑑定士」：是有能力調查稻田水質及生物的人員，亦可向協會申請認證，如草屯農會包裝米即有該認證標章；「調理炊飯鑑定士」則是有能力在餐廳大或小規模煮飯的人員，與廚藝技能較為相關。</p>
+
+<h2 id="結語">結語</h2>
+<p>協會透過鑑定士資格與包裝米認證，提升民眾對高品質稻米的意識，並讓消費者能依據明確標準，選擇高品質包裝米。在面臨飲食習慣改變，人均食米量降低的挑戰下，持續維繫米食文化。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/misway1.png" alt="IMG1" /></p>]]></content><author><name>李誠紘 | Levi</name></author><category term="Rice" /><category term="Culture" /><category term="Quality" /><category term="Japan" /><category term="Tasting" /><summary type="html"><![CDATA[介紹日本『米・食味鑑定士協會』如何透過食味鑑定、認證與文化推廣，維繫米食文化，並探討其對台灣米食推廣的借鏡價值。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">臺灣與日本米飯「官能品評」的標準方法</title><link href="https://mullerli.github.io/jekyll-theme-yat/sencoryevaluation/2025/09/15/RiceSensoryEvaluation.html" rel="alternate" type="text/html" title="臺灣與日本米飯「官能品評」的標準方法" /><published>2025-09-15T06:00:00+00:00</published><updated>2025-09-15T06:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/sencoryevaluation/2025/09/15/RiceSensoryEvaluation</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/sencoryevaluation/2025/09/15/RiceSensoryEvaluation.html"><![CDATA[<h2 id="背景">背景</h2>
+<p>稻米是世界過半人口的主要熱量來源，更是亞洲地區最重要的主食作物之一，而米飯是稻米最主要的利用方式，若品質優良，更能獲得消費者青睞，亦能創造更高市場價值，因此，如何準確鑑定米粒及米飯品質，遂成為提升稻米市場競爭力的關鍵。</p>
+
+<p>在眾多鑑定品質項目中，食味品質為將米飯烹煮後，由品評員或消費者，進行系統性的評估分析，「測量」米飯的風味、食味、口感及個人喜好之「總體評價」，並將指標數據化分析，達到判斷品質之目的。鑑於近年臺灣的消費者，對高品質米飯需求增加，產官學界對於系統化分析米飯食味品質技術需求提升，本文遂介紹最新米飯感官品評(sensory evaluation)標準方法，以供各界參考。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/sensory1.png" alt="感官品評" /></p>
+
+<h2 id="一日本米飯感官品評制度介紹">一、日本米飯感官品評制度介紹</h2>
+<p>日本水稻產業，在早年面臨生產過剩、發展方向轉以提升品質為目標，日本糧食廳(2003年廢止改為農林水產省)因此訂定標準的米飯品評流程，並進而應用在產官學界，也成為以米為主食的亞洲國家中，最早提出米飯感官品評制度的國家。</p>
+
+<p>日本消費者主要食用直鏈澱粉5-20%的稉米(japonica rice)，其米飯感官品評標準《米の食味試験要綱》及其「實施要領」係1966年由日本糧食廳以「41食糧第3332號」行政通達首度發布，自此奠定國家的感官品評程序及統計標準。本要領雖屬作業標準而非法條，仍被視為全國農產品質檢查及各都道府縣試驗場評價米飯食味品質的最高指引方法，而由財團法人日本穀物檢定協會執行，應用於全國各區生產的各種稻米品種食味分級。要領特點如下：</p>
+<ol>
+  <li>品評小組：由24位專家品評員組成，包括20-36歲與37歲以上男女各12人，以降低性別、年齡世代造成的喜好度偏差。但實務執行上，時常面臨難以一次召集24人之困境，因此地區試驗站會以較少人數(15-20人)執行。</li>
+  <li>樣本準備：稻米採收後，即碾成糙米並冷藏在10°C、相對濕度60-70%的環境中，並篩選米粒厚度1.8毫米以上之糙米，精白成原糙米重量90-91%之白米，冷藏保存直到品評測試前一天。</li>
+  <li>標準米準備：將日本各地生產的稻米品種「越光」混合後，產生一組食味品質中等的「基準米」，作為後續感官品評樣本的標準比較對象。</li>
+  <li>煮飯流程：將不同樣本的白米，以相同方式烹煮，先用自來水清洗排乾3次，直到水分較不混濁後，以濾網瀝乾靜置5分鐘，再放入相同電子鍋。按照白米清洗前的含水率，加入對應飲用水(約1.23-1.38倍的米重)，浸泡30-40分鐘，電子鍋跳起後，不開鍋蓋燜20分鐘再攪拌、品評。
+5.品評方法：「一基準三供試」，每次盛裝4種米飯樣本，每品種在白色圓盤(直徑25公分)中盛裝50公克，並以顏色(紅代表對照，黃、藍、綠代表3種樣本)區分4個供試米飯樣本。若樣品之間溫度不同或過燙，應於盤中冷卻約20分鐘消除樣品間的溫差，以利清楚識別差異。</li>
+  <li>品評指標：依樣本「外觀」(外観)、「香氣」(香り)、「味道」(味)、「黏性」(黏り)、「硬度」(硬さ)指標及個人喜好度的「綜合評價」，總共6項指標，對基準米進行比較評分。</li>
+  <li>評分尺度：6項指標以1分為單位，按程度分±3(かなり，非常)、±2(すこし，一點點)、±1(わずかに，輕微)、0(同基準米)。當品評員品嘗一次就發現差異，給予±3分；品嘗一次雖不確定，但感覺有差異，給予±2；品嘗一次不確定，品嘗第二次時就察覺差異，則給予±1；最後，品嘗兩次也無法察覺差異，則給予0分。</li>
+  <li>數據分析：去除離群值取平均，對基準米(0分)做變異數統計檢定，計算不同樣本品評指標之平均值差異。</li>
+  <li>品評環境：在相同空間以隔板間隔，座位相鄰，避免表情與語言互相影響。測驗結束後，亦避免互相討論或評價各樣品。</li>
+</ol>
+
+<p>上述要領提供一個標準的樣本準備及評分方法，更蒐集品評員的喜好，兼用感官品評學之「描述性」(descriptive)與「喜好度」(preference)測驗，可反應感官品質特徵及主觀喜好。但實務執行上，需召集許多專家品評員，執行的人力與資金成本過高，小型單位難以實施。後續因而衍生出簡化的兩種方法，以取得成本與效益的平衡。包括16位專業品評員進行品評，可一次品評10個樣本，以及40位非專業品評員進行品評，一次可品評6個樣本。
+<img src="/jekyll-theme-yat/assets/images/sensory3.png" alt="感官品評" /></p>
+
+<h2 id="二臺灣米飯感官品評制度介紹">二、臺灣米飯感官品評制度介紹</h2>
+<p>臺灣蓬萊米(Pon-lai rice)食味品質與日本稉稻相近，因此日本米飯感官品評實施要領，可作為本土方法借鑑。在未引入上述方法的早期，本場利用100毫升小燒杯，加入白米20公克，依照其直鏈澱粉含量不同，加入水27或42公克，封錫箔紙浸泡30分鐘，在電鍋外鍋加水80公克進行蒸煮，根據光澤、色澤、黏性、彈性、口味來評分。</p>
+
+<p>1982年8月，本場宋勳課長邀請日本農林水產省技官「堀末登」博士來臺指導，落地應用後，由洪梅珠副場長建立臺灣「米飯食味品評」技術，但執行面與日本之要領稍有不同：</p>
+<ol>
+  <li>品評小組：由至少8位具品評經驗之品評員，每個樣本重複品評兩次。</li>
+  <li>標準米準備：每期作自中部地區、或是在相同試驗田，取樣多個台稉9號或台中秈10號稻穀，確認稻米外觀及稻穀規格尚可(稻米少青米粒、無病害粒、無煙燻味及異味、外觀尚可、含水率13-15%)，先經一次品評試驗，排序選出食味品質中等者，作為當期對照標準米。</li>
+  <li>樣本準備：不同品系或栽培處理之稻穀，收穫後乾燥至含水率14%，將其冷藏於16-20°C，品評試驗前先回溫再碾成白米，於冰箱冷藏保存，品評試驗當天方以6人份家用電子鍋烹煮。</li>
+  <li>煮飯流程：取500公克白米，在水龍頭下邊加入自來水邊快速攪拌後排水，重複3次，於電子秤上加入飲用水，扣除洗米時的吸水量，加入白米重量1.35倍的水量，放入相同6人份電子鍋中，靜置30分鐘，始按下開關。待開關跳起，燜20分鐘後，將飯攪鬆，蓋上紗布，再燜1小時方可品評。</li>
+  <li>品評方法：以白色圓盤(直徑25公分)順時鐘盛裝1個對照及4個米飯樣本，每樣本以編號(CK為對照標準米、1-4號分別為4個樣本)區分。</li>
+  <li>感官品評指標：與日本的實施要領相同。</li>
+  <li>評分尺度：與日本的要領相同。</li>
+  <li>數據分析：去除離群值後取平均值，和對照標準米(0分)進行平均值差異性統計檢定。若顯著較高分(較硬、較黏、總評較佳)，則給予A；與對照標準米無顯著差異，則給予B；顯著較低分，則給予C。</li>
+  <li>品評環境：與日本的實施要領相同。</li>
+</ol>
+
+<p>上述方法建立後，應用在我國水稻育種、儲藏、栽培、品種研究試驗，也成為目前農糧署稻米品質競賽、精饌米獎等需米飯品評之競賽的參考方法。早期本場執行「良質米產銷計畫」，應用此法輔導全臺規劃「良質米產區」，透過釐清食味品質，提出各區域建議栽培的「良質米」品種，而後農糧署王慶一技正於2004年訂定「水稻良質米推薦品種實施要點」，明訂品種需經本場品評後「米飯食味總評達A」方可列入良質米推薦品種。本要點雖於2023年廢止，但已然成為研究技術與產業政策配合的良好典範。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/sensory2.png" alt="感官品評" /></p>
+
+<h2 id="三結語">三、結語</h2>
+<p>高食味品質稻米為消費者重視。感官品評作為一種科學方法，透過標準化流程與訓練有素的品評員，能客觀地分析米飯的外觀、香氣、味道、黏性及硬度等特徵。台中場借鑑日本於1966年建立的米飯食味試驗實施要領，發展出符合本土需求的米飯食味品評制度，並由稉米擴展至軟秈米的品評應用。透過標準化的品評技術建立及推廣，可提升國產米品質，提升產業價值，並讓消費者能享用到更優質的國產米飯。</p>]]></content><author><name>李誠紘 | Levi</name></author><category term="SencoryEvaluation" /><category term="Sensory" /><category term="Evaluation" /><category term="Taikeng 9" /><category term="Pon-lai" /><summary type="html"><![CDATA[米飯食味品評是一種標準化的感官評估方式，透過外觀、香氣、味道、黏性與硬度等指標，將消費者的『好吃』轉化為數據化的品質分析，並應用於品種育成與產業推廣。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">水稻「中暑」白堊質多？水稻專家推薦「這一招」緩解</title><link href="https://mullerli.github.io/jekyll-theme-yat/rice/quality/cultivation/2025/09/08/GrainFillingStageN.html" rel="alternate" type="text/html" title="水稻「中暑」白堊質多？水稻專家推薦「這一招」緩解" /><published>2025-09-08T06:00:00+00:00</published><updated>2025-09-08T06:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/rice/quality/cultivation/2025/09/08/GrainFillingStageN</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/rice/quality/cultivation/2025/09/08/GrainFillingStageN.html"><![CDATA[<h2 id="重點摘要">重點摘要</h2>
+<blockquote>
+  <p>充實期高溫，稉稻白堊質面積增加，影響碾米率及消費者觀感。
+白堊質是不透明的區域，不等同食味變差。<br />
+中部地區每年 5–6 月，常遇 30℃ 以上日高溫，可透過施肥、降溫或提早插秧避開。<br />
+抽穗開花後 7 日內，每 0.1 公頃追施 2 公斤氮素（約　20kgN/ha），可降低白堊質、提升稻穀容積重與完整米率。</p>
+</blockquote>
+
+<hr />
+
+<h2 id="背景與問題">背景與問題</h2>
+<p>在氣候變遷與全球暖化衝擊下，臺灣每年夏季水稻成熟時常遭遇熾熱天氣，高溫使米粒易出現不透明的白堊質。這不僅提高碾米過程的碎米風險、增加加工成本，亦影響包裝米外觀，進而降低消費者購買意願，成為產業共同關注的焦點。</p>
+
+<h2 id="什麼是白堊質">什麼是「白堊質」？</h2>
+<p>「白堊質」是白米中不透明的澱粉結構。因白米澱粉粒之間夾帶空氣、造成光線穿透時的偏折，形成不透明的外觀。</p>
+
+<p>在台灣中華民國國家標準（CNS）中，包裝米含越多白堊質米，外觀品質分級越低。不過，CNS 等級與食味品質沒有相關性。</p>
+
+<h2 id="白堊質與食味的關係">白堊質與食味的關係</h2>
+<p><strong>白堊質米不影響米飯食味</strong>。台中場的<strong>台稉9號</strong>近年受暖化影響，較常出現白堊質，但煮飯後仍有甜香，熱飯好吃，冷飯Q彈，現在還是好吃的非香米品種。2024年南投縣草屯鎮李啟元生產的台稉9號即獲<strong>全國稻米達人冠軍賽－冠軍</strong>肯定。</p>
+
+<p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtQXfPTjjgTP_FWsmV4IgfEDxsGCqbMDBYSw&amp;s" alt="李啟元" /></p>
+
+<p>李啟元阿北快要<a href="https://www.facebook.com/share/p/19iN1fYbp1/">退休</a>了，好吃的<a href="https://www.facebook.com/share/p/1BU1gsNvPH/">台稉九號</a>快成為絕響，趕快跟他買（0492560359）</p>
+
+<h2 id="高溫敏感期與發生風險">高溫敏感期與發生風險</h2>
+<p>中部地區每年 <strong>5–6 月</strong> 為水稻的 <strong>抽穗與穀粒灌漿期</strong>，此時對高溫極為敏感。此期間近年常出現 <strong>30℃ 以上</strong>的日高溫，易誘發白堊質形成、影響外觀與加工品質。</p>
+
+<h2 id="耐高溫栽培管理建議">耐高溫栽培管理建議</h2>
+<p>高溫下，水稻充實會受到<a href="https://www.tcdares.gov.tw/upload/tcdares/files/web_structure/13144/009-%E9%AB%98%E6%BA%AB%E7%92%B0%E5%A2%83%E5%B0%8D%E7%A8%BB%E7%B1%B3%E7%94%A2%E9%87%8F%E8%88%87%E7%B1%B3%E8%B3%AA%E4%B9%8B%E5%BD%B1%E9%9F%BF.pdf">全方面</a>的影響。</p>
+
+<blockquote>
+  <p><strong>澱粉合成酵素，基因表現量改變</strong>
+稻米中，澱粉合成酵素相關的基因表現下降，包含：蔗糖轉運蛋白、AGPase、BT1、GBSSI、SSIIa、SSIIIa、BEIIb，以及 ABA 合成相關基因改變。
+但是澱粉分解酵素（α-amylase）表現量增加，就好像桌遊矮人礦坑，鋪隧道卡的矮人變少，惡搞的矮人變多。
+<strong>儲藏蛋白體形成問題</strong>
+高溫使儲藏蛋白形成不全，澱粉粒中，原本蛋白質體的位置空出，出現空氣孔隙，在米粒中表現為白堊質。
+所以補充蛋白質的原料（氮素），就可以強化蛋白質體合成，進而減少白堊質。
+<strong>細胞到器官尺度的結果</strong>
+胚乳細胞<strong>體積變小</strong>，粒寬、粒厚、粒重下降。</p>
+</blockquote>
+
+<p>當然以白堊質的問題來說，抽穗後施用一次<strong>氮肥</strong>，補充氮素，就可以改善稻米的白堊質比例。</p>
+
+<p>這個做法並非新技術，早在以前就有，當時稱「粒肥」，意思是穀粒充實期施用的氮素。
+<img src="/jekyll-theme-yat/assets/images/grainFertilizer.png" alt="粒肥新聞" /></p>
+
+<p>在日本也建議高溫時施用<a href="https://www.pref.niigata.lg.jp/uploaded/attachment/381922.pdf">氮素</a></p>
+
+<h2 id="實務操作提示">實務操作提示</h2>
+<ul>
+  <li><strong>田間監測</strong>：抽穗前後14天內，密切留意溫度與田間生育勢，評估是否需要補施用粒肥。</li>
+  <li><strong>分區管理</strong>：依田區當期作的施肥歷史，微調粒肥用量。前期施用肥料越多，也需要施用越多粒肥。</li>
+  <li><strong>加工銜接</strong>：收穫與碾製流程中，留意稻米含水率以增加碾米率。</li>
+</ul>]]></content><author><name>李誠紘 | Levi</name></author><category term="Rice" /><category term="Quality" /><category term="Cultivation" /><category term="Chalky" /><category term="High-temperature" /><category term="Taikeng 9" /><summary type="html"><![CDATA[夏季高溫使稻米易出現白堊質，影響外觀與碎米率。透過調整氮肥時機與用量，於抽穗開花後7日內補追氮以提升容積重與完整米率。]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">香氣濃度以及香米栽培調製</title><link href="https://mullerli.github.io/jekyll-theme-yat/variety/2025/09/08/aromatic-rice3.html" rel="alternate" type="text/html" title="香氣濃度以及香米栽培調製" /><published>2025-09-08T00:00:00+00:00</published><updated>2025-09-08T00:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/variety/2025/09/08/aromatic-rice3</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/variety/2025/09/08/aromatic-rice3.html"><![CDATA[<h2 id="香米與香氣的濃度">香米與香氣的濃度</h2>
+
+<p>消費者或農友常覺得不同期作與品種的香米，香氣濃度有差異。</p>
+
+<p>其實香味強烈程度很主觀，穩定判斷香氣濃度的品評員（Panellists）幾乎沒有，研究傾向以稻米 2-AP 分子（香氣分子）濃度作為客觀標準。</p>
+
+<p>分子濃度雖與米飯香味濃度不同，機器和人為嗅聞有相關但不同，以下文章均以香氣分子濃度來代表香氣強弱，。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/aromaofrice.png" alt="現在仍以分子層次分析香氣濃度" /></p>
+
+<h2 id="香米的栽培與調製儲藏要領">香米的栽培與調製儲藏要領</h2>
+
+<p>香米的栽培品種，大多具優良食味與香氣，但還需要適當栽培管理配合，才能收穫香氣濃郁的稻米。</p>
+
+<p>茲整理栽培管理與儲藏調製策略如下，供農友栽培或從業者管理參考：</p>
+
+<ol>
+  <li>
+    <p>優良種原：品種是決定稻米品質與香氣的第一要件，栽培香米品種時，應使用來自於育成單位或三級繁殖制度提供的純正香米稻種，方能確保收穫稻穀齒頰留香。</p>
+  </li>
+  <li>去偽除雜：許多產銷集團使用純正稻種，收穫稻穀仍混有雜種稻種，致使香氣減弱。有些集團以為不純的原因來自於單位提供的稻種，視其為寇讎，犯了<a href="https://pansci.asia/archives/87359">歸因謬誤</a>。其實導致混雜稻種的原因有很多，應逐一了解可能原因，才能有效改善。例如：
+    <ul>
+      <li>稻種是由<a href="https://kmweb.moa.gov.tw/subject/subject.php?id=30374">原原種→原種→採種</a>，三次繁殖放大。自留種或是繁殖過程中，多少混有<a href="https://kmweb.moa.gov.tw/knowledgebase.php?func=&amp;type=12723&amp;keyword=&amp;id=17749">異品種</a>。單位提供原原種，不可能包含異品種。</li>
+      <li>育苗場同時處理多種品種時，有不同稻種落於同盤苗；或是育苗介質包含有未完全腐熟的粉碎稻殼或含殘留胚的小碎粒。介質須確實腐熟，或避免使用混有稻胚、稻穀的土壤育苗。</li>
+      <li>田間土壤混雜有前期作稻種，因水稻成熟時，落粒性增強，有可能在下次種植時萌發，變成異品種。前一作應種植相同品種；或前兩作不種稻；或先灌水催芽，使殘存稻種萌發後，再整地翻埋。拔除不在插秧線上的自生苗，以及外觀特徵或抽穗期明顯早/晚於主群的異株。</li>
+      <li>收割機收穫多塊田區，將不同品種／紅米等混合。進田收穫前，先讓收穫機空轉 2–3 分鐘，以排除上次作業殘留的稻穀；先收割繁殖田周邊（同品種）至少 50 公尺作為緩衝帶，將此批稻穀另行存放；清理機械後，再收割繁殖田內作為種用稻。</li>
+      <li>烘乾機、倉儲、包裝管線等，都有可能包含不同品種稻米，在過程難免混合。米廠可加強設計、選別等設備，剔除混雜來源。</li>
+    </ul>
+  </li>
+  <li>
+    <p>適期插秧：香米品種大多對溫度較為敏感，中部地區插秧時間第一期作勿早於立春，避免秧苗遭遇寒害導致枯死；第二期作盡量早於立秋，以免生育後期遭遇低溫衝擊。插秧期調整後，充實期氣溫愈涼爽，香氣累積愈多；惟過高或過低溫度反減少香氣分子生成。
+亦可透過流水灌溉、晝灌夜排等方式，使田間氣溫降低。</p>
+  </li>
+  <li>
+    <p>合理施肥：過多化學氮肥將不利香氣累積，並使稻米蛋白質提升，食味品質下降，甚至造成稻株倒伏，嚴重衝擊品質。合理化施肥建議每公頃施用120~140公斤氮素，分基肥、追肥、穗肥施用，以取得產量、品質及收益的平衡點。
+以高品質為生產目標者，可減少施用氮素，如此可生產低蛋白質、高香氣，食味品質優異的稻米。微量礦物質如矽(Zn)、錳(Mn)在研究中可促進香氣分子累積，農友可參照實際田間狀況，於充實期以液態肥做葉面施肥，適度補充對應養分。</p>
+  </li>
+  <li>
+    <p>乾溼交替：香米適宜在排水良好的砂質土壤中生長，在插秧後約30~40天時 （有效分蘗終期）曬田，有助於水稻停止無效分蘗，使根部健康發育；
+而開花期，必須維持土壤濕潤，但要避免長期淹水；充實期則讓土壤乾溼交替，促進香氣分子累積。
+但應避免過度乾旱影響產量和品質。</p>
+  </li>
+  <li>收穫調製：香氣分子容易在高溫日曬以及過度乾燥下揮發散失，因此稻穀應在稻穗基部2~3粒仍為綠色時適期收穫，並採三段式變溫與低溫乾燥，將稻穀水分分段乾燥至13~14%以下，再儲存在低溫乾燥（室溫18°C以下、相對濕度60%以下）的冷藏室。消費者則可購買當季小包裝米，以容器密封、抽真空、冷藏，如此可享用香氣馥郁的米飯。</li>
+</ol>
+
+<p><img src="/jekyll-theme-yat/assets/images/aromaofric2.png" alt="你喜歡香米嗎?" /></p>
+
+<h2 id="reference">Reference</h2>
+
+<p>Luo H, Zhang Q, Lai R, Zhang S, Yi W, Tang X. Regulation of 2-Acetyl-1-pyrroline Content in Fragrant Rice under Different Temperatures at the Grain-Filling Stage. J Agric Food Chem. 2024 May 8;72(18):10521-10530. doi: 10.1021/acs.jafc.3c08637. Epub 2024 Apr 24. PMID: 38656141.</p>
+
+<p>Potcho PM, Okpala NE, Korohou T, Imran M, Kamara N, Zhang J, Aloryi KD, Tang X. Nitrogen sources affected the biosynthesis of 2-acetyl-1-pyrroline, cooked rice elongation and amylose content in rice. PLoS One. 2021 Jul 15;16(7):e0254182. doi: 10.1371/journal.pone.0254182. PMID: 34264963; PMCID: PMC8282057.</p>]]></content><author><name>李誠紘 | Levi</name></author><category term="Variety" /><category term="Quality" /><category term="Variety" /><category term="Rice" /><summary type="html"><![CDATA[香米與香氣的濃度]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">香米的品種簡介</title><link href="https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/16/aromatic-rice2.html" rel="alternate" type="text/html" title="香米的品種簡介" /><published>2025-07-16T00:00:00+00:00</published><updated>2025-07-16T00:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/16/aromatic-rice2</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/16/aromatic-rice2.html"><![CDATA[<h2 id="世界香米品種">世界香米品種</h2>
+
+<p>　　雖然世界各國的香米價格不同、口感食味與香氣感受各異，但同時有個關鍵基因──BADH2 發生突變，導致一種酵素「甜菜鹼醛脫氫酶」(betaine aldehyde dehydrogenase) 失去活性，使香氣分子在稻株及穀粒中累積。藉由BADH2基因來分析世界各地的香米親緣，發現香氣基因最初是起源於稉稻親緣關係相近的香米品種，後來才由人為育種導入秈稻品種。</p>
+
+<p>　　各地的香米品種雖帶有相似的基因序列，但各品種的香氣特徵描述，依當地文化與人為主觀感受有些不同，例如KDML105與Jasmine 85帶有茉莉花般的香氣、巴薩瑪緹則帶有七葉蘭或爆米花般的香氣，而臺灣有些香米品種帶有芋頭般的香氣。即使如此，香米大部分的香氣分子，是由醛類化合物2AP(2-acetyl-1-pyrroline)組成，非香米品種只帶有極少2AP。此外，針對臺灣香米的研究就發現，香米帶有多種氣味各異的分子，以不同比例綜合表現出不同香氣，推測除了BADH2基因外，還有其他機制影響香氣形成。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/badh2.png" alt="BADH2" />
+BADH2和香米的香味</p>
+
+<h2 id="臺灣香米品種">臺灣香米品種</h2>
+
+<p>　　雖然世界各國都有栽培香米的習性，但臺灣的香米品種最早1980年代育成。截至2024年6月，臺灣總共育成23個香米品種，第一個帶香氣的品種是育種家楊遜謙先生(1925-2021)於1970年代引入日本香米「大正撰」與泰國香米KDML105育種，並在1986及1987年命名為台農秈20號與台農72號，為本土香秈稻與香稉稻育種研究之濫觴。後來更接續命名台稉4號、台農71號(益全香米)、台農74號、高雄147號、桃園3號、台南19號、台南20號等稉型香米並商品化。此群品種皆為「大正撰」一系之後代，香氣與食味品質有一定水準，其中桃園3號及高雄147號更是近年臺灣稻米達人冠軍賽常勝品種，台農74號甚至獲2008年日本「第十屆日本米．食味鑑定國際賽」金賞，獲選為「最適合咖哩烹調的米」。</p>
+
+<p>　　臺中區農業改良場2009年命名的台中194號，則是第一個巴薩瑪緹系的香米，是由許志聖博士利用印度北方德拉敦(Dehradun)的巴薩瑪緹品種「Type 3」(或稱T-3、T3)雜交育成。台中194號與一般稉稻相比，具有米粒寬度較窄，看起來較為「小粒」的特徵，但不減其米飯優異食味。有趣的是，推廣香米時，會以七葉蘭、爆米花或花香形容「Type 3」血緣的香米品種，但有些人覺得植物「七葉蘭」的香氣，也可以用芋頭香來形容，所以利用芋頭香形容「大正撰」血緣的香米品種也頗有意思。至於台中194號的香氣，也有人覺得與常見香米的芋頭香不同，更像是清新的青草香 。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/BADH2_2.png" alt="台灣香米" /></p>
+
+<h2 id="異國品種台灣飄香">異國品種台灣飄香</h2>
+
+<p>　　除上述品種以外，近年異國料理流行，量販店或泰國料理店常見到帶「茉莉花香」的進口泰國香米，研究人員因此陸續推出類似特性的品種，例如第一個香秈稻台農秈20號，以及後續的台農秈22、23號，皆帶有泰國香米KDML105血統。臺中農改場深耕秈稻育種，保存有多支香米種原，近期將會有香氣濃郁、口感適合佐餐的泰國香米品種命名推出。</p>
+
+<p>　　另外，臺灣山地的原民部落亦保存有香米地方品種，其中多數屬於陸稻，或稱為熱帶稉稻品種(tropical Japonica)，具有高株、發芽勢強、分蘗少、大粒，甚至具有耐旱潛力等不同於一般稉稻──即溫帶稉稻 (temperature Japonica) 的外觀特徵。臺中場協助南投縣松林部落建立特殊陸稻「伊娜谷香糯米」種原保存與栽培技術，因氣候條件限制，一年僅能一穫，但品質優良，為少見的帶香氣陸稻糯米；嘉大台南1、糯3號，則為嘉義大學與臺南場合作，以山地陸稻育成的香米品種。</p>
+
+<p>表2、帶香氣的臺灣水稻品種。</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>品種</th>
+      <th>命名單位</th>
+      <th>香米之親本</th>
+      <th>命名年</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>台農秈20號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>KDML105</td>
+      <td>1986</td>
+    </tr>
+    <tr>
+      <td>台農72號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>大正撰</td>
+      <td>1987</td>
+    </tr>
+    <tr>
+      <td>台稉4號</td>
+      <td>花蓮區農業改良場</td>
+      <td>大正撰</td>
+      <td>1990</td>
+    </tr>
+    <tr>
+      <td>台秈糯2號</td>
+      <td>高雄區農業改良場</td>
+      <td>KDML105</td>
+      <td>1994</td>
+    </tr>
+    <tr>
+      <td>台農71號</td>
+      <td>農業試驗所</td>
+      <td>大正撰</td>
+      <td>2000</td>
+    </tr>
+    <tr>
+      <td>桃園3號</td>
+      <td>桃園區農業改良場</td>
+      <td>大正撰</td>
+      <td>2004</td>
+    </tr>
+    <tr>
+      <td>台農秈22號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>KDML105</td>
+      <td>2004</td>
+    </tr>
+    <tr>
+      <td>台農74號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>大正撰</td>
+      <td>2006</td>
+    </tr>
+    <tr>
+      <td>台中194號</td>
+      <td>臺中區農業改良場</td>
+      <td>Type 3</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <td>台南13號</td>
+      <td>臺南區農業改良場</td>
+      <td>大正撰</td>
+      <td>2009</td>
+    </tr>
+    <tr>
+      <td>高雄147號</td>
+      <td>高雄區農業改良場</td>
+      <td>大正撰</td>
+      <td>2010</td>
+    </tr>
+    <tr>
+      <td>台農秈糯24號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>KDML105</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <td>台東35號</td>
+      <td>臺東區農業改良場</td>
+      <td>Type 3</td>
+      <td>2016</td>
+    </tr>
+    <tr>
+      <td>桃園5號</td>
+      <td>桃園區農業改良場</td>
+      <td>大正撰</td>
+      <td>2019</td>
+    </tr>
+    <tr>
+      <td>台南19號</td>
+      <td>臺南區農業改良場</td>
+      <td>大正撰</td>
+      <td>2019</td>
+    </tr>
+    <tr>
+      <td>嘉大台南1號</td>
+      <td>嘉義大學、臺南區農業改良場</td>
+      <td>大正撰</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <td>嘉大台南糯3號</td>
+      <td>嘉義大學、臺南區農業改良場</td>
+      <td>大正撰</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <td>桃園6號</td>
+      <td>桃園區農業改良場</td>
+      <td>大正撰</td>
+      <td>2021</td>
+    </tr>
+    <tr>
+      <td>台農85號</td>
+      <td>農業試驗所</td>
+      <td>大正撰</td>
+      <td>2021</td>
+    </tr>
+    <tr>
+      <td>台南20號</td>
+      <td>臺南區農業改良場</td>
+      <td>大正撰</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td>桃園7號</td>
+      <td>桃園區農業改良場</td>
+      <td>大正撰</td>
+      <td>2023</td>
+    </tr>
+    <tr>
+      <td>台農88號</td>
+      <td>農業試驗所</td>
+      <td>大正撰</td>
+      <td>2023</td>
+    </tr>
+    <tr>
+      <td>台農秈23號</td>
+      <td>農業試驗所嘉義分所</td>
+      <td>KDML105</td>
+      <td>2024</td>
+    </tr>
+    <tr>
+      <td>伊娜谷香糯米*</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><em>*</em> 為陸稻地方品種純化，並非經由命名程序。</p>
+</blockquote>]]></content><author><name>李誠紘 | Levi</name></author><category term="Variety" /><category term="Quality" /><category term="Variety" /><category term="Rice" /><summary type="html"><![CDATA[世界香米品種]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">世界與臺灣的香米市場</title><link href="https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/05/aromatic-rice.html" rel="alternate" type="text/html" title="世界與臺灣的香米市場" /><published>2025-07-05T00:00:00+00:00</published><updated>2025-07-05T00:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/05/aromatic-rice</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/variety/2025/07/05/aromatic-rice.html"><![CDATA[<h2 id="香米是什麼">香米是什麼</h2>
+
+<p>　　新鮮的米飯烹煮後，可以聞到穀物般的香氣，但有些品種，還會散發出有別於穀物，更像花香、青草或爆米花等讓人食指大動、心情愉悅的香氣，這種帶有特殊香氣的稻米，即是所謂的「香米」（scented or aromatic rice）。</p>
+
+<p>　　香米是特殊的水稻品種類群，其稻米帶「香氣」是重要的品質屬性。因為香氣分子是一種揮發性物質，在保存上若不留意則會揮發消失，在栽培與收穫後乾燥等步驟需特別注意，所以香米產品在世界與臺灣各地都具有較高的價格，但仍廣受一般消費大眾的歡迎。</p>
+
+<p>　　近年臺灣也有許多香米品種問世，其產品在市場佔重要角色，為使農友及消費者對香米有更深的認識，本文將介紹香米的市場現況、臺灣香米的品種及栽培與儲藏調製須知。</p>
+
+<p><img src="/jekyll-theme-yat/assets/images/aromarice1.png" alt="香米" /></p>
+
+<h2 id="世界與臺灣的香米市場價格">世界與臺灣的香米市場價格</h2>
+
+<p>　　《與朝臣論秔稻書》：「魏文帝『江表惟長沙名有好米，何得比新城秔稻耶？』上風吹之，五里聞香」，顯示中國古時即有栽培香米品種的習慣，這種橫跨時間與地區的特性，可知帶香氣的稻米品種是人類所偏好，所以才不約而同地為各地農民所栽培。近代世界各國有名香米品種，包含泰國香米（Thai Hom Mali Rice）品種KDML105（Khao Dawk Mali 105，意思是茉莉香米 105 號）、印度香米巴薩瑪緹 (Basmati，來自於印地語 bāsmatī，意思是香氣) 以及美國的茉莉香米 Jasmine 85 (Jasmine 為茉莉花之意)等。</p>
+
+<p>　　在世界各國，香米都是廣受歡迎的水稻栽培品種類群，因為具香味的稻米有其品質特殊性，所以市場價格較一般稻米為高。於 2024 年 6 月小包裝食米商品在臺灣知名線上電商的市場價格，香米的平均售價為每公斤 86 元，較非香米類別商品78元為高；在世界市場方面，聯合國糧食及農業組織(Food and Agriculture Organization of the United Nations, FAO) 大宗稻米出口價格統計資料 (2024 年 5 月)，最高價格之稻米為每公噸 1400 美元印度 Pusa 巴薩瑪緹香米，其次為每公噸 907 美元的巴基斯坦香米。此二者以近期新台幣匯率換算，約為每公斤 45.3 及 29.4 元；相較不帶香氣的稉米與秈米則為 31.3 及 26.9 元。</p>
+
+<p>　　巴薩瑪緹香米的價格高於其他種香米，這是因為其出口價格是由印度農業與加工食品出口發展局 (APEDA) 依據市場狀況，設定在每公噸至少 950 美元才能出口；此外，印度食品安全和標準局 (FSSAI) 也對巴薩瑪緹香米制定一系列品質規格，如必須具備天然香氣、不能含有人工色素、香料，而且米粒的大小、加熱後米粒延長率、含水量、直鏈澱粉含量及破碎粒比例等，都有嚴格規範，以保護巴薩瑪緹米的最高品質及國際市場上的聲譽。</p>
+
+<p>表1、世界各地的香米市場價格</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>市場</th>
+      <th>類群</th>
+      <th>每公斤價格(TWD)*</th>
+      <th>資料來源</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>臺灣電商包裝米</td>
+      <td>包裝白米平均（非香米）</td>
+      <td>78.8</td>
+      <td>MOMO 購物網</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>包裝香米平均</td>
+      <td>86.2</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>世界大宗米糧</td>
+      <td>印度Pusa巴薩瑪緹香米</td>
+      <td>45.3</td>
+      <td>聯合國糧食及農業組織(FAO)</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>巴基斯坦巴薩瑪緹香米</td>
+      <td>29.4</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>香米（哥倫比亞）</td>
+      <td>30.1</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>香米（泰國）</td>
+      <td>29.7</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>香米（越南）</td>
+      <td>19.9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>稉米（非香米，美國）</td>
+      <td>31.3</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>秈米（非香米，巴西）</td>
+      <td>26.9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>糯米（非香米，泰國）</td>
+      <td>25.6</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>美國電商－包裝米</td>
+      <td>茉莉香米</td>
+      <td>188.6</td>
+      <td>Amazon 電商網站-美國地區</td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>巴薩瑪緹香米</td>
+      <td>230.9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>越光米（非香米）</td>
+      <td>186.9</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>超長粒白米（非香米）</td>
+      <td>80.0</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td>中粒米（非香米）</td>
+      <td>91.5</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <ul>
+    <li>以資料查詢時間（2024-6-8）新台幣：美元匯率 32.41：1 換算。</li>
+  </ul>
+</blockquote>]]></content><author><name>李誠紘 | Levi</name></author><category term="Variety" /><category term="Quality" /><category term="Variety" /><category term="Rice" /><summary type="html"><![CDATA[香米是什麼]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">李誠紘個人簡歷</title><link href="https://mullerli.github.io/jekyll-theme-yat/2025/07/03/%E6%9D%8E%E8%AA%A0%E7%B4%98%E5%80%8B%E4%BA%BA%E7%B0%A1%E6%AD%B7.html" rel="alternate" type="text/html" title="李誠紘個人簡歷" /><published>2025-07-03T00:00:00+00:00</published><updated>2025-07-03T00:00:00+00:00</updated><id>https://mullerli.github.io/jekyll-theme-yat/2025/07/03/%E6%9D%8E%E8%AA%A0%E7%B4%98%E5%80%8B%E4%BA%BA%E7%B0%A1%E6%AD%B7</id><content type="html" xml:base="https://mullerli.github.io/jekyll-theme-yat/2025/07/03/%E6%9D%8E%E8%AA%A0%E7%B4%98%E5%80%8B%E4%BA%BA%E7%B0%A1%E6%AD%B7.html"><![CDATA[]]></content><author><name>李誠紘 | Levi</name></author><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" /><media:content medium="image" url="https://mullerli.github.io/jekyll-theme-yat/assets/images/preview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
